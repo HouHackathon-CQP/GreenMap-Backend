@@ -1,0 +1,49 @@
+version: "3.8"
+
+services:
+  # 1. DỊCH VỤ CSDL: PostgreSQL + PostGIS (cho dữ liệu bản đồ)
+  postgres-db:
+    image: postgis/postgis:15-3.4-alpine
+    container_name: greenmap-postgres
+    environment:
+      - POSTGRES_DB=greenmap_db
+      - POSTGRES_USER=admin
+      - POSTGRES_PASSWORD=mysecretpassword
+    ports:
+      - "5432:5432" # Mở cổng 5432 của máy thật để kết nối vào
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U admin -d greenmap_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # 2. DỊCH VỤ LƯU TRỮ NGỮ CẢNH: MongoDB (cho Orion-LD)
+  # Orion-LD cần Mongo để lưu trạng thái hiện tại (current state)
+  mongo-db:
+    image: mongo:5.0
+    container_name: greenmap-mongo
+    command: --nojournal
+    volumes:
+      - mongo_data:/data/db
+
+  # 3. "BỘ NÃO" NGSI-LD: FIWARE Orion Context Broker
+
+  orion-ld:
+    image: fiware/orion-ld:1.1.0
+    container_name: greenmap-orion
+    ports:
+      - "1026:1026" # Cổng NGSI-LD chuẩn
+    command: -dbhost mongo-db -logLevel DEBUG
+    depends_on:
+      - mongo-db
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:1026/version"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgres_data:
+  mongo_data:
