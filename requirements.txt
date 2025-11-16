@@ -1,0 +1,8 @@
+fastapi[all]
+sqlalchemy
+psycopg2-binary
+asyncpg
+geoalchemy2
+shapely
+passlib[bcrypt]
+python-jose
