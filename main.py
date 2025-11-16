@@ -7,6 +7,9 @@ import models
 import schemas
 import crud
 from database import get_db, engine, Base
+from fastapi.security import OAuth2PasswordRequestForm
+from security import create_access_token 
+from security import verify_password
 
 
 # HÀM KHỞI TẠO CSDL (Tạo bảng)
@@ -68,6 +71,57 @@ async def read_one_location(
         # Nếu không tìm thấy, trả lỗi 404 cho Frontend
         raise HTTPException(status_code=404, detail="Location not found")
     return db_location
+
+# API CHO "USER"
+@app.post("/users", response_model=schemas.UserRead)
+async def create_new_user(
+    user: schemas.UserCreate, 
+    db: AsyncSession = Depends(get_db)
+):
+    """
+    API để ĐĂNG KÝ một người dùng mới.
+    """
+    # 1. Kiểm tra xem email đã tồn tại chưa?
+    db_user = await crud.get_user_by_email(db, email=user.email)
+    if db_user:
+        # Nếu tồn tại, trả lỗi 400
+        raise HTTPException(status_code=400, detail="Email already registered")
+    
+    # 2. Nếu email OK, gọi 'crud' để tạo user (đã bao gồm băm mật khẩu)
+    return await crud.create_user(db=db, user=user)
+
+# ĐĂNG NHẬP và LẤY TOKEN
+@app.post("/login")
+async def login_for_access_token(
+    # FastAPI sẽ tự động lấy 'username' và 'password' từ form
+    form_data: OAuth2PasswordRequestForm = Depends(), 
+    db: AsyncSession = Depends(get_db)
+):
+    """
+    API để ĐĂNG NHẬP. Trả về một "Access Token".
+    """
+    
+    # 1. Kiểm tra User: (form_data.username chính là 'email')
+    user = await crud.get_user_by_email(db, email=form_data.username)
+    
+    # 2. Kiểm tra Mật khẩu:
+    #    So sánh pass "chay" (form_data.password) với pass "băm" (user.hashed_password)
+    if not user or not verify_password(form_data.password, user.hashed_password):
+        # Nếu sai, trả lỗi 401
+        raise HTTPException(
+            status_code=401,
+            detail="Incorrect email or password",
+            headers={"WWW-Authenticate": "Bearer"}, # Đây là chuẩn
+        )
+        
+    # 3. Mật khẩu đúng! Tạo "vé thông hành" (JWT)
+    #    "sub" (subject) chính là email của user
+    access_token = create_access_token(
+        data={"sub": user.email}
+    )
+    
+    # 4. Trả "vé" về cho Frontend
+    return {"access_token": access_token, "token_type": "bearer"}
 
 # API "KIỂM TRA SỨC KHỎE" 
 

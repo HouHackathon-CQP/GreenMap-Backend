@@ -30,3 +30,28 @@ class GreenLocation(Base):
     
     external_id = Column(String(255), nullable=True, index=True) # ID từ OpenStreetMap
     is_active = Column(Boolean, default=True) # Dùng để cho Admin duyệt
+
+class User(Base):
+    """
+    Bản thiết kế cho bảng "users".
+    Cần cho các tính năng:
+    - Cộng đồng xanh (báo cáo ô nhiễm) 
+    - Gamification (tích điểm) 
+    """
+    __tablename__ = "users"
+
+    id = Column(Integer, primary_key=True, index=True)
+    
+    # Email dùng để đăng nhập, phải là duy nhất
+    email = Column(String(255), unique=True, index=True, nullable=False)
+    
+    full_name = Column(String(255), nullable=True) # Tên đầy đủ (tùy chọn)
+
+    # Cột quan trọng: KHÔNG LƯU MẬT KHẨU
+    # Chỉ lưu "mật khẩu đã băm"
+    hashed_password = Column(String(255), nullable=False)
+    
+    # Dùng để "khóa" tài khoản nếu cần
+    is_active = Column(Boolean, default=True)
+
+    # (Sau này có thể thêm 'is_superuser' cho Admin)

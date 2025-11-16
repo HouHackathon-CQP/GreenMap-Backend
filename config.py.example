@@ -1,0 +1,11 @@
+import os
+
+# "Chìa khóa" bí mật để ký tên vào JWT.
+# !!! HÃY TẠO RA MỘT KEY CỦA RIÊNG BẠN !!!
+SECRET_KEY = "your-own-random-secret-key-goes-here"
+
+# Thuật toán để ký tên
+ALGORITHM = "HS256"
+
+# Token sẽ "hết hạn" sau bao lâu?
+ACCESS_TOKEN_EXPIRE_MINUTES = 30

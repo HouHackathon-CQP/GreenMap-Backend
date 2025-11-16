@@ -1,6 +1,6 @@
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.future import select
-
+from security import get_password_hash
 import models
 import schemas # Import "khuôn"
 
@@ -49,3 +49,38 @@ async def get_locations(db: AsyncSession, skip: int = 0, limit: int = 100):
         select(models.GreenLocation).offset(skip).limit(limit)
     )
     return result.scalars().all() # Trả về list[GreenLocation]
+
+# user CRUD functions
+async def get_user_by_email(db: AsyncSession, email: str):
+    """Lấy 1 user theo email (dùng để kiểm tra email tồn tại)"""
+    result = await db.execute(
+        select(models.User).where(models.User.email == email)
+    )
+    return result.scalar_one_or_none()
+
+
+async def create_user(db: AsyncSession, user: schemas.UserCreate):
+    """
+    Hàm "tay bẩn" để tạo user:
+    1. Nhận "khuôn" UserCreate (có password "chay").
+    2. "Băm" mật khẩu.
+    3. Tạo object models.User.
+    4. Lưu vào CSDL.
+    """
+    
+    # 2. "Băm" mật khẩu
+    hashed_password = get_password_hash(user.password)
+    
+    # 3. Tạo object model
+    db_user = models.User(
+        email=user.email,
+        full_name=user.full_name,
+        hashed_password=hashed_password # LƯU MẬT KHẨU ĐÃ BĂM
+    )
+    
+    # 4. Lưu vào CSDL
+    db.add(db_user)
+    await db.commit()
+    await db.refresh(db_user)
+    
+    return db_user # Trả về object model
