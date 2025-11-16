@@ -6,3 +6,5 @@ geoalchemy2
 shapely
 passlib[bcrypt]
 python-jose
+httpx
+python-dotenv

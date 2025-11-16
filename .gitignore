@@ -1,7 +1,8 @@
-config.py
 .venv/
 venv/
 __pycache__/
 *.pyc
 .vscode/
 .idea/
+.env
+.env.*

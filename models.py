@@ -6,8 +6,10 @@ from database import Base
 # Dùng Enum để định nghĩa các loại địa điểm một cách "sạch sẽ"
 class LocationType(str, enum.Enum):
     CHARGING_STATION = "CHARGING_STATION" # Trạm sạc xanh
-    GREEN_SPACE = "GREEN_SPACE"         # Điểm nghỉ xanh
-    PUBLIC_PARK = "PUBLIC_PARK"         # Công viên
+    GREEN_SPACE = "GREEN_SPACE"         # Điểm nghỉ xanh [cite: 2611-3403]
+    PUBLIC_PARK = "PUBLIC_PARK"         # Công viên [cite: 2611-3403]
+    BICYCLE_RENTAL = "BICYCLE_RENTAL"   # Điểm thuê xe đạp [cite: 3404-3610]
+    TOURIST_ATTRACTION = "TOURIST_ATTRACTION" # Địa điểm du lịch [cite: 1-1985]
     # Sau này có thể thêm: SENSOR_STATION (Trạm đo), ...
 
 class GreenLocation(Base):

@@ -2,20 +2,15 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.future import select
 from security import get_password_hash
 import models
-import schemas # Import "khuôn"
+import schemas 
+from models import LocationType 
+from typing import Optional
 
 # ----------------------------------------------------------------
 # HÀM TẠO MỚI (CREATE)
 # ----------------------------------------------------------------
 async def create_location(db: AsyncSession, location: schemas.LocationCreate):
-    """
-    Hàm "tay bẩn" đây:
-    1. Nhận "khuôn" LocationCreate (có lat/lon).
-    2. "Dịch" lat/lon thành WKT (Well-Known Text) mà PostGIS hiểu.
-    3. Tạo object models.GreenLocation.
-    4. Lưu vào CSDL.
-    """
-    
+    """Tạo mới một địa điểm (GreenLocation) trong CSDL"""
     # "Dịch" lat/lon thành WKT. Ví dụ: "SRID=4326;POINT(105.8 21.0)"
     wkt_location = f"SRID=4326;POINT({location.longitude} {location.latitude})"
     
@@ -36,19 +31,27 @@ async def create_location(db: AsyncSession, location: schemas.LocationCreate):
 # ----------------------------------------------------------------
 # HÀM ĐỌC (READ)
 # ----------------------------------------------------------------
-async def get_location(db: AsyncSession, location_id: int):
-    """Lấy 1 địa điểm theo ID"""
-    result = await db.execute(
-        select(models.GreenLocation).where(models.GreenLocation.id == location_id)
-    )
-    return result.scalar_one_or_none() # Trả về 1 object, hoặc None
-
-async def get_locations(db: AsyncSession, skip: int = 0, limit: int = 100):
-    """Lấy danh sách địa điểm (có phân trang)"""
-    result = await db.execute(
-        select(models.GreenLocation).offset(skip).limit(limit)
-    )
+async def get_locations(
+    db: AsyncSession, 
+    location_type: Optional[LocationType] = None, # <-- Thêm tham số lọc
+    skip: int = 0, 
+    limit: int = 100
+):
+    """Lấy danh sách địa điểm (có phân trang VÀ LỌC)"""
+    
+    # Bắt đầu câu truy vấn
+    query = select(models.GreenLocation)
+    
+    # Nếu người dùng cung cấp bộ lọc, thêm điều kiện WHERE
+    if location_type:
+        query = query.where(models.GreenLocation.location_type == location_type)
+        
+    # Thêm phân trang và thực thi
+    query = query.offset(skip).limit(limit)
+    result = await db.execute(query)
+    
     return result.scalars().all() # Trả về list[GreenLocation]
+
 
 # user CRUD functions
 async def get_user_by_email(db: AsyncSession, email: str):

@@ -10,7 +10,9 @@ from database import get_db, engine, Base
 from fastapi.security import OAuth2PasswordRequestForm
 from security import create_access_token 
 from security import verify_password
-
+import services
+from typing import List, Optional
+from models import LocationType
 
 # HÀM KHỞI TẠO CSDL (Tạo bảng)
 async def create_db_and_tables():
@@ -46,15 +48,21 @@ async def create_new_location(
 
 @app.get("/locations", response_model=List[schemas.LocationRead])
 async def read_all_locations(
+    location_type: Optional[LocationType] = None, 
     skip: int = 0, 
     limit: int = 100, 
     db: AsyncSession = Depends(get_db)
 ):
     """
     API để LẤY DANH SÁCH tất cả các địa điểm.
-    Có hỗ trợ phân trang (skip, limit).
+    Giờ đã hỗ trợ lọc theo 'location_type'.
     """
-    locations = await crud.get_locations(db=db, skip=skip, limit=limit)
+    locations = await crud.get_locations(
+        db=db, 
+        location_type=location_type,
+        skip=skip, 
+        limit=limit
+    )
     return locations
 
 
@@ -122,6 +130,16 @@ async def login_for_access_token(
     
     # 4. Trả "vé" về cho Frontend
     return {"access_token": access_token, "token_type": "bearer"}
+
+
+# API LẤY DỮ LIỆU AQI THỜI GIAN THỰC CHO HÀ NỘI
+@app.get("/aqi/hanoi")
+async def get_live_hanoi_aqi():
+    """
+    API lấy dữ liệu AQI (pm2.5) thời gian thực cho Hà Nội từ OpenAQ.
+    """
+    aqi_data = await services.get_hanoi_aqi()
+    return {"source": "OpenAQ", "count": len(aqi_data), "data": aqi_data}
 
 # API "KIỂM TRA SỨC KHỎE" 
 
