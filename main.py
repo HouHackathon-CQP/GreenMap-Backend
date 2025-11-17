@@ -1,18 +1,21 @@
 from fastapi import FastAPI, Depends, HTTPException
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.sql import text
-from typing import List 
+from typing import List
 import uvicorn
 import models
 import schemas
 import crud
 from database import get_db, engine, Base
 from fastapi.security import OAuth2PasswordRequestForm
-from security import create_access_token 
+from security import create_access_token
 from security import verify_password
 import services
 from typing import List, Optional
 from models import LocationType
+
+# --- THÊM IMPORT CHO CORS ---
+from fastapi.middleware.cors import CORSMiddleware
 
 # HÀM KHỞI TẠO CSDL (Tạo bảng)
 async def create_db_and_tables():
@@ -24,6 +27,23 @@ app = FastAPI(
     title="Green Map Hanoi API",
     description="Backend API cho dự án Bản Đồ Xanh và OLP 2025."
 )
+
+# --- CORS ---
+
+origins = [
+    "http://localhost:5173", # Địa chỉ của React (Vite)
+    "http://localhost:5174", # (Địa chỉ dự phòng của Vite)
+    "http://localhost",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,       # Chỉ cho phép các địa chỉ này
+    allow_credentials=True,
+    allow_methods=["*"],         # Cho phép mọi phương thức (GET, POST, v.v.)
+    allow_headers=["*"],         # Cho phép mọi header
+)
+
 
 @app.on_event("startup")
 async def on_startup():
@@ -74,7 +94,7 @@ async def read_one_location(
     """
     API để LẤY CHI TIẾT 1 địa điểm theo ID.
     """
-    db_location = await crud.get_location(db=db, location_id=location_id)
+    db_location = await crud.get_location(db=db, location_id=location_id) # Giả định crud.py có hàm này
     if db_location is None:
         # Nếu không tìm thấy, trả lỗi 404 cho Frontend
         raise HTTPException(status_code=404, detail="Location not found")
