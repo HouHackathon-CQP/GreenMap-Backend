@@ -1,7 +1,30 @@
-version: "3.8"
+# Dòng 'version' đã lỗi thời và bị xóa
 
 services:
-  # 1. DỊCH VỤ CSDL: PostgreSQL + PostGIS (cho dữ liệu bản đồ)
+  # 1. DỊCH VỤ API (FastAPI) CỦA BẠN
+  backend-api:
+    build: . # Xây dựng từ Dockerfile trong thư mục này
+    container_name: greenmap-api
+    ports:
+      - "8000:8000" # Mở cổng 8000 của máy thật
+    volumes:
+      - .:/app # Mount code hiện tại vào /app để "reload"
+      # --- CẤU HÌNH DATA CHO SEEDING ---
+      # Đã cập nhật đường dẫn sang GreenMap-Data
+      - ../GreenMap-Data:/HCMConnect-Data 
+    env_file:
+      - .env # Nạp các biến từ file .env
+    depends_on:
+      postgres-db: # Chỉ khởi động KHI postgres-db "healthy"
+        condition: service_healthy
+    healthcheck:
+      # Kiểm tra xem API có thể kết nối CSDL thành công không
+      test: ["CMD-SHELL", "curl -f http://localhost:8000/test-db || exit 1"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+
+  # 2. DỊCH VỤ CSDL: PostgreSQL + PostGIS
   postgres-db:
     image: postgis/postgis:15-3.4-alpine
     container_name: greenmap-postgres
@@ -10,7 +33,7 @@ services:
       - POSTGRES_USER=admin
       - POSTGRES_PASSWORD=mysecretpassword
     ports:
-      - "5432:5432" # Mở cổng 5432 của máy thật để kết nối vào
+      - "5432:5432" 
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
@@ -19,8 +42,7 @@ services:
       timeout: 5s
       retries: 5
 
-  # 2. DỊCH VỤ LƯU TRỮ NGỮ CẢNH: MongoDB (cho Orion-LD)
-  # Orion-LD cần Mongo để lưu trạng thái hiện tại (current state)
+  # 3. DỊCH VỤ LƯU TRỮ NGỮ CẢNH: MongoDB
   mongo-db:
     image: mongo:5.0
     container_name: greenmap-mongo
@@ -28,13 +50,12 @@ services:
     volumes:
       - mongo_data:/data/db
 
-  # 3. "BỘ NÃO" NGSI-LD: FIWARE Orion Context Broker
-
+  # 4. "BỘ NÃO" NGSI-LD: FIWARE Orion
   orion-ld:
     image: fiware/orion-ld:1.1.0
     container_name: greenmap-orion
     ports:
-      - "1026:1026" # Cổng NGSI-LD chuẩn
+      - "1026:1026" 
     command: -dbhost mongo-db -logLevel DEBUG
     depends_on:
       - mongo-db
