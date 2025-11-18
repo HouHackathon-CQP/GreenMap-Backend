@@ -1,118 +1,154 @@
 import json
 import asyncio
-from sqlalchemy.future import select
-from sqlalchemy.exc import IntegrityError
-from shapely.geometry import shape
-from pathlib import Path 
-from sqlalchemy.sql import text 
+import httpx  # Thư viện để gọi API
+from pathlib import Path
+from models import LocationType # Vẫn cần để lấy Enum
 
-# Import các thành phần CSDL và Model
-from database import SessionLocal, engine 
-from models import GreenLocation, LocationType, Base
+# --- 1. IMPORT TỪ CONFIG (Đọc từ .env) ---
+from config import ORION_BROKER_URL # Import URL từ config
+
+# --- 2. DÙNG BIẾN ĐÃ IMPORT ---
+# Thêm "/ngsi-ld/v1/entities" vào URL gốc
+ORION_ENTITIES_URL = f"{ORION_BROKER_URL}/ngsi-ld/v1/entities" 
+
+# Header chuẩn NGSI-LD
+HEADERS = {
+    "Content-Type": "application/ld+json",
+    "Accept": "application/json"
+}
+# Bối cảnh (Context) để Orion hiểu "name", "location" là gì
+CONTEXT = "https://schema.lab.fiware.org/ld/context"
+
+# --- 3. ĐƯỜNG DẪN DỮ LIỆU ---
 CURRENT_FILE_PATH = Path(__file__).resolve()
 PROJECT_DIR = CURRENT_FILE_PATH.parent
-DATA_DIR = PROJECT_DIR.parent / "HCMConnect-Data" / "Data"
+# Trỏ đến thư mục data (ngang hàng với thư mục backend)
+DATA_DIR = PROJECT_DIR.parent / "GreenMap-Data" / "Data"
 
-
-async def create_location_from_feature(db, feature: dict, location_type: LocationType):
+# --- 4. HÀM "DỊCH" VÀ "BƠM" ---
+async def create_ngsi_entity(client: httpx.AsyncClient, feature: dict, entity_type: LocationType):
+    """
+    Dịch 1 'feature' từ GeoJSON sang JSON-LD và POST lên Orion.
+    """
     properties = feature.get("properties", {})
     geometry = feature.get("geometry")
-    if not geometry: return
     
-    name = properties.get("name")
-    external_id = properties.get("@id")
-    
-    if not name: 
-        # Lấy tạm tên từ 'description' nếu có
-        name = properties.get("description", external_id) # Lấy external_id làm tên cuối cùng
-        
-    if not name: # Nếu vẫn không có tên
-        name = f"{location_type.value}_{external_id}" # Tên dự phòng
-
-    geom_shape = shape(geometry)
-    centroid = geom_shape.centroid
-    
-    longitude = centroid.x
-    latitude = centroid.y
-    
-    wkt_location = f"SRID=4326;POINT({longitude} {latitude})"
-
-    existing = await db.execute(
-        select(GreenLocation).where(GreenLocation.external_id == external_id)
-    )
-    if existing.scalar_one_or_none():
-        print(f"Bỏ qua (đã tồn tại): {name[:50]}...") 
+    if not geometry: 
         return
 
-    db_location = GreenLocation(
-        name=str(name), # Ép kiểu về string
-        location_type=location_type,
-        location=wkt_location,
-        description=str(properties.get("description")), # Ép kiểu về string
-        data_source="OpenStreetMap",
-        external_id=external_id,
-        is_active=True
-    )
-    db.add(db_location)
-    print(f"Thêm mới: {name[:50]}...") # Cắt ngắn tên cho gọn
+    # 1. Tạo ID duy nhất (URN)
+    osm_id = properties.get("@id", "").replace("/", "-")
+    if not osm_id: 
+        print("Bỏ qua (không có @id)")
+        return
+    
+    entity_id = f"urn:ngsi-ld:{entity_type.value}:{osm_id}"
+    
+    # 2. Lấy tên (nếu không có, dùng tên dự phòng)
+    name = properties.get("name")
+    if not name: 
+        name = properties.get("description", f"{entity_type.value} {osm_id}")
 
+    # 3. Xây dựng Payload (JSON-LD)
+    payload = {
+        "id": entity_id,
+        "type": entity_type.value,
+        
+        "name": {
+            "type": "Property",
+            "value": str(name) # Ép kiểu sang string
+        },
+        
+        "location": {
+            "type": "GeoProperty",
+            "value": geometry # Gửi thẳng object GeoJSON (Point hoặc Polygon)
+        },
+        
+        "source": {
+            "type": "Property",
+            "value": "OpenStreetMap"
+        },
+        "original_osm_id": {
+            "type": "Property",
+            "value": properties.get("@id")
+        },
+        
+        "@context": CONTEXT
+    }
+
+    # 4. "Bơm" (POST) thực thể lên Orion-LD
+    try:
+        response = await client.post(ORION_ENTITIES_URL, headers=HEADERS, json=payload, timeout=30.0)
+        
+        if response.status_code == 201: # 201 Created
+            print(f"Đã tạo: {entity_id}")
+        elif response.status_code == 409: # 409 Conflict
+            print(f"Bỏ qua (đã tồn tại): {entity_id}")
+        else:
+            print(f"LỖI BƠM: {entity_id} - {response.status_code} - {response.text}")
+            
+    except httpx.ConnectError:
+        print(f"LỖI KẾT NỐI: Không thể kết nối tới Orion-LD tại {ORION_BROKER_URL}. Bạn đã chạy 'docker-compose up' chưa?")
+        return # Dừng nếu không kết nối được
+    except Exception as e:
+        print(f"Lỗi không xác định: {e}")
+
+# --- 5. HÀM CHẠY CHÍNH ---
 async def seed():
     if not DATA_DIR.exists():
         print(f"LỖI: Không tìm thấy thư mục data tại: {DATA_DIR}")
-        print("Vui lòng kiểm tra lại cấu trúc thư mục.")
-        return # Thoát script nếu không tìm thấy data
+        print("Hãy chắc chắn cấu trúc thư mục là: \n- HCMConnect-Backend\n- HCMConnect-Data\n  - Data\n    - park.geojson\n    - ...")
+        return
     
     print(f"Sẽ đọc dữ liệu từ: {DATA_DIR}")
+    print(f"Bơm dữ liệu vào Context Broker tại: {ORION_BROKER_URL}")
+    
+    async with httpx.AsyncClient() as client:
+        
+        tasks = [] # Danh sách các "việc cần làm"
 
-    async with engine.begin() as conn:
-        await conn.run_sync(Base.metadata.create_all)
-        await conn.execute(text("CREATE EXTENSION IF NOT EXISTS postgis;"))
-
-    db = SessionLocal()
-    try:
-        # [cite_start]1. Bơm TRẠM SẠC [cite: 1986-2590]
-        print("\n--- Đang bơm dữ liệu TRẠM SẠC ---")
+        # 1. Bơm TRẠM SẠC
+        print("Đang đọc Trạm Sạc...")
         charging_file = DATA_DIR / "charging_station.geojson"
         with open(charging_file, 'r', encoding='utf-8') as f:
             data = json.load(f)
             for feature in data['features']:
-                await create_location_from_feature(db, feature, LocationType.CHARGING_STATION)
+                tasks.append(create_ngsi_entity(client, feature, LocationType.CHARGING_STATION))
 
-        # [cite_start]2. Bơm ĐIỂM THUÊ XE ĐẠP [cite: 3404-3610]
-        print("\n--- Đang bơm dữ liệu THUÊ XE ĐẠP ---")
+        # 2. Bơm ĐIỂM THUÊ XE ĐẠP
+        print("Đang đọc Thuê Xe Đạp...")
         bicycle_file = DATA_DIR / "bicycle_rental.geojson"
         with open(bicycle_file, 'r', encoding='utf-8') as f:
             data = json.load(f)
             for feature in data['features']:
-                await create_location_from_feature(db, feature, LocationType.BICYCLE_RENTAL)
+                tasks.append(create_ngsi_entity(client, feature, LocationType.BICYCLE_RENTAL))
 
-        # [cite_start]3. Bơm CÔNG VIÊN (PUBLIC_PARK) [cite: 2611-3403]
-        print("\n--- Đang bơm dữ liệu CÔNG VIÊN ---")
+        # 3. Bơm CÔNG VIÊN
+        print("Đang đọc Công Viên...")
         park_file = DATA_DIR / "park.geojson"
         with open(park_file, 'r', encoding='utf-8') as f:
             data = json.load(f)
             for feature in data['features']:
-                await create_location_from_feature(db, feature, LocationType.PUBLIC_PARK)
+                tasks.append(create_ngsi_entity(client, feature, LocationType.PUBLIC_PARK))
         
-        # 4. Bơm ĐỊA ĐIỂM DU LỊCH (ATTRACTION) [cite: 1-1985]
-        print("\n--- Đang bơm dữ liệu ĐỊA ĐIỂM DU LỊCH ---")
+        # 4. Bơm ĐỊA ĐIỂM DU LỊCH 
+        print("Đang đọc Địa Điểm Du Lịch...")
         tourist_file = DATA_DIR / "tourist_attractions.geojson"
         with open(tourist_file, 'r', encoding='utf-8') as f:
             data = json.load(f)
             for feature in data['features']:
-                await create_location_from_feature(db, feature, LocationType.TOURIST_ATTRACTION)
+                tasks.append(create_ngsi_entity(client, feature, LocationType.TOURIST_ATTRACTION))
+
+        # --- 6. Chạy song song (theo lô) ---
+        print(f"\n--- Chuẩn bị bơm {len(tasks)} thực thể. Quá trình này có thể mất vài phút... ---")
         
-        await db.commit()
-        print("\n--- HOÀN THÀNH BƠM DỮ LIỆU! ---")
-    
-    except FileNotFoundError as e:
-        print(f"LỖI: Không tìm thấy file: {e.filename}")
-        print(f"Hãy chắc chắn file của bạn nằm ở thư mục: {DATA_DIR}")
-    except Exception as e:
-        await db.rollback()
-        print(f"Đã xảy ra lỗi: {e}")
-    finally:
-        await db.close()
+        for i in range(0, len(tasks), 100): # Chạy 100 task 1 lần
+            batch = tasks[i:i+100]
+            print(f"--- Đang chạy lô {i//100 + 1}/{len(tasks)//100 + 1} ---")
+            await asyncio.gather(*batch)
+            await asyncio.sleep(1) # Nghỉ 1 giây
+            
+        print("\n--- HOÀN THÀNH BƠM DỮ LIỆU VÀO ORION-LD! ---")
         
 if __name__ == "__main__":
     asyncio.run(seed())
