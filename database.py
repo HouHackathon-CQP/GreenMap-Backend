@@ -14,7 +14,7 @@ POSTGRES_HOST = os.getenv("POSTGRES_HOST", "localhost")
 
 # 2. CHUỖI KẾT NỐI (Connection String)
 #    Sử dụng biến POSTGRES_HOST thay vì "localhost" cứng
-DATABASE_URL = f"postgresql+asyncpg://admin:mysecretpassword@{POSTGRES_HOST}:5432/greenmap_db"
+DATABASE_URL = "postgresql+asyncpg://greenmap:12345678@160.250.5.180:5432/greenmap"
 
 
 # 3. TẠO "CỖ MÁY" KẾT NỐI (Engine)
