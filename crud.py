@@ -3,7 +3,7 @@ from sqlalchemy.future import select
 from security import get_password_hash
 import models
 import schemas 
-from models import LocationType 
+from models import LocationType, User, UserRole
 from typing import Optional
 
 # ----------------------------------------------------------------
@@ -62,28 +62,23 @@ async def get_user_by_email(db: AsyncSession, email: str):
     return result.scalar_one_or_none()
 
 
-async def create_user(db: AsyncSession, user: schemas.UserCreate):
+async def create_user(db: AsyncSession, user: schemas.UserCreate, role: UserRole = UserRole.CITIZEN):
     """
-    Hàm "tay bẩn" để tạo user:
-    1. Nhận "khuôn" UserCreate (có password "chay").
-    2. "Băm" mật khẩu.
-    3. Tạo object models.User.
-    4. Lưu vào CSDL.
+    Tạo user mới.
+    - Mặc định 'role' là CITIZEN (nếu gọi từ API đăng ký).
+    - Có thể truyền 'role=ADMIN' (nếu gọi từ script khởi tạo).
     """
-    
-    # 2. "Băm" mật khẩu
     hashed_password = get_password_hash(user.password)
     
-    # 3. Tạo object model
     db_user = models.User(
         email=user.email,
         full_name=user.full_name,
-        hashed_password=hashed_password # LƯU MẬT KHẨU ĐÃ BĂM
+        hashed_password=hashed_password,
+        role=role 
     )
     
-    # 4. Lưu vào CSDL
     db.add(db_user)
     await db.commit()
     await db.refresh(db_user)
     
-    return db_user # Trả về object model
+    return db_user

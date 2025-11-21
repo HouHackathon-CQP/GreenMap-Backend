@@ -40,7 +40,7 @@ def create_access_token(data: dict, expires_delta: Optional[timedelta] = None):
     encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
     return encoded_jwt
 
-# (Hàm "kiểm tra vé", chúng ta sẽ dùng ở bước sau khi cần bảo vệ API)
+# Hàm "kiểm tra vé"
 def verify_token(token: str, credentials_exception):
     """Kiểm tra xem "vé" có hợp lệ không."""
     try:

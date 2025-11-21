@@ -13,9 +13,6 @@ OPENAQ_API_KEY = os.getenv("OPENAQ_API_KEY")
 ORION_BROKER_URL = os.getenv("ORION_BROKER_URL", "http://localhost:1026")
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 30
-# --- Kiểm tra an toàn ---
-if not SECRET_KEY:
-    print("LỖI: Biến 'SECRET_KEY' không được tìm thấy trong file .env")
-    # (Trong sản phẩm thật, bạn nên raise Exception ở đây)
-if not OPENAQ_API_KEY:
-    print("CẢNH BÁO: Biến 'OPENAQ_API_KEY' không được tìm thấy trong .env. Các cuộc gọi API OpenAQ có thể bị lỗi.")
+
+FIRST_SUPERUSER = os.getenv("FIRST_SUPERUSER", "admin@example.com")
+FIRST_SUPERUSER_PASSWORD = os.getenv("FIRST_SUPERUSER_PASSWORD", "123456")
