@@ -3,47 +3,55 @@ print("--- [DEBUG] File aqi_agent.py đã được đọc ---")
 import asyncio
 import httpx
 from datetime import datetime, timezone
-import services  # Import file services.py của bạn
-from config import ORION_BROKER_URL  # Import URL của Orion-LD
+import services  # Import file services.py
+from config import ORION_BROKER_URL  # Import URL Orion-LD
 
-# --- 1. CẤU HÌNH (Đã sửa lỗi 405) ---
 print("--- [DEBUG] Đang cấu hình URLs... ---")
 ORION_UPSERT_URL = f"{ORION_BROKER_URL}/ngsi-ld/v1/entityOperations/upsert?options=update"
+
 HEADERS = {
     "Content-Type": "application/ld+json",
     "Accept": "application/json"
 }
-CONTEXT = "https://schema.lab.fiware.org/ld/context"
 
-# --- 2. HÀM "DỊCH THUẬT" (Đã sửa lỗi 'null observedAt') ---
+# --- CHUẨN HÓA: Sử dụng Context chính thức của Smart Data Models (Environment) ---
+# Context này định nghĩa AirQualityObserved và refDevice đúng chuẩn SOSA/SSN
+CONTEXT = "https://raw.githubusercontent.com/smart-data-models/dataModel.Environment/master/context.jsonld"
+
 def translate_to_ngsi_aqi(measurement: dict) -> dict:
+    """
+    Dịch dữ liệu sang NGSI-LD tuân thủ SOSA/SSN.
+    """
     station_name = measurement.get("station_name", "Trạm không tên")
     provider = measurement.get("provider_name", "Không rõ")
     coords = measurement.get("coordinates", {})
     value = measurement.get("value")
-    utc_time_str = measurement.get("datetime_utc") # Có thể là None
+    utc_time_str = measurement.get("datetime_utc")
     
     safe_name = "".join(e for e in station_name if e.isalnum())
-    safe_name_id = measurement.get("sensor_id", "UnknownID") 
-    entity_id = f"urn:ngsi-ld:AirQualityObserved:Hanoi:{safe_name}:{safe_name_id}"
+    sensor_id = measurement.get("sensor_id", "UnknownID") 
+    
+    # ID Quan trắc (Observation)
+    entity_id = f"urn:ngsi-ld:AirQualityObserved:Hanoi:{safe_name}:{sensor_id}"
+    
+    # ID Thiết bị (Sensor) - Phải khớp với logic tạo Device
+    device_ref_id = f"urn:ngsi-ld:Device:OpenAQ-{sensor_id}"
 
-    # 1. Tạo payload cơ bản
+    # Payload cho thuộc tính PM2.5
     pm25_payload = {
         "type": "Property",
         "value": value,
-        "unitCode": "GP" # µg/m³
+        "unitCode": "GP" # Mã chuẩn cho µg/m³
     }
     
-    # 2. CHỈ thêm 'observedAt' NẾU NÓ TỒN TẠI (khác None)
+    # Chỉ thêm thời gian quan sát nếu có
     if utc_time_str:
         pm25_payload["observedAt"] = utc_time_str
-    else:
-        # Cảnh báo này là BÌNH THƯỜNG (vì trạm OpenAQ không có data)
-        print(f"Cảnh báo: Không có 'observedAt' cho {entity_id}. Sẽ bỏ qua thuộc tính này.")
 
+    # Cấu trúc Entity
     payload = {
         "id": entity_id,
-        "type": "AirQualityObserved",
+        "type": "AirQualityObserved", # Tương đương sosa:Observation
         
         "location": {
             "type": "GeoProperty",
@@ -53,7 +61,15 @@ def translate_to_ngsi_aqi(measurement: dict) -> dict:
             }
         },
         
-        "pm25": pm25_payload,
+        "pm25": pm25_payload, # Tương đương sosa:hasResult
+        
+        # --- LIÊN KẾT DỮ LIỆU (LINKED DATA) ---
+        # Thuộc tính này liên kết Quan trắc với Thiết bị đo (sosa:madeBySensor)
+        "refDevice": {
+            "type": "Relationship",
+            "object": device_ref_id
+        },
+        # --------------------------------------
         
         "provider": {
             "type": "Property",
@@ -68,9 +84,8 @@ def translate_to_ngsi_aqi(measurement: dict) -> dict:
     }
     return payload
 
-# --- 3. HÀM CHẠY CHÍNH CỦA ĐẶC VỤ (Đã sửa lỗi 201) ---
 async def run_aqi_agent():
-    print("--- [Đặc Vụ AQI] bắt đầu khởi động (trong hàm run_aqi_agent) ---")
+    print("--- [Đặc Vụ AQI] bắt đầu khởi động ---")
     
     while True:
         print(f"\n[{datetime.now()}] Đang chạy... Lấy dữ liệu AQI từ OpenAQ...")
@@ -80,7 +95,7 @@ async def run_aqi_agent():
             
             if not live_measurements:
                 print("Không tìm thấy số đo 'sống' nào. Bỏ qua vòng này.")
-                await asyncio.sleep(600) # Nghỉ 10 phút
+                await asyncio.sleep(600)
                 continue
 
             print(f"Tìm thấy {len(live_measurements)} số đo 'sống'. Bắt đầu 'bơm' (upsert) lên Orion-LD...")
@@ -91,42 +106,33 @@ async def run_aqi_agent():
                 entities_to_upsert.append(ngsi_entity)
 
             async with httpx.AsyncClient() as client:
+                # Tăng timeout vì Context từ GitHub có thể tải hơi lâu lần đầu
                 response = await client.post(
                     ORION_UPSERT_URL, 
                     headers=HEADERS, 
                     json=entities_to_upsert,
-                    timeout=30.0
+                    timeout=60.0 
                 )
                 
-                # --- SỬA LỖI TẠI ĐÂY ---
-                # Chấp nhận 201 (Created) VÀ 204 (No Content/Updated) là THÀNH CÔNG
                 if response.status_code == 204 or response.status_code == 201:
                     print(f"Thành công! Đã 'upsert' {len(entities_to_upsert)} thực thể (Code: {response.status_code}).")
-                # --- HẾT PHẦN SỬA LỖI ---
-                
-                elif response.status_code == 207: # 207 Multi-Status
+                elif response.status_code == 207:
                     print(f"Thành công 1 phần (Multi-Status): {response.text}")
                 else:
                     print(f"LỖI 'UPSERT': {response.status_code} - {response.text}")
 
         except Exception as e:
-            print(f"LỖI NGHIÊM TRỌNG TRONG VÒNG LẶP: {e}")
+            print(f"LỖI NGHIÊM TRỌNG: {e}")
             import traceback
             traceback.print_exc() 
             
         print("--- [Đặc Vụ AQI] Hoàn thành. Nghỉ 10 phút... ---")
         await asyncio.sleep(600) 
 
-# --- 4. ĐIỂM KHỞI CHẠY (Giữ nguyên) ---
-print("--- [DEBUG] Sắp vào __main__ ---")
-
 if __name__ == "__main__":
-    print("--- [DEBUG] Đã vào __main__, sắp chạy asyncio.run() ---")
     try:
         asyncio.run(run_aqi_agent())
     except KeyboardInterrupt:
         print("\n--- [Đặc Vụ AQI] Đã tắt. ---")
     except Exception as e_main:
-        print(f"LỖI KHỞI ĐỘNG NGHIÊM TRỌNG: {e_main}")
-        import traceback
-        traceback.print_exc()
+        print(f"LỖI KHỞI ĐỘNG: {e_main}")
