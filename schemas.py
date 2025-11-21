@@ -1,6 +1,6 @@
 from pydantic import BaseModel, ConfigDict, computed_field, Field 
 from typing import Any
-from models import LocationType
+from models import LocationType, UserRole
 from geoalchemy2.shape import to_shape
 
 class LocationBase(BaseModel):
@@ -40,32 +40,14 @@ class LocationRead(LocationBase):
 
 # User Schemas 
 class UserBase(BaseModel):
-    """Khuôn cơ bản, chứa các trường chung."""
     email: str
     full_name: str | None = None
 
-
 class UserCreate(UserBase):
-    """
-    Khuôn TẠO MỚI (Đăng ký).
-    Frontend sẽ gửi lên 'password' (mật khẩu chay).
-    """
     password: str
-    
-    # Ví dụ JSON Frontend gửi lên:
-    # {
-    #   "email": "user@example.com",
-    #   "full_name": "Test User",
-    #   "password": "this_is_a_secret"
-    # }
-
 
 class UserRead(UserBase):
-    """
-    Khuôn ĐỌC DỮ LIỆU (API trả về).
-    TUYỆT ĐỐI KHÔNG trả về 'hashed_password'.
-    """
     id: int
     is_active: bool
-
+    role: UserRole 
     model_config = ConfigDict(from_attributes=True)

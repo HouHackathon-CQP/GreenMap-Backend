@@ -1,10 +1,12 @@
 fastapi[all]
+uvicorn
 sqlalchemy
-psycopg2-binary
 asyncpg
+psycopg2-binary
 geoalchemy2
 shapely
 passlib[bcrypt]
 python-jose
-httpx
+bcrypt==3.2.0
 python-dotenv
+httpx
