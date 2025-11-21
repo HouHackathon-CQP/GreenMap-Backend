@@ -82,3 +82,40 @@ async def create_user(db: AsyncSession, user: schemas.UserCreate, role: UserRole
     await db.refresh(db_user)
     
     return db_user
+
+# 1. TẠO BÁO CÁO
+async def create_report(db: AsyncSession, report: schemas.ReportCreate, user_id: int):
+    db_report = models.UserReport(
+        **report.model_dump(), # Copy toàn bộ dữ liệu từ schema
+        user_id=user_id,       # Gán ID người gửi
+        status=models.ReportStatus.PENDING # Mặc định là chờ duyệt
+    )
+    db.add(db_report)
+    await db.commit()
+    await db.refresh(db_report)
+    return db_report
+
+# 2. LẤY DANH SÁCH BÁO CÁO (Cho Admin)
+async def get_reports(db: AsyncSession, status: models.ReportStatus = None, skip: int = 0, limit: int = 100):
+    query = select(models.UserReport)
+    if status:
+        query = query.where(models.UserReport.status == status)
+    
+    query = query.offset(skip).limit(limit)
+    result = await db.execute(query)
+    return result.scalars().all()
+
+# 3. CẬP NHẬT TRẠNG THÁI (Duyệt bài)
+async def update_report_status(db: AsyncSession, report_id: int, status: models.ReportStatus):
+    # Tìm báo cáo
+    result = await db.execute(select(models.UserReport).where(models.UserReport.id == report_id))
+    db_report = result.scalar_one_or_none()
+    
+    if not db_report:
+        return None
+    
+    # Cập nhật trạng thái
+    db_report.status = status
+    await db.commit()
+    await db.refresh(db_report)
+    return db_report

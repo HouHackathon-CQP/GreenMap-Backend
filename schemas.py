@@ -1,6 +1,6 @@
 from pydantic import BaseModel, ConfigDict, computed_field, Field 
 from typing import Any
-from models import LocationType, UserRole
+from models import LocationType, UserRole, ReportStatus
 from geoalchemy2.shape import to_shape
 
 class LocationBase(BaseModel):
@@ -50,4 +50,30 @@ class UserRead(UserBase):
     id: int
     is_active: bool
     role: UserRole 
+    model_config = ConfigDict(from_attributes=True)
+
+# --- SCHEMAS CHO BÁO CÁO ---
+
+class ReportBase(BaseModel):
+    title: str
+    description: str | None = None
+    latitude: float
+    longitude: float
+    image_url: str | None = None
+
+# Khuôn để người dân GỬI báo cáo
+class ReportCreate(ReportBase):
+    pass
+
+# Khuôn để Admin CẬP NHẬT trạng thái
+class ReportUpdate(BaseModel):
+    status: ReportStatus
+
+# Khuôn để TRẢ VỀ dữ liệu (cho Admin/App xem)
+class ReportRead(ReportBase):
+    id: int
+    user_id: int
+    status: ReportStatus
+    created_at: str | None = None
+
     model_config = ConfigDict(from_attributes=True)
