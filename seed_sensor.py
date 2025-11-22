@@ -1,10 +1,11 @@
 import asyncio
-import httpx
-import services
-from config import ORION_BROKER_URL
 
-# 1. CẤU HÌNH
-ORION_ENTITIES_URL = f"{ORION_BROKER_URL}/ngsi-ld/v1/entities"
+import httpx
+
+from app.core.config import settings
+from app.services import openaq
+
+ORION_ENTITIES_URL = f"{settings.orion_broker_url}/ngsi-ld/v1/entities"
 HEADERS = {"Content-Type": "application/ld+json", "Accept": "application/json"}
 CONTEXT = "https://schema.lab.fiware.org/ld/context"
 
@@ -13,7 +14,7 @@ async def seed_devices():
     
     # 1. Lấy danh sách trạm từ OpenAQ (Dùng hàm có sẵn)
     # Hàm này trả về danh sách các số đo, ta sẽ trích xuất thông tin trạm từ đó
-    measurements = await services.get_hanoi_aqi()
+    measurements = await openaq.get_hanoi_aqi()
     
     if not measurements:
         print("Không lấy được dữ liệu từ OpenAQ.")

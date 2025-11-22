@@ -127,7 +127,7 @@ python aqi_agent.py
 
 ### 1. API Nghiệp vụ (User, Auth, Report)
 Gọi trực tiếp vào **FastAPI**: `http://127.0.0.1:8000`
-* **Đăng nhập:** `POST /login` (Form-data username/password).
+* **Đăng nhập:** `POST /login` (JSON body: `{ "email": "...", "password": "..." }`).
 * **Gửi báo cáo:** `POST /reports` (Kèm Token Bearer).
 
 ### 2. API Dữ liệu Bản đồ & IoT (Orion-LD)
