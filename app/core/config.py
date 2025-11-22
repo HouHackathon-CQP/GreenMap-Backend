@@ -16,7 +16,7 @@ class Settings(BaseModel):
     access_token_expire_minutes: int = int(os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES", "30"))
     database_url: str = os.getenv(
         "DATABASE_URL",
-        "postgresql+asyncpg://greenmap:12345678@160.250.5.180:5432/greenmap",
+        "postgresql+asyncpg://postgres:password@localhost/greenmap_db",
     )
     openaq_api_key: str | None = os.getenv("OPENAQ_API_KEY")
     orion_broker_url: str = os.getenv("ORION_BROKER_URL", "http://localhost:1026")

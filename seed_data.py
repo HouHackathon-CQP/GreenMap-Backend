@@ -105,52 +105,51 @@ async def seed():
     print(f"Sẽ đọc dữ liệu từ: {DATA_DIR}")
     print(f"Bơm dữ liệu vào Context Broker tại: {settings.orion_broker_url}")
 
+    async with httpx.AsyncClient() as client:
+        tasks = []  # Danh sách các "việc cần làm"
 
-async with httpx.AsyncClient() as client:
-    tasks = []  # Danh sách các "việc cần làm"
+        # 1. Bơm TRẠM SẠC
+        print("Đang đọc Trạm Sạc...")
+        charging_file = DATA_DIR / "charging_station.geojson"
+        with open(charging_file, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+            for feature in data['features']:
+                tasks.append(create_ngsi_entity(client, feature, LocationType.CHARGING_STATION))
 
-    # 1. Bơm TRẠM SẠC
-    print("Đang đọc Trạm Sạc...")
-    charging_file = DATA_DIR / "charging_station.geojson"
-    with open(charging_file, 'r', encoding='utf-8') as f:
-        data = json.load(f)
-        for feature in data['features']:
-            tasks.append(create_ngsi_entity(client, feature, LocationType.CHARGING_STATION))
+        # 2. Bơm ĐIỂM THUÊ XE ĐẠP
+        print("Đang đọc Thuê Xe Đạp...")
+        bicycle_file = DATA_DIR / "bicycle_rental.geojson"
+        with open(bicycle_file, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+            for feature in data['features']:
+                tasks.append(create_ngsi_entity(client, feature, LocationType.BICYCLE_RENTAL))
 
-    # 2. Bơm ĐIỂM THUÊ XE ĐẠP
-    print("Đang đọc Thuê Xe Đạp...")
-    bicycle_file = DATA_DIR / "bicycle_rental.geojson"
-    with open(bicycle_file, 'r', encoding='utf-8') as f:
-        data = json.load(f)
-        for feature in data['features']:
-            tasks.append(create_ngsi_entity(client, feature, LocationType.BICYCLE_RENTAL))
+        # 3. Bơm CÔNG VIÊN
+        print("Đang đọc Công Viên...")
+        park_file = DATA_DIR / "park.geojson"
+        with open(park_file, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+            for feature in data['features']:
+                tasks.append(create_ngsi_entity(client, feature, LocationType.PUBLIC_PARK))
 
-    # 3. Bơm CÔNG VIÊN
-    print("Đang đọc Công Viên...")
-    park_file = DATA_DIR / "park.geojson"
-    with open(park_file, 'r', encoding='utf-8') as f:
-        data = json.load(f)
-        for feature in data['features']:
-            tasks.append(create_ngsi_entity(client, feature, LocationType.PUBLIC_PARK))
+        # 4. Bơm ĐỊA ĐIỂM DU LỊCH
+        print("Đang đọc Địa Điểm Du Lịch...")
+        tourist_file = DATA_DIR / "tourist_attractions.geojson"
+        with open(tourist_file, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+            for feature in data['features']:
+                tasks.append(create_ngsi_entity(client, feature, LocationType.TOURIST_ATTRACTION))
 
-    # 4. Bơm ĐỊA ĐIỂM DU LỊCH
-    print("Đang đọc Địa Điểm Du Lịch...")
-    tourist_file = DATA_DIR / "tourist_attractions.geojson"
-    with open(tourist_file, 'r', encoding='utf-8') as f:
-        data = json.load(f)
-        for feature in data['features']:
-            tasks.append(create_ngsi_entity(client, feature, LocationType.TOURIST_ATTRACTION))
+        # --- 6. Chạy song song (theo lô) ---
+        print(f"\n--- Chuẩn bị bơm {len(tasks)} thực thể. Quá trình này có thể mất vài phút... ---")
 
-    # --- 6. Chạy song song (theo lô) ---
-    print(f"\n--- Chuẩn bị bơm {len(tasks)} thực thể. Quá trình này có thể mất vài phút... ---")
+        for i in range(0, len(tasks), 100):  # Chạy 100 task 1 lần
+            batch = tasks[i:i + 100]
+            print(f"--- Đang chạy lô {i // 100 + 1}/{max(1, (len(tasks) + 99) // 100)} ---")
+            await asyncio.gather(*batch)
+            await asyncio.sleep(1)  # Nghỉ 1 giây
 
-    for i in range(0, len(tasks), 100):  # Chạy 100 task 1 lần
-        batch = tasks[i:i + 100]
-        print(f"--- Đang chạy lô {i // 100 + 1}/{len(tasks) // 100 + 1} ---")
-        await asyncio.gather(*batch)
-        await asyncio.sleep(1)  # Nghỉ 1 giây
-
-    print("\n--- HOÀN THÀNH BƠM DỮ LIỆU VÀO ORION-LD! ---")
+        print("\n--- HOÀN THÀNH BƠM DỮ LIỆU VÀO ORION-LD! ---")
 
 if __name__ == "__main__":
     asyncio.run(seed())
