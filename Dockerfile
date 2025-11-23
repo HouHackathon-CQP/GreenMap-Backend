@@ -1,20 +1,31 @@
-# 1. Sử dụng image Python 3.11 mỏng nhẹ
+# Sử dụng Python 3.11
 FROM python:3.11-slim
 
-# 2. Đặt thư mục làm việc bên trong container
+# Không tạo .pyc + log trực tiếp ra stdout
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+
+# Cài các gói hệ thống cần thiết (nếu lib của bạn cần build)
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    && rm -rf /var/lib/apt/lists/*
+
+# Thư mục làm việc trong container
 WORKDIR /app
 
-# 3. Sao chép file requirements và cài đặt thư viện
-# Tách ra để tận dụng Docker cache
+# Copy requirements trước để tận dụng cache
 COPY requirements.txt .
+
+# Cài thư viện Python
 RUN pip install --no-cache-dir -r requirements.txt
 
-# 4. Sao chép toàn bộ mã nguồn (.py) vào container
+# Copy toàn bộ source code vào container (trừ những thứ nằm trong .dockerignore)
 COPY . .
 
-# 5. Mở cổng 8000 (cổng FastAPI chạy)
+# FastAPI/Uvicorn sẽ chạy port 8000
 EXPOSE 8000
 
-# 6. Lệnh để chạy ứng dụng khi container khởi động
-# Sử dụng uvicorn và bật --reload để code tự cập nhật khi bạn sửa file
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+# ---- QUAN TRỌNG ----
+# Nếu biến app = FastAPI() nằm trong main.py -> dùng "main:app"
+# Nếu nằm trong app/main.py với biến app -> dùng "app.main:app"
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8001"]

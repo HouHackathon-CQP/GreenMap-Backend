@@ -1,70 +1,16 @@
-# Dòng 'version' đã lỗi thời và bị xóa
+version: "3.9"
 
 services:
-  # 1. DỊCH VỤ API (FastAPI) CỦA BẠN
-  backend-api:
-    build: . # Xây dựng từ Dockerfile trong thư mục này
-    container_name: greenmap-api
+  backend:
+    build: .
+    container_name: greenmap-backend
     ports:
-      - "8000:8000" # Mở cổng 8000 của máy thật
-    volumes:
-      - .:/app # Mount code hiện tại vào /app để "reload"
-      # --- CẤU HÌNH DATA CHO SEEDING ---
-      # Đã cập nhật đường dẫn sang GreenMap-Data
-      - ../GreenMap-Data:/HCMConnect-Data 
+      - "8001:8001"      # host:container
+    restart: always
+    # Nếu bạn có file .env thì bật 2 dòng sau và tạo ./ .env
     env_file:
-      - .env # Nạp các biến từ file .env
-    depends_on:
-      postgres-db: # Chỉ khởi động KHI postgres-db "healthy"
-        condition: service_healthy
-    healthcheck:
-      # Kiểm tra xem API có thể kết nối CSDL thành công không
-      test: ["CMD-SHELL", "curl -f http://localhost:8000/test-db || exit 1"]
-      interval: 15s
-      timeout: 5s
-      retries: 5
-
-  # 2. DỊCH VỤ CSDL: PostgreSQL + PostGIS
-  postgres-db:
-    image: postgis/postgis:15-3.4-alpine
-    container_name: greenmap-postgres
-    environment:
-      - POSTGRES_DB=greenmap_db
-      - POSTGRES_USER=admin
-      - POSTGRES_PASSWORD=mysecretpassword
-    ports:
-      - "5432:5432" 
-    volumes:
-      - postgres_data:/var/lib/postgresql/data
-    healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U admin -d greenmap_db"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
-
-  # 3. DỊCH VỤ LƯU TRỮ NGỮ CẢNH: MongoDB
-  mongo-db:
-    image: mongo:5.0
-    container_name: greenmap-mongo
-    command: --nojournal
-    volumes:
-      - mongo_data:/data/db
-
-  # 4. "BỘ NÃO" NGSI-LD: FIWARE Orion
-  orion-ld:
-    image: fiware/orion-ld:1.1.0
-    container_name: greenmap-orion
-    ports:
-      - "1026:1026" 
-    command: -dbhost mongo-db -logLevel DEBUG
-    depends_on:
-      - mongo-db
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:1026/version"]
-      interval: 10s
-      timeout: 5s
-      retries: 5
-
-volumes:
-  postgres_data:
-  mongo_data:
+        - ./.env
+    # Nếu muốn dev mode và mount code local vào container để auto reload:
+    # volumes:
+    #   - .:/app
+    #   - /app/venv
