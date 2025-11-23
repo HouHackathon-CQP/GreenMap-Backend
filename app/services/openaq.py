@@ -42,6 +42,11 @@ async def get_hanoi_aqi():
                 "limit": 200,
             }
             loc_res = await client.get(loc_url, params=loc_params, headers=headers)
+            if loc_res.status_code == 401:
+                raise HTTPException(
+                    status_code=401,
+                    detail="OpenAQ yêu cầu API key. Thêm OPENAQ_API_KEY vào .env hoặc biến môi trường.",
+                )
             loc_res.raise_for_status()
             locations = loc_res.json().get("results", [])
 

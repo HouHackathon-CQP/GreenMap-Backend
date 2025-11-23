@@ -129,6 +129,7 @@ python aqi_agent.py
 Gọi trực tiếp vào **FastAPI**: `http://127.0.0.1:8000`
 * **Đăng nhập:** `POST /login` (JSON body: `{ "email": "...", "password": "..." }`).
 * **Gửi báo cáo:** `POST /reports` (Kèm Token Bearer).
+* **Tin tức môi trường Hà Nội (Hà Nội Mới):** `GET /news/hanoimoi?limit=20`
 
 ### 2. API Dữ liệu Bản đồ & IoT (Orion-LD)
 Gọi trực tiếp vào **Context Broker**: `http://localhost:1026/ngsi-ld/v1/entities`

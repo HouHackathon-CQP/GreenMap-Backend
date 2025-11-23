@@ -1,0 +1,7125 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2025-11-16T01:12:29Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1208800265",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "capacity": "12",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.7544885,
+              21.0051959
+            ],
+            [
+              105.7544809,
+              21.0051808
+            ],
+            [
+              105.75446,
+              21.0051386
+            ],
+            [
+              105.7547219,
+              21.0050251
+            ],
+            [
+              105.7547504,
+              21.0050825
+            ],
+            [
+              105.7544885,
+              21.0051959
+            ]
+          ]
+        ]
+      },
+      "id": "way/1208800265"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1425204631",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.9809857,
+              20.9460316
+            ],
+            [
+              105.9809821,
+              20.9460297
+            ],
+            [
+              105.9809839,
+              20.9460265
+            ],
+            [
+              105.9809874,
+              20.9460282
+            ],
+            [
+              105.9809857,
+              20.9460316
+            ]
+          ]
+        ]
+      },
+      "id": "way/1425204631"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1425204632",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.9810379,
+              20.9460516
+            ],
+            [
+              105.9810355,
+              20.9460508
+            ],
+            [
+              105.9810363,
+              20.9460493
+            ],
+            [
+              105.9810386,
+              20.9460503
+            ],
+            [
+              105.9810379,
+              20.9460516
+            ]
+          ]
+        ]
+      },
+      "id": "way/1425204632"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1425204633",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.9811059,
+              20.9460783
+            ],
+            [
+              105.9811032,
+              20.9460775
+            ],
+            [
+              105.9811038,
+              20.9460758
+            ],
+            [
+              105.9811066,
+              20.9460768
+            ],
+            [
+              105.9811059,
+              20.9460783
+            ]
+          ]
+        ]
+      },
+      "id": "way/1425204633"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1425204634",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.9811671,
+              20.9461014
+            ],
+            [
+              105.9811647,
+              20.9461
+            ],
+            [
+              105.9811655,
+              20.9460988
+            ],
+            [
+              105.9811679,
+              20.9461004
+            ],
+            [
+              105.9811671,
+              20.9461014
+            ]
+          ]
+        ]
+      },
+      "id": "way/1425204634"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1425491438",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.9819476,
+              20.9491698
+            ],
+            [
+              105.9819418,
+              20.9491682
+            ],
+            [
+              105.9819462,
+              20.9491594
+            ],
+            [
+              105.9819518,
+              20.949161
+            ],
+            [
+              105.9819476,
+              20.9491698
+            ]
+          ]
+        ]
+      },
+      "id": "way/1425491438"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1425491439",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.981965,
+              20.9491338
+            ],
+            [
+              105.9819589,
+              20.9491316
+            ],
+            [
+              105.9819629,
+              20.9491237
+            ],
+            [
+              105.981969,
+              20.9491256
+            ],
+            [
+              105.981965,
+              20.9491338
+            ]
+          ]
+        ]
+      },
+      "id": "way/1425491439"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1425491440",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.9819806,
+              20.9491001
+            ],
+            [
+              105.9819747,
+              20.9490981
+            ],
+            [
+              105.9819787,
+              20.9490902
+            ],
+            [
+              105.9819849,
+              20.9490928
+            ],
+            [
+              105.9819806,
+              20.9491001
+            ]
+          ]
+        ]
+      },
+      "id": "way/1425491440"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1425491441",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.9819952,
+              20.9490684
+            ],
+            [
+              105.9819891,
+              20.9490661
+            ],
+            [
+              105.9819931,
+              20.9490583
+            ],
+            [
+              105.9819991,
+              20.9490602
+            ],
+            [
+              105.9819952,
+              20.9490684
+            ]
+          ]
+        ]
+      },
+      "id": "way/1425491441"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1425491442",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.9820116,
+              20.9490355
+            ],
+            [
+              105.9820055,
+              20.9490333
+            ],
+            [
+              105.9820095,
+              20.9490254
+            ],
+            [
+              105.9820156,
+              20.9490273
+            ],
+            [
+              105.9820116,
+              20.9490355
+            ]
+          ]
+        ]
+      },
+      "id": "way/1425491442"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1425491443",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.9820264,
+              20.9490026
+            ],
+            [
+              105.9820203,
+              20.9490004
+            ],
+            [
+              105.9820243,
+              20.9489925
+            ],
+            [
+              105.9820303,
+              20.9489944
+            ],
+            [
+              105.9820264,
+              20.9490026
+            ]
+          ]
+        ]
+      },
+      "id": "way/1425491443"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1425491444",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.9820425,
+              20.9489688
+            ],
+            [
+              105.9820363,
+              20.9489666
+            ],
+            [
+              105.9820404,
+              20.9489587
+            ],
+            [
+              105.9820464,
+              20.9489606
+            ],
+            [
+              105.9820425,
+              20.9489688
+            ]
+          ]
+        ]
+      },
+      "id": "way/1425491444"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1425491445",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.9820599,
+              20.9489331
+            ],
+            [
+              105.9820538,
+              20.9489309
+            ],
+            [
+              105.9820578,
+              20.948923
+            ],
+            [
+              105.9820638,
+              20.9489249
+            ],
+            [
+              105.9820599,
+              20.9489331
+            ]
+          ]
+        ]
+      },
+      "id": "way/1425491445"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1425491446",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.9820746,
+              20.9489024
+            ],
+            [
+              105.9820685,
+              20.9489002
+            ],
+            [
+              105.9820726,
+              20.9488924
+            ],
+            [
+              105.9820786,
+              20.9488942
+            ],
+            [
+              105.9820746,
+              20.9489024
+            ]
+          ]
+        ]
+      },
+      "id": "way/1425491446"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1425491447",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.9820911,
+              20.9488692
+            ],
+            [
+              105.982085,
+              20.948867
+            ],
+            [
+              105.982089,
+              20.9488592
+            ],
+            [
+              105.982095,
+              20.948861
+            ],
+            [
+              105.9820911,
+              20.9488692
+            ]
+          ]
+        ]
+      },
+      "id": "way/1425491447"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1425491448",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.9821065,
+              20.9488363
+            ],
+            [
+              105.9821004,
+              20.9488341
+            ],
+            [
+              105.9821044,
+              20.9488263
+            ],
+            [
+              105.9821104,
+              20.9488282
+            ],
+            [
+              105.9821065,
+              20.9488363
+            ]
+          ]
+        ]
+      },
+      "id": "way/1425491448"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1425491449",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.9821215,
+              20.9488029
+            ],
+            [
+              105.9821154,
+              20.9488006
+            ],
+            [
+              105.9821195,
+              20.9487928
+            ],
+            [
+              105.9821255,
+              20.9487947
+            ],
+            [
+              105.9821215,
+              20.9488029
+            ]
+          ]
+        ]
+      },
+      "id": "way/1425491449"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1425491450",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.9821403,
+              20.9487694
+            ],
+            [
+              105.9821342,
+              20.9487671
+            ],
+            [
+              105.9821382,
+              20.9487593
+            ],
+            [
+              105.9821443,
+              20.9487612
+            ],
+            [
+              105.9821403,
+              20.9487694
+            ]
+          ]
+        ]
+      },
+      "id": "way/1425491450"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1425491451",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.9821544,
+              20.9487362
+            ],
+            [
+              105.9821483,
+              20.9487339
+            ],
+            [
+              105.9821523,
+              20.9487261
+            ],
+            [
+              105.9821584,
+              20.948728
+            ],
+            [
+              105.9821544,
+              20.9487362
+            ]
+          ]
+        ]
+      },
+      "id": "way/1425491451"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1425491452",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.9821708,
+              20.9487014
+            ],
+            [
+              105.9821647,
+              20.9486992
+            ],
+            [
+              105.9821687,
+              20.9486914
+            ],
+            [
+              105.9821748,
+              20.9486932
+            ],
+            [
+              105.9821708,
+              20.9487014
+            ]
+          ]
+        ]
+      },
+      "id": "way/1425491452"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1425491453",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.9821873,
+              20.9486676
+            ],
+            [
+              105.9821811,
+              20.9486654
+            ],
+            [
+              105.9821852,
+              20.9486575
+            ],
+            [
+              105.9821912,
+              20.9486594
+            ],
+            [
+              105.9821873,
+              20.9486676
+            ]
+          ]
+        ]
+      },
+      "id": "way/1425491453"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1425491454",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.9822047,
+              20.9486344
+            ],
+            [
+              105.9821986,
+              20.9486322
+            ],
+            [
+              105.9822026,
+              20.9486243
+            ],
+            [
+              105.9822086,
+              20.9486262
+            ],
+            [
+              105.9822047,
+              20.9486344
+            ]
+          ]
+        ]
+      },
+      "id": "way/1425491454"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1425491455",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.9822181,
+              20.9486046
+            ],
+            [
+              105.982212,
+              20.9486024
+            ],
+            [
+              105.982216,
+              20.9485946
+            ],
+            [
+              105.9822221,
+              20.9485964
+            ],
+            [
+              105.9822181,
+              20.9486046
+            ]
+          ]
+        ]
+      },
+      "id": "way/1425491455"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1425491456",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.9822339,
+              20.9485749
+            ],
+            [
+              105.9822278,
+              20.9485726
+            ],
+            [
+              105.9822318,
+              20.9485648
+            ],
+            [
+              105.9822378,
+              20.9485667
+            ],
+            [
+              105.9822339,
+              20.9485749
+            ]
+          ]
+        ]
+      },
+      "id": "way/1425491456"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1425491457",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.982251,
+              20.9485385
+            ],
+            [
+              105.9822449,
+              20.9485363
+            ],
+            [
+              105.9822489,
+              20.9485285
+            ],
+            [
+              105.9822549,
+              20.9485304
+            ],
+            [
+              105.982251,
+              20.9485385
+            ]
+          ]
+        ]
+      },
+      "id": "way/1425491457"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1425491458",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.982265,
+              20.9485094
+            ],
+            [
+              105.9822589,
+              20.9485072
+            ],
+            [
+              105.982263,
+              20.9484994
+            ],
+            [
+              105.982269,
+              20.9485012
+            ],
+            [
+              105.982265,
+              20.9485094
+            ]
+          ]
+        ]
+      },
+      "id": "way/1425491458"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1425491459",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.9822818,
+              20.9484765
+            ],
+            [
+              105.9822757,
+              20.9484743
+            ],
+            [
+              105.9822797,
+              20.9484665
+            ],
+            [
+              105.9822858,
+              20.9484684
+            ],
+            [
+              105.9822818,
+              20.9484765
+            ]
+          ]
+        ]
+      },
+      "id": "way/1425491459"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1425491460",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.9822982,
+              20.9484418
+            ],
+            [
+              105.9822921,
+              20.9484396
+            ],
+            [
+              105.9822962,
+              20.9484317
+            ],
+            [
+              105.9823022,
+              20.9484336
+            ],
+            [
+              105.9822982,
+              20.9484418
+            ]
+          ]
+        ]
+      },
+      "id": "way/1425491460"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1425491461",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.982313,
+              20.948408
+            ],
+            [
+              105.9823069,
+              20.9484057
+            ],
+            [
+              105.9823109,
+              20.9483979
+            ],
+            [
+              105.9823169,
+              20.9483998
+            ],
+            [
+              105.982313,
+              20.948408
+            ]
+          ]
+        ]
+      },
+      "id": "way/1425491461"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1425491462",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.9823281,
+              20.9483757
+            ],
+            [
+              105.982322,
+              20.9483735
+            ],
+            [
+              105.982326,
+              20.9483657
+            ],
+            [
+              105.982332,
+              20.9483675
+            ],
+            [
+              105.9823281,
+              20.9483757
+            ]
+          ]
+        ]
+      },
+      "id": "way/1425491462"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1425491463",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              105.9823408,
+              20.9483516
+            ],
+            [
+              105.9823347,
+              20.9483494
+            ],
+            [
+              105.9823387,
+              20.9483416
+            ],
+            [
+              105.9823448,
+              20.9483434
+            ],
+            [
+              105.9823408,
+              20.9483516
+            ]
+          ]
+        ]
+      },
+      "id": "way/1425491463"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6924855573",
+        "addr:housenumber": "D4",
+        "amenity": "charging_station",
+        "capacity": "1"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8550444,
+          21.024143
+        ]
+      },
+      "id": "node/6924855573"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9424945491",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7530759,
+          21.0064811
+        ]
+      },
+      "id": "node/9424945491"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/9705391237",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "moped": "yes",
+        "name": "VinFast (xe máy điện)",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:schuko": "486"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7536328,
+          21.0068699
+        ]
+      },
+      "id": "node/9705391237"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11200062857",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7531876,
+          21.0062731
+        ]
+      },
+      "id": "node/11200062857"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11200062864",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7511818,
+          21.0071044
+        ]
+      },
+      "id": "node/11200062864"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11200062869",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "10",
+        "socket:type2_combo:output": "30 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7561945,
+          21.0035106
+        ]
+      },
+      "id": "node/11200062869"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11200062870",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "58",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7429849,
+          21.0087306
+        ]
+      },
+      "id": "node/11200062870"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11200062871",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7422541,
+          21.0081158
+        ]
+      },
+      "id": "node/11200062871"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11200062872",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "29",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7391453,
+          21.0090064
+        ]
+      },
+      "id": "node/11200062872"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11200062876",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "3",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7377803,
+          21.0088396
+        ]
+      },
+      "id": "node/11200062876"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11200062895",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "10",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7383447,
+          21.007159
+        ]
+      },
+      "id": "node/11200062895"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11200062896",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7398249,
+          21.0076943
+        ]
+      },
+      "id": "node/11200062896"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11200062936",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "3",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7390631,
+          21.0046844
+        ]
+      },
+      "id": "node/11200062936"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11200062941",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7407158,
+          21.0029381
+        ]
+      },
+      "id": "node/11200062941"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11200062942",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7378925,
+          21.0027151
+        ]
+      },
+      "id": "node/11200062942"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11200062943",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "3",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7380468,
+          21.0015855
+        ]
+      },
+      "id": "node/11200062943"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11200062947",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7378592,
+          20.9977004
+        ]
+      },
+      "id": "node/11200062947"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11200062985",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "moped": "yes",
+        "name": "VinFast (xe máy điện)",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:schuko": "34"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7426371,
+          21.0088387
+        ]
+      },
+      "id": "node/11200062985"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11200062986",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "level": "-1",
+        "moped": "yes",
+        "name": "VinFast (xe máy điện)",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:schuko": "64"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7422817,
+          21.0082609
+        ]
+      },
+      "id": "node/11200062986"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11200062987",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "moped": "yes",
+        "name": "VinFast (xe máy điện)",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:schuko": "118"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7391917,
+          21.0046119
+        ]
+      },
+      "id": "node/11200062987"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11200062988",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "moped": "yes",
+        "name": "VinFast (xe máy điện)",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:schuko": "30"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7379718,
+          21.0014106
+        ]
+      },
+      "id": "node/11200062988"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11200062989",
+        "access": "private",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "moped": "yes",
+        "name": "VinFast (xe máy điện)",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7387332,
+          21.0036675
+        ]
+      },
+      "id": "node/11200062989"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11200062990",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "moped": "yes",
+        "name": "VinFast (xe máy điện)",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:schuko": "62"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7379423,
+          20.9979431
+        ]
+      },
+      "id": "node/11200062990"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11200062991",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "moped": "yes",
+        "name": "VinFast (xe máy điện)",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:schuko": "64"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7379678,
+          20.9975095
+        ]
+      },
+      "id": "node/11200062991"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11203075385",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "2",
+        "socket:type2_combo:output": "60 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.3596155,
+          21.2314951
+        ]
+      },
+      "id": "node/11203075385"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11203075386",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.4160223,
+          21.206373
+        ]
+      },
+      "id": "node/11203075386"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11203075387",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "4",
+        "socket:type2_combo:output": "60 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.3150393,
+          21.1766438
+        ]
+      },
+      "id": "node/11203075387"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11203075388",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "4",
+        "socket:type2_combo:output": "60 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.3209957,
+          21.0723524
+        ]
+      },
+      "id": "node/11203075388"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11203075389",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.4363022,
+          21.0673259
+        ]
+      },
+      "id": "node/11203075389"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11203075390",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "2",
+        "socket:type2_combo:output": "30 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.4153401,
+          21.1037214
+        ]
+      },
+      "id": "node/11203075390"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11203075391",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9955353,
+          21.0267848
+        ]
+      },
+      "id": "node/11203075391"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11203075392",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9193656,
+          20.9974213
+        ]
+      },
+      "id": "node/11203075392"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11203075393",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9597978,
+          20.9945812
+        ]
+      },
+      "id": "node/11203075393"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11203075396",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.960978,
+          20.9938704
+        ]
+      },
+      "id": "node/11203075396"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11203075397",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast (xe máy điện)",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:schuko": "176"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9603343,
+          20.9943031
+        ]
+      },
+      "id": "node/11203075397"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11203075399",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "opening_hours": "Mo-Su 05:00-15:00",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "12",
+        "socket:type2_combo:output": "180 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9585283,
+          20.9941819
+        ]
+      },
+      "id": "node/11203075399"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11203075400",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "opening_hours": "Mo-Su 08:00-21:00; PH off",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "2",
+        "socket:type2_combo:output": "30 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9605032,
+          20.9931775
+        ]
+      },
+      "id": "node/11203075400"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11203075401",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "6",
+        "socket:type2_combo:output": "60 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9557446,
+          20.9913935
+        ]
+      },
+      "id": "node/11203075401"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11203075402",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "level": "-1",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.956663,
+          20.9910168
+        ]
+      },
+      "id": "node/11203075402"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11203075403",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast (xe máy điện)",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:schuko": "64"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9562681,
+          20.9911691
+        ]
+      },
+      "id": "node/11203075403"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11203075404",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "2",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9484704,
+          20.9893244
+        ]
+      },
+      "id": "node/11203075404"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11203075405",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9486491,
+          20.9894068
+        ]
+      },
+      "id": "node/11203075405"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11203075406",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "8",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9438542,
+          20.9898045
+        ]
+      },
+      "id": "node/11203075406"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11203075407",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast (xe máy điện)",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:schuko": "40"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9489796,
+          20.9892123
+        ]
+      },
+      "id": "node/11203075407"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11203075408",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.943669,
+          20.9914424
+        ]
+      },
+      "id": "node/11203075408"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11203075409",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "moped": "yes",
+        "name": "VinFast (xe máy điện)",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:schuko": "16"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9425232,
+          20.9896532
+        ]
+      },
+      "id": "node/11203075409"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11203075410",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9418339,
+          20.9887216
+        ]
+      },
+      "id": "node/11203075410"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11203075411",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "8",
+        "socket:type2_combo:output": "60 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9415068,
+          20.9887862
+        ]
+      },
+      "id": "node/11203075411"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11203075412",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "moped": "yes",
+        "name": "VinFast (xe máy điện)",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:schuko": "236"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9420271,
+          20.9887586
+        ]
+      },
+      "id": "node/11203075412"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11203075413",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "9",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.940081,
+          20.990359
+        ]
+      },
+      "id": "node/11203075413"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11203075414",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "moped": "yes",
+        "name": "VinFast (xe máy điện)",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9405285,
+          20.9904634
+        ]
+      },
+      "id": "node/11203075414"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11203075415",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "opening_hours": "Mo-Su 06:00-18:00",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "3",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.94064,
+          20.9905761
+        ]
+      },
+      "id": "node/11203075415"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11203075416",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "level": "-1",
+        "moped": "yes",
+        "name": "VinFast (xe máy điện)",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:schuko": "80"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9428084,
+          20.993725
+        ]
+      },
+      "id": "node/11203075416"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11203075417",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9409847,
+          20.991982
+        ]
+      },
+      "id": "node/11203075417"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11203075418",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "moped": "yes",
+        "name": "VinFast (xe máy điện)",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.941358,
+          20.9917656
+        ]
+      },
+      "id": "node/11203075418"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11203075419",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9414338,
+          20.9945946
+        ]
+      },
+      "id": "node/11203075419"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11203075420",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "opening_hours": "Mo-Su 06:00-18:00",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "4",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9427937,
+          20.9936422
+        ]
+      },
+      "id": "node/11203075420"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11203075421",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "opening_hours": "Mo-Su 06:00-18:00",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "3",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9441007,
+          20.9957352
+        ]
+      },
+      "id": "node/11203075421"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11203075422",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "moped": "yes",
+        "name": "VinFast (xe máy điện)",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9416588,
+          20.9944171
+        ]
+      },
+      "id": "node/11203075422"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11203075423",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "opening_hours": "Mo-Su 06:00-18:00",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9428671,
+          21.0010903
+        ]
+      },
+      "id": "node/11203075423"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11203075424",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "moped": "yes",
+        "name": "VinFast (xe máy điện)",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9430585,
+          21.0010474
+        ]
+      },
+      "id": "node/11203075424"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11203075425",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "3",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7227587,
+          21.0164064
+        ]
+      },
+      "id": "node/11203075425"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11203075426",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7211257,
+          20.998382
+        ]
+      },
+      "id": "node/11203075426"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11203075427",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7312517,
+          21.1552909
+        ]
+      },
+      "id": "node/11203075427"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11203075428",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7312632,
+          21.1966076
+        ]
+      },
+      "id": "node/11203075428"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11203075429",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "opening_hours": "Mo-Su 05:00-22:00",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "2",
+        "socket:type2_combo:output": "60 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7762525,
+          21.1982952
+        ]
+      },
+      "id": "node/11203075429"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11203075431",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "6",
+        "socket:type2_combo:output": "60 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9118115,
+          20.6846624
+        ]
+      },
+      "id": "node/11203075431"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11203075432",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "opening_hours": "Mo-Su 06:00-20:00",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9900602,
+          20.6982596
+        ]
+      },
+      "id": "node/11203075432"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11203075433",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "moped": "yes",
+        "name": "VinFast (xe máy điện)",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:schuko": "4"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.990346,
+          20.6981999
+        ]
+      },
+      "id": "node/11203075433"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11203078939",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.5213215,
+          21.1230823
+        ]
+      },
+      "id": "node/11203078939"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11203078940",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.5353332,
+          20.9698174
+        ]
+      },
+      "id": "node/11203078940"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11203078942",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8491066,
+          21.2592422
+        ]
+      },
+      "id": "node/11203078942"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11203078943",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "2",
+        "socket:type2_combo:output": "60 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8196466,
+          21.1980847
+        ]
+      },
+      "id": "node/11203078943"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204387937",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "3",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7848078,
+          20.929402
+        ]
+      },
+      "id": "node/11204387937"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204387938",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "3",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7847583,
+          20.9304856
+        ]
+      },
+      "id": "node/11204387938"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204387939",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "3",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7846771,
+          20.9323831
+        ]
+      },
+      "id": "node/11204387939"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204387940",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "3",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.784641,
+          20.9337751
+        ]
+      },
+      "id": "node/11204387940"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204387941",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "3",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7884238,
+          20.9300958
+        ]
+      },
+      "id": "node/11204387941"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204387942",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "3",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7917322,
+          20.9333702
+        ]
+      },
+      "id": "node/11204387942"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204387943",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7776408,
+          20.929959
+        ]
+      },
+      "id": "node/11204387943"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204387944",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "2",
+        "socket:type2_combo:output": "180 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8292135,
+          20.946147
+        ]
+      },
+      "id": "node/11204387944"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204387945",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8535402,
+          20.9505966
+        ]
+      },
+      "id": "node/11204387945"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204387946",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8532125,
+          20.9487446
+        ]
+      },
+      "id": "node/11204387946"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204387947",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "3",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8513042,
+          20.9330665
+        ]
+      },
+      "id": "node/11204387947"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204387948",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "3",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8504211,
+          20.9323069
+        ]
+      },
+      "id": "node/11204387948"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204387949",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "opening_hours": "Mo-Fr 08:00-17:00",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8696778,
+          20.8577406
+        ]
+      },
+      "id": "node/11204387949"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204387955",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.460179,
+          21.018423
+        ]
+      },
+      "id": "node/11204387955"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204387956",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.5433304,
+          20.999463
+        ]
+      },
+      "id": "node/11204387956"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204387957",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "moped": "yes",
+        "name": "VinFast (xe máy điện)",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:schuko": "44"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.5446255,
+          20.9999018
+        ]
+      },
+      "id": "node/11204387957"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204387958",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.5694284,
+          20.9882861
+        ]
+      },
+      "id": "node/11204387958"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204387959",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7600791,
+          21.1329664
+        ]
+      },
+      "id": "node/11204387959"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204387961",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "3",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8284485,
+          21.112381
+        ]
+      },
+      "id": "node/11204387961"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204387962",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8365487,
+          21.1483607
+        ]
+      },
+      "id": "node/11204387962"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204387963",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8676893,
+          21.127481
+        ]
+      },
+      "id": "node/11204387963"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204387964",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "4",
+        "socket:type2_combo:output": "60 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8740299,
+          21.141312
+        ]
+      },
+      "id": "node/11204387964"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204387965",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7492714,
+          20.6893385
+        ]
+      },
+      "id": "node/11204387965"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204387966",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.819124,
+          21.0345817
+        ]
+      },
+      "id": "node/11204387966"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204387967",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8143599,
+          21.0318593
+        ]
+      },
+      "id": "node/11204387967"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204387968",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "moped": "yes",
+        "name": "VinFast (xe máy điện)",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8143033,
+          21.03163
+        ]
+      },
+      "id": "node/11204387968"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204387969",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "3",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7591934,
+          21.042177
+        ]
+      },
+      "id": "node/11204387969"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204387970",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7803964,
+          21.0518173
+        ]
+      },
+      "id": "node/11204387970"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204387973",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "opening_hours": "Mo-Sa 07:00-22:00; PH off",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "2",
+        "socket:type2_combo:output": "30 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7851026,
+          21.0717119
+        ]
+      },
+      "id": "node/11204387973"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204387974",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "5",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7862281,
+          21.0682996
+        ]
+      },
+      "id": "node/11204387974"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204387975",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "3",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.796396,
+          21.0639605
+        ]
+      },
+      "id": "node/11204387975"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204387976",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "2",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8053982,
+          21.0390193
+        ]
+      },
+      "id": "node/11204387976"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204387977",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "3",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7947678,
+          21.0355197
+        ]
+      },
+      "id": "node/11204387977"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204387978",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "moped": "yes",
+        "name": "VinFast (xe máy điện)",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:schuko": "16"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7949235,
+          21.035453
+        ]
+      },
+      "id": "node/11204387978"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204387979",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "opening_hours": "Mo-Sa 07:00-19:00; PH off",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "2",
+        "socket:type2_combo:output": "30 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.779678,
+          21.0337047
+        ]
+      },
+      "id": "node/11204387979"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204387980",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "3",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7811902,
+          21.0310639
+        ]
+      },
+      "id": "node/11204387980"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204387981",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7909211,
+          21.0129356
+        ]
+      },
+      "id": "node/11204387981"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204387982",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7939337,
+          21.0070676
+        ]
+      },
+      "id": "node/11204387982"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204387984",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "level": "-2",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "3",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7943858,
+          21.0040704
+        ]
+      },
+      "id": "node/11204387984"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204387985",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "level": "-2",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "3",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7942311,
+          21.0045718
+        ]
+      },
+      "id": "node/11204387985"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204387986",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "level": "-3",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "3",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7944223,
+          21.0052433
+        ]
+      },
+      "id": "node/11204387986"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204387987",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "level": "-1",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "3",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8474603,
+          21.0095758
+        ]
+      },
+      "id": "node/11204387987"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204387988",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "6",
+        "socket:type2_combo:output": "180 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8680793,
+          20.9980806
+        ]
+      },
+      "id": "node/11204387988"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204387989",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8671593,
+          20.9969716
+        ]
+      },
+      "id": "node/11204387989"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204387990",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "12",
+        "socket:type2_combo:output": "60 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8667127,
+          20.9969835
+        ]
+      },
+      "id": "node/11204387990"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204387991",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8670164,
+          20.9954803
+        ]
+      },
+      "id": "node/11204387991"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204387992",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "moped": "yes",
+        "name": "VinFast (xe máy điện)",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8669909,
+          20.9952992
+        ]
+      },
+      "id": "node/11204387992"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204387994",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.869389,
+          20.9967679
+        ]
+      },
+      "id": "node/11204387994"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204387995",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "moped": "yes",
+        "name": "VinFast (xe máy điện)",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8695778,
+          20.996663
+        ]
+      },
+      "id": "node/11204387995"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204387996",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8683757,
+          20.997501
+        ]
+      },
+      "id": "node/11204387996"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204387997",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8682409,
+          20.9906469
+        ]
+      },
+      "id": "node/11204387997"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204387998",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8696944,
+          20.9906469
+        ]
+      },
+      "id": "node/11204387998"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204387999",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.867194,
+          20.9917349
+        ]
+      },
+      "id": "node/11204387999"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204388000",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "capacity": "6",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8464213,
+          20.9850391
+        ]
+      },
+      "id": "node/11204388000"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204388001",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "capacity": "6",
+        "fee": "yes",
+        "moped": "yes",
+        "name": "VinFast (xe máy điện)",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:schuko": "8"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8465131,
+          20.9852571
+        ]
+      },
+      "id": "node/11204388001"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204388011",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8384642,
+          20.9731509
+        ]
+      },
+      "id": "node/11204388011"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204388012",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.839331,
+          20.9727668
+        ]
+      },
+      "id": "node/11204388012"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204388013",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8382899,
+          20.9737961
+        ]
+      },
+      "id": "node/11204388013"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204388014",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "capacity": "8",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "3",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8137416,
+          20.9805775
+        ]
+      },
+      "id": "node/11204388014"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204388015",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8769823,
+          20.9724956
+        ]
+      },
+      "id": "node/11204388015"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204388016",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8790261,
+          20.9710014
+        ]
+      },
+      "id": "node/11204388016"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204388017",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8780777,
+          20.9704104
+        ]
+      },
+      "id": "node/11204388017"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204388018",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "opening_hours": "Mo-Sa 07:00-19:00; PH off",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.853345,
+          20.9647702
+        ]
+      },
+      "id": "node/11204388018"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204388031",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "opening_hours": "Mo-Sa 00:00-23:59; PH off",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8598868,
+          20.9611752
+        ]
+      },
+      "id": "node/11204388031"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204388032",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "2",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.844595,
+          20.9640591
+        ]
+      },
+      "id": "node/11204388032"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204388033",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "3",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8447358,
+          20.9631627
+        ]
+      },
+      "id": "node/11204388033"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204388034",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "moped": "yes",
+        "name": "VinFast (xe máy điện)",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8445494,
+          20.9640153
+        ]
+      },
+      "id": "node/11204388034"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204388035",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "moped": "yes",
+        "name": "VinFast (xe máy điện)",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8447231,
+          20.9630498
+        ]
+      },
+      "id": "node/11204388035"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204388082",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "3",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8220043,
+          20.9642832
+        ]
+      },
+      "id": "node/11204388082"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11204388083",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "3",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8240304,
+          20.9640139
+        ]
+      },
+      "id": "node/11204388083"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11207463890",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "3",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.787769,
+          20.9747509
+        ]
+      },
+      "id": "node/11207463890"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11207463891",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "3",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7926404,
+          20.9679613
+        ]
+      },
+      "id": "node/11207463891"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11207463892",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "opening_hours": "Mo-Su 06:00-22:00",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7666676,
+          20.9808112
+        ]
+      },
+      "id": "node/11207463892"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11207463893",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "moped": "yes",
+        "name": "VinFast (xe máy điện)",
+        "opening_hours": "Mo-Su 06:00-22:00",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:schuko": "8"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7666889,
+          20.9809855
+        ]
+      },
+      "id": "node/11207463893"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11207463894",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "3",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7628467,
+          20.9760445
+        ]
+      },
+      "id": "node/11207463894"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11207463912",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7377467,
+          20.9866529
+        ]
+      },
+      "id": "node/11207463912"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11207463917",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "3",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7699121,
+          20.9668086
+        ]
+      },
+      "id": "node/11207463917"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11207463918",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "opening_hours": "Mo-Su 06:00-22:00; PH off",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "4",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7593465,
+          20.9629422
+        ]
+      },
+      "id": "node/11207463918"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11207463924",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.756534,
+          20.9568709
+        ]
+      },
+      "id": "node/11207463924"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11207463926",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "2",
+        "socket:type2_combo:output": "30 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7515475,
+          20.9525991
+        ]
+      },
+      "id": "node/11207463926"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11207463928",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "3",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7407354,
+          20.9605816
+        ]
+      },
+      "id": "node/11207463928"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11207463929",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "3",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7418127,
+          20.9601509
+        ]
+      },
+      "id": "node/11207463929"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11207463930",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "3",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8948789,
+          21.0264214
+        ]
+      },
+      "id": "node/11207463930"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11207463931",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9064403,
+          21.0188214
+        ]
+      },
+      "id": "node/11207463931"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11207463932",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "opening_hours": "Mo-Sa 06:00-21:00; PH off",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "3",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9333772,
+          21.035589
+        ]
+      },
+      "id": "node/11207463932"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11207463933",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "moped": "yes",
+        "name": "VinFast (xe máy điện)",
+        "opening_hours": "PH off",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:schuko": "32"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9335284,
+          21.0357454
+        ]
+      },
+      "id": "node/11207463933"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11207463934",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "3",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9274084,
+          21.0408088
+        ]
+      },
+      "id": "node/11207463934"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11207463935",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "4",
+        "socket:type2_combo:output": "60 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9240032,
+          21.0405809
+        ]
+      },
+      "id": "node/11207463935"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11207463936",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9178718,
+          21.045837
+        ]
+      },
+      "id": "node/11207463936"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11207515037",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "moped": "yes",
+        "name": "VinFast (xe máy điện)",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:schuko": "48"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9181168,
+          21.0460514
+        ]
+      },
+      "id": "node/11207515037"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11207515038",
+        "access": "private",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "moped": "yes",
+        "name": "VinFast (xe máy điện)",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:schuko": "8"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9168564,
+          21.0490564
+        ]
+      },
+      "id": "node/11207515038"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11207515040",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9157827,
+          21.0505281
+        ]
+      },
+      "id": "node/11207515040"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11207515041",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9154164,
+          21.0508851
+        ]
+      },
+      "id": "node/11207515041"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11207515042",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "opening_hours": "Mo-Sa 00:00-23:59; PH off",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9167751,
+          21.0513785
+        ]
+      },
+      "id": "node/11207515042"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11207515043",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "moped": "yes",
+        "name": "VinFast (xe máy điện)",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:schuko": "160"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9035624,
+          21.0429064
+        ]
+      },
+      "id": "node/11207515043"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11207515044",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9030661,
+          21.0477251
+        ]
+      },
+      "id": "node/11207515044"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11207515045",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9112741,
+          21.0440943
+        ]
+      },
+      "id": "node/11207515045"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11207515046",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9089476,
+          21.0482716
+        ]
+      },
+      "id": "node/11207515046"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11207515047",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "15",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9082591,
+          21.0511529
+        ]
+      },
+      "id": "node/11207515047"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11207515048",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "2",
+        "socket:type2_combo:output": "250 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9084245,
+          21.0515791
+        ]
+      },
+      "id": "node/11207515048"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11207515049",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9098139,
+          21.0514118
+        ]
+      },
+      "id": "node/11207515049"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11207515050",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "moped": "yes",
+        "name": "VinFast (xe máy điện)",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9096207,
+          21.0516381
+        ]
+      },
+      "id": "node/11207515050"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11207515051",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "moped": "yes",
+        "name": "VinFast (xe máy điện)",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.907767,
+          21.0433412
+        ]
+      },
+      "id": "node/11207515051"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11207515052",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9077533,
+          21.0435253
+        ]
+      },
+      "id": "node/11207515052"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11207515053",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "11",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9049556,
+          21.0459154
+        ]
+      },
+      "id": "node/11207515053"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11207515054",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9032371,
+          21.0431705
+        ]
+      },
+      "id": "node/11207515054"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11207515055",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "8",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9072825,
+          21.0415572
+        ]
+      },
+      "id": "node/11207515055"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11207515056",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9066833,
+          21.03931
+        ]
+      },
+      "id": "node/11207515056"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11207515057",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9080502,
+          21.0374179
+        ]
+      },
+      "id": "node/11207515057"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11208353264",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "opening_hours": "Mo-Sa 06:00-21:00; PH off",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9112879,
+          21.0557105
+        ]
+      },
+      "id": "node/11208353264"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11208353265",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "opening_hours": "Mo-Sa 06:00-21:00; PH off",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9120926,
+          21.0560856
+        ]
+      },
+      "id": "node/11208353265"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11208353282",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9143705,
+          21.0595766
+        ]
+      },
+      "id": "node/11208353282"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11208353283",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "moped": "yes",
+        "name": "VinFast (xe máy điện)",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:schuko": "12"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9140556,
+          21.0593811
+        ]
+      },
+      "id": "node/11208353283"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11208353284",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "opening_hours": "Mo-Sa 06:00-21:00; PH off",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "3",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9135807,
+          21.0628941
+        ]
+      },
+      "id": "node/11208353284"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11208353285",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9050962,
+          21.0680098
+        ]
+      },
+      "id": "node/11208353285"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11208353286",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "opening_hours": "Mo-Sa 06:00-21:00; PH off",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "3",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8846786,
+          21.0561808
+        ]
+      },
+      "id": "node/11208353286"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11208353287",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "opening_hours": "Mo-Sa 06:00-21:00; PH off",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8761257,
+          21.0537975
+        ]
+      },
+      "id": "node/11208353287"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11208353288",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.879475,
+          21.0649569
+        ]
+      },
+      "id": "node/11208353288"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11208353289",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "3",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7681693,
+          21.0449062
+        ]
+      },
+      "id": "node/11208353289"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11208353291",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "5",
+        "socket:type2_combo:output": "30 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7413163,
+          21.0402763
+        ]
+      },
+      "id": "node/11208353291"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11208353292",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7598233,
+          21.0355101
+        ]
+      },
+      "id": "node/11208353292"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11208353293",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "moped": "yes",
+        "name": "VinFast (xe máy điện)",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:schuko": "54"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7599585,
+          21.0356363
+        ]
+      },
+      "id": "node/11208353293"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11208353294",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "10",
+        "socket:type2_combo:output": "60 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7615384,
+          21.0347282
+        ]
+      },
+      "id": "node/11208353294"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11208353316",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7596078,
+          21.0338511
+        ]
+      },
+      "id": "node/11208353316"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11208353317",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7477388,
+          21.0166523
+        ]
+      },
+      "id": "node/11208353317"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11208353318",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.781753,
+          21.0202922
+        ]
+      },
+      "id": "node/11208353318"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11208353319",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "moped": "yes",
+        "name": "VinFast (xe máy điện)",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7814648,
+          21.0203686
+        ]
+      },
+      "id": "node/11208353319"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11208353320",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "moped": "yes",
+        "name": "VinFast (xe máy điện)",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:schuko": "10"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7815678,
+          21.0144259
+        ]
+      },
+      "id": "node/11208353320"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11208353321",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.78139,
+          21.0143704
+        ]
+      },
+      "id": "node/11208353321"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11208375935",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7907696,
+          21.0060202
+        ]
+      },
+      "id": "node/11208375935"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11208375936",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7829848,
+          21.0035042
+        ]
+      },
+      "id": "node/11208375936"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11208375937",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7853277,
+          21.0008463
+        ]
+      },
+      "id": "node/11208375937"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11208375938",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "moped": "yes",
+        "name": "VinFast (xe máy điện)",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7832254,
+          21.0007024
+        ]
+      },
+      "id": "node/11208375938"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11208375939",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "moped": "yes",
+        "name": "VinFast (xe máy điện)",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:schuko": "486"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.791333,
+          21.0005623
+        ]
+      },
+      "id": "node/11208375939"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11208375940",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7884789,
+          20.9926606
+        ]
+      },
+      "id": "node/11208375940"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11208375941",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "3",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7877886,
+          20.9909791
+        ]
+      },
+      "id": "node/11208375941"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11208375942",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8157156,
+          21.000863
+        ]
+      },
+      "id": "node/11208375942"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11208375943",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "moped": "yes",
+        "name": "VinFast (xe máy điện)",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8157871,
+          21.0009885
+        ]
+      },
+      "id": "node/11208375943"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11208375944",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "moped": "yes",
+        "name": "VinFast (xe máy điện)",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8143601,
+          21.0003345
+        ]
+      },
+      "id": "node/11208375944"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11208375945",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8145789,
+          21.0002724
+        ]
+      },
+      "id": "node/11208375945"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11208375946",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "3",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8023139,
+          21.0024869
+        ]
+      },
+      "id": "node/11208375946"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11208375947",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "opening_hours": "Mo-Su 08:30-22:00",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "3",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7999944,
+          21.0001043
+        ]
+      },
+      "id": "node/11208375947"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11208375949",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "3",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8039611,
+          21.0005399
+        ]
+      },
+      "id": "node/11208375949"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11208375950",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "moped": "yes",
+        "name": "VinFast (xe máy điện)",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:schuko": "16"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8038529,
+          21.0006713
+        ]
+      },
+      "id": "node/11208375950"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11208375951",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7989441,
+          20.9837682
+        ]
+      },
+      "id": "node/11208375951"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11208375952",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8133106,
+          21.0755478
+        ]
+      },
+      "id": "node/11208375952"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11208375953",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "3",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8095734,
+          21.0707561
+        ]
+      },
+      "id": "node/11208375953"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11208375954",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "3",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8115546,
+          21.0698553
+        ]
+      },
+      "id": "node/11208375954"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11208375955",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "3",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8261229,
+          21.0663165
+        ]
+      },
+      "id": "node/11208375955"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11208375956",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "moped": "yes",
+        "name": "VinFast (xe máy điện)",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:schuko": "8"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8260258,
+          21.0663547
+        ]
+      },
+      "id": "node/11208375956"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11208375957",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "3",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8269546,
+          21.0658044
+        ]
+      },
+      "id": "node/11208375957"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11208375958",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.818662,
+          21.044122
+        ]
+      },
+      "id": "node/11208375958"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11208375959",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8086192,
+          21.0232202
+        ]
+      },
+      "id": "node/11208375959"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11208375960",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "moped": "yes",
+        "name": "VinFast (xe máy điện)",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.808697,
+          21.0231166
+        ]
+      },
+      "id": "node/11208375960"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11208375961",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "opening_hours": "Mo-Sa 08:00-17:30",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "2",
+        "socket:type2_combo:output": "30 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8150227,
+          21.0089892
+        ]
+      },
+      "id": "node/11208375961"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11208375962",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8322732,
+          21.0063691
+        ]
+      },
+      "id": "node/11208375962"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11208375963",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "3",
+        "socket:type2_combo:output": "11 kW"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8306058,
+          21.0058318
+        ]
+      },
+      "id": "node/11208375963"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11208375964",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.4997321,
+          21.056101
+        ]
+      },
+      "id": "node/11208375964"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11367995432",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "capacity": "16",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561",
+        "socket:type2_combo": "16"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9423992,
+          20.987621
+        ]
+      },
+      "id": "node/11367995432"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12240739583",
+        "amenity": "charging_station",
+        "brand": "Charge+",
+        "name": "Charge+",
+        "website": "https://www.chargeplus.com/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7557656,
+          20.965844
+        ]
+      },
+      "id": "node/12240739583"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12311675103",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9602975,
+          21.0919961
+        ]
+      },
+      "id": "node/12311675103"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12311675104",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9624048,
+          21.1030388
+        ]
+      },
+      "id": "node/12311675104"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12311675105",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.0191732,
+          21.1802789
+        ]
+      },
+      "id": "node/12311675105"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12311675106",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9967797,
+          21.2093903
+        ]
+      },
+      "id": "node/12311675106"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12311675107",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.0073308,
+          21.2351532
+        ]
+      },
+      "id": "node/12311675107"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12311675112",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9565941,
+          21.17809
+        ]
+      },
+      "id": "node/12311675112"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12311675113",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9516543,
+          21.2034641
+        ]
+      },
+      "id": "node/12311675113"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12311675136",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "VinFast",
+        "brand:wikidata": "Q56660561",
+        "fee": "yes",
+        "name": "VinFast",
+        "operator": "VinFast",
+        "operator:wikidata": "Q56660561"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          106.0088471,
+          21.1232376
+        ]
+      },
+      "id": "node/12311675136"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12344217036",
+        "amenity": "charging_station",
+        "brand": "PV Power",
+        "fee": "yes",
+        "name": "PV Power",
+        "operator": "Tổng Công ty Điện lực Dầu khí Việt Nam",
+        "operator:short": "PV Power",
+        "website": "https://pvpower.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8133155,
+          21.0179338
+        ]
+      },
+      "id": "node/12344217036"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/12944151533",
+        "access": "yes",
+        "amenity": "charging_station",
+        "brand": "Vinfast",
+        "name": "Vinfast",
+        "operator": "Vinfast"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7963824,
+          20.8882596
+        ]
+      },
+      "id": "node/12944151533"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13099744432",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9811659,
+          20.9461
+        ]
+      },
+      "id": "node/13099744432"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13099744433",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9811049,
+          20.9460769
+        ]
+      },
+      "id": "node/13099744433"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13099744434",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.981037,
+          20.9460502
+        ]
+      },
+      "id": "node/13099744434"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13099744435",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9809848,
+          20.9460283
+        ]
+      },
+      "id": "node/13099744435"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13102927638",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9819465,
+          20.9491635
+        ]
+      },
+      "id": "node/13102927638"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13102927643",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9819646,
+          20.9491288
+        ]
+      },
+      "id": "node/13102927643"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13102927740",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.981979,
+          20.9490946
+        ]
+      },
+      "id": "node/13102927740"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13102927741",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9819937,
+          20.9490642
+        ]
+      },
+      "id": "node/13102927741"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13102927742",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9820102,
+          20.9490301
+        ]
+      },
+      "id": "node/13102927742"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13102927743",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9820259,
+          20.9489966
+        ]
+      },
+      "id": "node/13102927743"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13102927744",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.982041,
+          20.9489631
+        ]
+      },
+      "id": "node/13102927744"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13102927745",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9820588,
+          20.9489268
+        ]
+      },
+      "id": "node/13102927745"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13102927749",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9821205,
+          20.9487971
+        ]
+      },
+      "id": "node/13102927749"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13102927750",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9821396,
+          20.9487636
+        ]
+      },
+      "id": "node/13102927750"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13102927751",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9821543,
+          20.9487308
+        ]
+      },
+      "id": "node/13102927751"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13102927752",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9821704,
+          20.9486938
+        ]
+      },
+      "id": "node/13102927752"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13102927753",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9821865,
+          20.9486612
+        ]
+      },
+      "id": "node/13102927753"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13102927754",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.982204,
+          20.9486284
+        ]
+      },
+      "id": "node/13102927754"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13102927755",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9822184,
+          20.9485983
+        ]
+      },
+      "id": "node/13102927755"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13102927756",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9822331,
+          20.9485683
+        ]
+      },
+      "id": "node/13102927756"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13102927757",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9822499,
+          20.9485316
+        ]
+      },
+      "id": "node/13102927757"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13102927758",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9822643,
+          20.9485047
+        ]
+      },
+      "id": "node/13102927758"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13102927759",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9822811,
+          20.9484712
+        ]
+      },
+      "id": "node/13102927759"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13102927760",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9822972,
+          20.9484364
+        ]
+      },
+      "id": "node/13102927760"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13102927761",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9823126,
+          20.9484029
+        ]
+      },
+      "id": "node/13102927761"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13102927762",
+        "amenity": "charging_station"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9823277,
+          20.9483688
+        ]
+      },
+      "id": "node/13102927762"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13102927763",
+        "amenity": "charging_station",
+        "operator": "VinGroup"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9823404,
+          20.948345
+        ]
+      },
+      "id": "node/13102927763"
+    }
+  ]
+}

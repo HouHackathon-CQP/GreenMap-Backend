@@ -10,11 +10,13 @@ HEADERS = {"Content-Type": "application/ld+json", "Accept": "application/json"}
 CONTEXT = "https://schema.lab.fiware.org/ld/context"
 
 async def seed_devices():
+    print("ORION_ENTITIES_URL =", ORION_ENTITIES_URL)
     print("--- BẮT ĐẦU ĐĂNG KÝ THIẾT BỊ (SOSA: SENSOR) ---")
     
     # 1. Lấy danh sách trạm từ OpenAQ (Dùng hàm có sẵn)
     # Hàm này trả về danh sách các số đo, ta sẽ trích xuất thông tin trạm từ đó
     measurements = await openaq.get_hanoi_aqi()
+    print(measurements)
     
     if not measurements:
         print("Không lấy được dữ liệu từ OpenAQ.")
