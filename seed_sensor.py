@@ -1,22 +1,20 @@
 import asyncio
-
 import httpx
-
 from app.core.config import settings
+import app.services as services
 from app.services import openaq
 
 ORION_ENTITIES_URL = f"{settings.orion_broker_url}/ngsi-ld/v1/entities"
 HEADERS = {"Content-Type": "application/ld+json", "Accept": "application/json"}
-CONTEXT = "https://schema.lab.fiware.org/ld/context"
+
+# --- SỬA DÒNG NÀY (Dùng chung Context với aqi_agent.py) ---
+CONTEXT = "https://raw.githubusercontent.com/smart-data-models/dataModel.Environment/master/context.jsonld"
+# ---------------------------------------------------------
 
 async def seed_devices():
-    print("ORION_ENTITIES_URL =", ORION_ENTITIES_URL)
     print("--- BẮT ĐẦU ĐĂNG KÝ THIẾT BỊ (SOSA: SENSOR) ---")
     
-    # 1. Lấy danh sách trạm từ OpenAQ (Dùng hàm có sẵn)
-    # Hàm này trả về danh sách các số đo, ta sẽ trích xuất thông tin trạm từ đó
     measurements = await openaq.get_hanoi_aqi()
-    print(measurements)
     
     if not measurements:
         print("Không lấy được dữ liệu từ OpenAQ.")
@@ -31,13 +29,11 @@ async def seed_devices():
             coords = item["coordinates"]
             provider = item["provider_name"]
 
-            # 2. Tạo ID chuẩn cho Thiết bị
             device_id = f"urn:ngsi-ld:Device:OpenAQ-{sensor_id}"
 
-            # 3. Tạo Payload theo chuẩn NGSI-LD (Mô hình hóa SOSA:Sensor)
             payload = {
                 "id": device_id,
-                "type": "Device", # Đây là Entity đại diện cho Cảm biến
+                "type": "Device",
                 "category": {
                     "type": "Property",
                     "value": ["sensor"]
@@ -59,12 +55,11 @@ async def seed_devices():
                 },
                 "controlledProperty": {
                     "type": "Property",
-                    "value": ["airQuality"] # Thiết bị này đo cái gì?
+                    "value": ["airQuality"]
                 },
                 "@context": CONTEXT
             }
 
-            # 4. Gửi sang Orion-LD
             try:
                 resp = await client.post(ORION_ENTITIES_URL, json=payload, headers=HEADERS)
                 if resp.status_code == 201:

@@ -24,6 +24,7 @@ class Settings(BaseModel):
     first_superuser: str = os.getenv("FIRST_SUPERUSER", "admin@example.com")
     first_superuser_password: str = os.getenv("FIRST_SUPERUSER_PASSWORD", "123456")
     static_dir: str = os.getenv("STATIC_DIR", "static")
+    aqi_service_path: str = os.getenv("AQI_SERVICE_PATH", "https://smartdatamodels.org/dataModel.Environment")
 
     @validator("cors_origins", pre=True)
     def split_origins(cls, v: str | list[str]) -> list[str]:
