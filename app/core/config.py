@@ -2,7 +2,7 @@ import os
 from functools import lru_cache
 
 from dotenv import load_dotenv
-from pydantic import BaseModel
+from pydantic import BaseModel, validator
 
 
 # Load environment variables early so the Settings class can read them.
@@ -18,11 +18,18 @@ class Settings(BaseModel):
         "DATABASE_URL",
         "postgresql+asyncpg://postgres:password@localhost/greenmap_db",
     )
+    cors_origins: list[str] = os.getenv("CORS_ORIGINS", "*").split(",")
     openaq_api_key: str | None = os.getenv("OPENAQ_API_KEY")
     orion_broker_url: str = os.getenv("ORION_BROKER_URL", "http://localhost:1026")
     first_superuser: str = os.getenv("FIRST_SUPERUSER", "admin@example.com")
     first_superuser_password: str = os.getenv("FIRST_SUPERUSER_PASSWORD", "123456")
     static_dir: str = os.getenv("STATIC_DIR", "static")
+
+    @validator("cors_origins", pre=True)
+    def split_origins(cls, v: str | list[str]) -> list[str]:
+        if isinstance(v, str):
+            return [origin.strip() for origin in v.split(",") if origin.strip()]
+        return v
 
 
 @lru_cache
