@@ -21,7 +21,7 @@ CONTEXT = "https://schema.lab.fiware.org/ld/context"
 CURRENT_FILE_PATH = Path(__file__).resolve()
 PROJECT_DIR = CURRENT_FILE_PATH.parent
 # Trỏ đến thư mục data (ngang hàng với thư mục backend)
-DATA_DIR = PROJECT_DIR.parent / "GreenMap-Data" / "Data"
+DATA_DIR = PROJECT_DIR.parent / "GreenMap-Backend" /"Data"
 
 
 # --- 4. HÀM "DỊCH" VÀ "BƠM" ---

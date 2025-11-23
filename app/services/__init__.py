@@ -1,3 +1,3 @@
-from app.services import openaq
+from app.services import openaq, rss
 
-__all__ = ["openaq"]
+__all__ = ["openaq", "rss"]

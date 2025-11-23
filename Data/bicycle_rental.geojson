@@ -1,0 +1,2415 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2025-11-14T02:28:39Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1295779942",
+        "amenity": "bicycle_rental",
+        "name": "MBI Bike Sharing",
+        "operator": "MBI Bike Sharing",
+        "operator:type": "business",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9444,
+          21.0018327
+        ]
+      },
+      "id": "way/1295779942"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1295779943",
+        "amenity": "bicycle_rental",
+        "fee": "yes",
+        "name": "MBI Bike Sharing",
+        "operator": "MBI Bike Sharing",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9596225,
+          20.9932808
+        ]
+      },
+      "id": "way/1295779943"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1295779944",
+        "amenity": "bicycle_rental",
+        "fee": "yes",
+        "name": "MBI Bike Sharing",
+        "operator": "MBI Bike Sharing",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9594364,
+          20.9943695
+        ]
+      },
+      "id": "way/1295779944"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1298093424",
+        "amenity": "bicycle_rental",
+        "fee": "yes",
+        "name": "MBI Bike Sharing",
+        "operator": "MBI Bike Sharing",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9460655,
+          20.9934386
+        ]
+      },
+      "id": "way/1298093424"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1298093425",
+        "amenity": "bicycle_rental",
+        "fee": "yes",
+        "name": "MBI Bike Sharing",
+        "network": "MBI Bike Sharing",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9507896,
+          20.9972249
+        ]
+      },
+      "id": "way/1298093425"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1298093426",
+        "amenity": "bicycle_rental",
+        "fee": "yes",
+        "name": "MBI Bike Sharing",
+        "operator": "MBI Bike Sharing",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9428462,
+          20.993232
+        ]
+      },
+      "id": "way/1298093426"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1298093427",
+        "amenity": "bicycle_rental",
+        "fee": "yes",
+        "name": "MBI Bike Sharing",
+        "operator": "MBI Bike Sharing",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.9408727,
+          20.994068
+        ]
+      },
+      "id": "way/1298093427"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/1304789003",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "dropoff_point",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Vườn hoa Lê Nin",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "operator:type": "private",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/",
+        "@geometry": "center"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8402212,
+          21.0314164
+        ]
+      },
+      "id": "way/1304789003"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4242866212",
+        "amenity": "bicycle_rental"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8512636,
+          21.0340218
+        ]
+      },
+      "id": "node/4242866212"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4306946389",
+        "amenity": "bicycle_rental"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7729463,
+          21.0226633
+        ]
+      },
+      "id": "node/4306946389"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4346919292",
+        "amenity": "bicycle_rental"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8560986,
+          21.0321811
+        ]
+      },
+      "id": "node/4346919292"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/4590106500",
+        "amenity": "bicycle_rental"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8044861,
+          21.02342
+        ]
+      },
+      "id": "node/4590106500"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/7259912785",
+        "amenity": "bicycle_rental",
+        "operator": "Hanoi Bicycle Rental",
+        "website": "https://m.facebook.com/hanoibicyclerental"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8372129,
+          21.0521495
+        ]
+      },
+      "id": "node/7259912785"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115728946",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "dropoff_point",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Số 289 Kim Mã",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8186521,
+          21.0306892
+        ]
+      },
+      "id": "node/11115728946"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115728947",
+        "amenity": "bicycle_rental",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Số 01 Trần Huy Liệu",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8216711,
+          21.0281207
+        ]
+      },
+      "id": "node/11115728947"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115728948",
+        "amenity": "bicycle_rental",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Nguyễn Văn Ngọc",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8106706,
+          21.0318083
+        ]
+      },
+      "id": "node/11115728948"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115728949",
+        "amenity": "bicycle_rental",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Hồ Ngọc Khánh",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8119431,
+          21.027112
+        ]
+      },
+      "id": "node/11115728949"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115728950",
+        "amenity": "bicycle_rental",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Liễu Giai - Đội Cấn",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8153201,
+          21.036873
+        ]
+      },
+      "id": "node/11115728950"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115728951",
+        "amenity": "bicycle_rental",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Bảo tàng Chiến thắng B52",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8258562,
+          21.0348912
+        ]
+      },
+      "id": "node/11115728951"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115728952",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "dropoff_point",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Công viên Bách thảo",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8308019,
+          21.0414655
+        ]
+      },
+      "id": "node/11115728952"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115728953",
+        "amenity": "bicycle_rental",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Thành cổ Hà Nội",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8416822,
+          21.040548
+        ]
+      },
+      "id": "node/11115728953"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115728954",
+        "amenity": "bicycle_rental",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Số 568 đường Bưởi",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8063846,
+          21.045398
+        ]
+      },
+      "id": "node/11115728954"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115728955",
+        "amenity": "bicycle_rental",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Vườn hoa Nguyễn Biểu",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8401196,
+          21.0434405
+        ]
+      },
+      "id": "node/11115728955"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115728956",
+        "amenity": "bicycle_rental",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Số 145 Hoàng Hoa Thám",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8248219,
+          21.0406588
+        ]
+      },
+      "id": "node/11115728956"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115728957",
+        "amenity": "bicycle_rental",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Số 30 Phan Đình Phùng",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8423227,
+          21.040614
+        ]
+      },
+      "id": "node/11115728957"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115728958",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "dropoff_point",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Số 34 Trần Phú",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8437626,
+          21.0302309
+        ]
+      },
+      "id": "node/11115728958"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115728959",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "dropoff_point",
+        "brand": "TNGo",
+        "capacity": "12",
+        "fee": "yes",
+        "name": "TNGo - Số 12 Đào Tấn",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "operator:type": "private",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8097081,
+          21.0324458
+        ]
+      },
+      "id": "node/11115728959"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115728960",
+        "amenity": "bicycle_rental",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Sân bóng Vạn Phúc",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8180584,
+          21.0330245
+        ]
+      },
+      "id": "node/11115728960"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115728961",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "dropoff_point",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Nhà hát Chèo Việt Nam",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8272626,
+          21.0319831
+        ]
+      },
+      "id": "node/11115728961"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115728962",
+        "amenity": "bicycle_rental",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Bến xe Kim Mã",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8297737,
+          21.0320666
+        ]
+      },
+      "id": "node/11115728962"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115728963",
+        "amenity": "bicycle_rental",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Bảo tàng Mỹ thuật",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8366677,
+          21.0303269
+        ]
+      },
+      "id": "node/11115728963"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115728965",
+        "amenity": "bicycle_rental",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Vườn hoa Hàng Đậu 01",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8462975,
+          21.0399164
+        ]
+      },
+      "id": "node/11115728965"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115728966",
+        "amenity": "bicycle_rental",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Vườn hoa Hàng Đậu 02",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8470878,
+          21.0402044
+        ]
+      },
+      "id": "node/11115728966"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115728967",
+        "amenity": "bicycle_rental",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Số 30 Văn Cao",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8157537,
+          21.0403168
+        ]
+      },
+      "id": "node/11115728967"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115728968",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "dropoff_point",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Đền Thủy Trung Tiên",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8388624,
+          21.0491572
+        ]
+      },
+      "id": "node/11115728968"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115728969",
+        "amenity": "bicycle_rental",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Số 187 Trích Sài",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8124903,
+          21.0532329
+        ]
+      },
+      "id": "node/11115728969"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115728970",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "dropoff_point",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Nguyễn Hoàng Tôn",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8107623,
+          21.0698473
+        ]
+      },
+      "id": "node/11115728970"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115728971",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "dropoff_point",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Chung cư B12C10",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8071372,
+          21.0663476
+        ]
+      },
+      "id": "node/11115728971"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115728972",
+        "amenity": "bicycle_rental",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Số 380 Lạc Long Quân",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8112678,
+          21.0677594
+        ]
+      },
+      "id": "node/11115728972"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115728973",
+        "amenity": "bicycle_rental",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Số 705 Lạc Long Quân",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8175714,
+          21.0808349
+        ]
+      },
+      "id": "node/11115728973"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115728974",
+        "amenity": "bicycle_rental",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Hồ Tây - Đường Lạc Long Quân",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8089755,
+          21.0591738
+        ]
+      },
+      "id": "node/11115728974"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115728975",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "dropoff_point",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Bờ hồ Trúc Bạch",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8365074,
+          21.0446713
+        ]
+      },
+      "id": "node/11115728975"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115728976",
+        "amenity": "bicycle_rental",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Vườn hoa Lý Tự Trọng",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8352051,
+          21.0427679
+        ]
+      },
+      "id": "node/11115728976"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115728977",
+        "amenity": "bicycle_rental",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - UDIC Võ Chí Công",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8126939,
+          21.0787957
+        ]
+      },
+      "id": "node/11115728977"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115728978",
+        "amenity": "bicycle_rental",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Chung cư CT13A Võ Chí Công",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.810287,
+          21.0742122
+        ]
+      },
+      "id": "node/11115728978"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115728979",
+        "amenity": "bicycle_rental",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - VEAM Tây Hồ",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8141388,
+          21.0801463
+        ]
+      },
+      "id": "node/11115728979"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115728980",
+        "amenity": "bicycle_rental",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - 187C Giảng Võ",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8224608,
+          21.0259672
+        ]
+      },
+      "id": "node/11115728980"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115728981",
+        "amenity": "bicycle_rental",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Số 77 Hào Nam",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8265042,
+          21.0229154
+        ]
+      },
+      "id": "node/11115728981"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115728982",
+        "amenity": "bicycle_rental",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Hồ Hoàng Cầu",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8221834,
+          21.0165595
+        ]
+      },
+      "id": "node/11115728982"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115728983",
+        "amenity": "bicycle_rental",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Ga Metro Thái Hà",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8197319,
+          21.0151686
+        ]
+      },
+      "id": "node/11115728983"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115728986",
+        "amenity": "bicycle_rental",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Ga Metro Láng",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8164572,
+          21.0058843
+        ]
+      },
+      "id": "node/11115728986"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115728987",
+        "amenity": "bicycle_rental",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Ngã Tư Sở",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8192332,
+          21.0032128
+        ]
+      },
+      "id": "node/11115728987"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115728988",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "dropoff_point",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Số 70 Nguyễn Chí Thanh",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8070976,
+          21.0183662
+        ]
+      },
+      "id": "node/11115728988"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115728989",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "dropoff_point",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Số 99 Nguyễn Chí Thanh",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8074952,
+          21.0181622
+        ]
+      },
+      "id": "node/11115728989"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115728990",
+        "amenity": "bicycle_rental",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Số 77 Nguyễn Chí Thanh",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8099584,
+          21.0233055
+        ]
+      },
+      "id": "node/11115728990"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115728991",
+        "amenity": "bicycle_rental",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Số 58 Nguyễn Chí Thanh",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8093223,
+          21.0221676
+        ]
+      },
+      "id": "node/11115728991"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115728992",
+        "amenity": "bicycle_rental",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Ga Metro Cát Linh",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8275926,
+          21.0268353
+        ]
+      },
+      "id": "node/11115728992"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115728993",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "dropoff_point",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Học viện Ngoại giao",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "rental": "city_bike",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8068773,
+          21.0235052
+        ]
+      },
+      "id": "node/11115728993"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115728994",
+        "amenity": "bicycle_rental",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Gò Đống Đa",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8252667,
+          21.0110721
+        ]
+      },
+      "id": "node/11115728994"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115728995",
+        "amenity": "bicycle_rental",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Đại học Thủy lợi",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8235808,
+          21.0074258
+        ]
+      },
+      "id": "node/11115728995"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115728996",
+        "amenity": "bicycle_rental",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Hồ Hố Mẻ",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8296968,
+          21.0006964
+        ]
+      },
+      "id": "node/11115728996"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115728997",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "dropoff_point",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Vincom Phạm Ngọc Thạch",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8319929,
+          21.0066352
+        ]
+      },
+      "id": "node/11115728997"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115728998",
+        "amenity": "bicycle_rental",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Số 56 Hai Bà Trưng",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.846642,
+          21.0260079
+        ]
+      },
+      "id": "node/11115728998"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115728999",
+        "amenity": "bicycle_rental",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Số 80 Trần Hưng Đạo",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8460431,
+          21.0229282
+        ]
+      },
+      "id": "node/11115728999"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115729000",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "dropoff_point",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Số 32 Lý Thường Kiệt",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8521497,
+          21.0229353
+        ]
+      },
+      "id": "node/11115729000"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115729001",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "dropoff_point",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Số 44B Lý Thường Kiệt",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8481247,
+          21.0241473
+        ]
+      },
+      "id": "node/11115729001"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115729002",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "dropoff_point",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Số 19 Lý Thường Kiệt",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8558933,
+          21.0216209
+        ]
+      },
+      "id": "node/11115729002"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115729003",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "dropoff_point",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Vườn hoa 19/8",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8569099,
+          21.0236428
+        ]
+      },
+      "id": "node/11115729003"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115729004",
+        "amenity": "bicycle_rental",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Vườn hoa Cổ Tân",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8581331,
+          21.0249634
+        ]
+      },
+      "id": "node/11115729004"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115736305",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "dropoff_point",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Vườn hoa Hàng Vôi",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8567859,
+          21.0291271
+        ]
+      },
+      "id": "node/11115736305"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115736306",
+        "amenity": "bicycle_rental",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Vườn hoa Lý Thái Tổ",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8545951,
+          21.0272348
+        ]
+      },
+      "id": "node/11115736306"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115736307",
+        "amenity": "bicycle_rental",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Vườn hoa Tây Sơn",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8502749,
+          21.0267451
+        ]
+      },
+      "id": "node/11115736307"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115736308",
+        "amenity": "bicycle_rental",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Vườn hoa Tao Đàn",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8574509,
+          21.0213745
+        ]
+      },
+      "id": "node/11115736308"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115736309",
+        "amenity": "bicycle_rental",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Số 90 Khuất Duy Tiến",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8001132,
+          20.9959443
+        ]
+      },
+      "id": "node/11115736309"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115736310",
+        "amenity": "bicycle_rental",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Hầm đi bộ Khuất Duy Tiến",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8026524,
+          20.9926496
+        ]
+      },
+      "id": "node/11115736310"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115736311",
+        "amenity": "bicycle_rental",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Số 27A Khuất Duy Tiến",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7980182,
+          20.9975327
+        ]
+      },
+      "id": "node/11115736311"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115736312",
+        "amenity": "bicycle_rental",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Số 47 Nguyễn Đình Chiểu",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8464651,
+          21.0132935
+        ]
+      },
+      "id": "node/11115736312"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115736313",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "dropoff_point",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Cổng CC02 Nguyễn Đình Chiểu",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8457088,
+          21.0106158
+        ]
+      },
+      "id": "node/11115736313"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115736314",
+        "amenity": "bicycle_rental",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Cổng Nguyễn Đình Chiểu",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8459662,
+          21.0083221
+        ]
+      },
+      "id": "node/11115736314"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115736315",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "dropoff_point",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Cổng Đại Cồ Việt - Công viên Thống Nhất",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8417322,
+          21.0080665
+        ]
+      },
+      "id": "node/11115736315"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115736316",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "dropoff_point",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Cổng Đảo Công viên Thống Nhất",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8414916,
+          21.0109159
+        ]
+      },
+      "id": "node/11115736316"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115736317",
+        "amenity": "bicycle_rental",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Cổng Quán Gió Công viên Thống Nhất",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8414764,
+          21.013422
+        ]
+      },
+      "id": "node/11115736317"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115736318",
+        "amenity": "bicycle_rental",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Số 72 Trần Đại Nghĩa",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8452297,
+          21.0007832
+        ]
+      },
+      "id": "node/11115736318"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115736319",
+        "amenity": "bicycle_rental",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Số 185 Trần Đại Nghĩa",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8456256,
+          20.9995248
+        ]
+      },
+      "id": "node/11115736319"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115736320",
+        "amenity": "bicycle_rental",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Số 55 Giải Phóng",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8415261,
+          21.0037763
+        ]
+      },
+      "id": "node/11115736320"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115736321",
+        "amenity": "bicycle_rental",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Số 75 Trần Đại Nghĩa",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8457144,
+          21.0053592
+        ]
+      },
+      "id": "node/11115736321"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115736322",
+        "amenity": "bicycle_rental",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Số 17 đường Giải Phóng",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8416051,
+          21.0052614
+        ]
+      },
+      "id": "node/11115736322"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115736323",
+        "amenity": "bicycle_rental",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Số 09 Lê Thánh Tông",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.859739,
+          21.0144453
+        ]
+      },
+      "id": "node/11115736323"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115736324",
+        "amenity": "bicycle_rental",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Số 48 Tăng Bạt Hổ",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8592675,
+          21.0140466
+        ]
+      },
+      "id": "node/11115736324"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115736325",
+        "amenity": "bicycle_rental",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Số 16 Tăng Bạt Hổ",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8582978,
+          21.0178512
+        ]
+      },
+      "id": "node/11115736325"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11115736326",
+        "amenity": "bicycle_rental",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Văn phòng TNGo Hà Nội",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8094902,
+          21.0376877
+        ]
+      },
+      "id": "node/11115736326"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11395670879",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "dropoff_point",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Hồ Xã Đàn",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8316587,
+          21.0119269
+        ]
+      },
+      "id": "node/11395670879"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11575790803",
+        "amenity": "bicycle_rental",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Đối diện 458 đường Láng",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8129576,
+          21.0094899
+        ]
+      },
+      "id": "node/11575790803"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11575790804",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "dropoff_point",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Đối diện 544 đường Láng",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8095217,
+          21.0117066
+        ]
+      },
+      "id": "node/11575790804"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11575790805",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "dropoff_point",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Đối diện 572 đường Láng",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8079728,
+          21.0127595
+        ]
+      },
+      "id": "node/11575790805"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11575790806",
+        "amenity": "bicycle_rental",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Đối diện 808 đường Láng",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8025452,
+          21.0185073
+        ]
+      },
+      "id": "node/11575790806"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11575790807",
+        "amenity": "bicycle_rental",
+        "bicycle_rental": "dropoff_point",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Đối diện 1030 đường Láng",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7987375,
+          21.0235158
+        ]
+      },
+      "id": "node/11575790807"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/11575790808",
+        "amenity": "bicycle_rental",
+        "brand": "TNGo",
+        "fee": "yes",
+        "name": "TNGo - Đối diện 1152 đường Láng",
+        "network": "TNGo",
+        "operator": "Công ty cổ phần vận tải số Trí Nam",
+        "payment:app": "yes",
+        "payment:credit_cards": "yes",
+        "payment:debit_cards": "yes",
+        "payment:prepaid_ticket": "yes",
+        "website": "https://tngo.vn/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.7984135,
+          21.0263283
+        ]
+      },
+      "id": "node/11575790808"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/13271879879",
+        "amenity": "bicycle_rental",
+        "check_date": "2025-10-31"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          105.8594106,
+          21.0250462
+        ]
+      },
+      "id": "node/13271879879"
+    }
+  ]
+}
