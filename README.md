@@ -59,6 +59,8 @@ DATABASE_URL="postgresql+asyncpg://admin:mysecretpassword@127.0.0.1:5432/greenma
 SECRET_KEY="thay_the_bang_chuoi_bi_mat_cua_ban" #64 chars 
 ALGORITHM="HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES=30
+# Cho phép CORS (điền origin frontend, phân tách bằng dấu phẩy)
+CORS_ORIGINS="http://localhost:3000"
 
 # --- Tài khoản Admin mặc định ---
 FIRST_SUPERUSER="admin@greenmap.hanoi"
