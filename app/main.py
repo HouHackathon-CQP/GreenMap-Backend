@@ -5,6 +5,7 @@ from pathlib import Path
 
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
+from fastapi.middleware.cors import CORSMiddleware
 
 from app.api.api import api_router
 from app.core.config import settings
@@ -20,6 +21,14 @@ if sys.platform.startswith("win"):
 
 def create_application() -> FastAPI:
     app = FastAPI(title=settings.project_name)
+
+    app.add_middleware(
+        CORSMiddleware,
+        allow_origins=settings.cors_origins,
+        allow_credentials=True,
+        allow_methods=["*"],
+        allow_headers=["*"],
+    )
 
     static_dir = Path(settings.static_dir)
     static_dir.mkdir(parents=True, exist_ok=True)
