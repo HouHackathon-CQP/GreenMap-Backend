@@ -1,5 +1,4 @@
 import httpx
-from datetime import datetime
 
 OPEN_METEO_URL = "https://api.open-meteo.com/v1/forecast"
 
@@ -34,7 +33,8 @@ async def get_weather_forecast(lat: float, lon: float):
             response = await client.get(OPEN_METEO_URL, params=params, timeout=10.0)
             response.raise_for_status()
             data = response.json()
-            # Xử lý hiện tại
+            
+            # --- Xử lý hiện tại ---
             current = data.get("current", {})
             result_current = {
                 "temp": current.get("temperature_2m"),
@@ -43,24 +43,23 @@ async def get_weather_forecast(lat: float, lon: float):
                 "desc": get_weather_description(current.get("weather_code")),
                 "time": current.get("time")
             }
-            # Xử lý 24h tới (Hourly)
+
+            # --- Xử lý 24h tới (Hourly) ---
             hourly = data.get("hourly", {})
             times = hourly.get("time", [])
             temps = hourly.get("temperature_2m", [])
             codes = hourly.get("weather_code", [])
             probs = hourly.get("precipitation_probability", [])
-            
             result_24h = []
-            current_hour_iso = datetime.now().strftime("%Y-%m-%dT%H:00")
+            current_api_time = current.get("time") 
             
             start_index = 0
-            # Tìm vị trí giờ hiện tại trong mảng
-            for i, t in enumerate(times):
-                if t >= current_hour_iso:
-                    start_index = i
-                    break
+            if current_api_time:
+                for i, t in enumerate(times):
+                    if t >= current_api_time:
+                        start_index = i
+                        break
             
-            # Lấy 24 mốc thời gian tiếp theo
             for i in range(start_index, start_index + 24):
                 if i < len(times):
                     result_24h.append({
@@ -69,8 +68,7 @@ async def get_weather_forecast(lat: float, lon: float):
                         "rain_prob": probs[i],
                         "desc": get_weather_description(codes[i])
                     })
-
-            # Xử lý 7 ngày tới (Daily)
+            # --- Xử lý 7 ngày tới (Daily) ---   
             daily = data.get("daily", {})
             d_times = daily.get("time", [])
             d_max = daily.get("temperature_2m_max", [])
@@ -85,6 +83,7 @@ async def get_weather_forecast(lat: float, lon: float):
                     "temp_min": d_min[i],
                     "desc": get_weather_description(d_codes[i])
                 })
+
             return {
                 "current": result_current,
                 "hourly_24h": result_24h,
