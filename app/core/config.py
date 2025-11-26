@@ -25,7 +25,9 @@ class Settings(BaseModel):
     first_superuser_password: str = os.getenv("FIRST_SUPERUSER_PASSWORD", "123456")
     static_dir: str = os.getenv("STATIC_DIR", "static")
     aqi_service_path: str = os.getenv("AQI_SERVICE_PATH", "https://smartdatamodels.org/dataModel.Environment")
-
+    ngsi_context_url: str = os.getenv("NGSI_CONTEXT_URL", "https://raw.githubusercontent.com/smart-data-models/dataModel.Environment/master/context.jsonld")    
+    ngsi_type_aqi: str = os.getenv("NGSI_TYPE_AQI", "https://smartdatamodels.org/dataModel.Environment/AirQualityObserved")
+    ngsi_type_weather: str = os.getenv("NGSI_TYPE_WEATHER", "https://smartdatamodels.org/dataModel.Environment/WeatherObserved")
     @validator("cors_origins", pre=True)
     def split_origins(cls, v: str | list[str]) -> list[str]:
         if isinstance(v, str):

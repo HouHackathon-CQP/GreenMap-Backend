@@ -1,8 +1,6 @@
 import asyncio
 import sys
-
 import uvicorn
-
 from app.main import app
 
 
