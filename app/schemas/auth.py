@@ -13,7 +13,7 @@
 # limitations under the License.
 
 from pydantic import BaseModel, ConfigDict, Field
-
+from app.models.enums import UserRole
 
 class LoginRequest(BaseModel):
     email: str = Field(alias="username")
@@ -25,3 +25,7 @@ class LoginRequest(BaseModel):
 class TokenResponse(BaseModel):
     access_token: str
     token_type: str = "bearer"
+    id: int
+    email: str
+    full_name: str | None = None
+    role: UserRole
