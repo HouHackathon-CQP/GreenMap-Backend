@@ -91,6 +91,9 @@ docker-compose up -d
 Chạy lần lượt các lệnh sau:
 
 ```bash
+# Nối file dữ liệu JSON
+python Data/merge_json.py
+
 # Tạo bảng User & Admin
 python init_db.py
 
@@ -99,6 +102,9 @@ python seed_sensors.py
 
 # Nạp dữ liệu bản đồ
 python seed_data.py
+
+# Xử lý dữ liệu giao thông mô phỏng 
+python process_simulation.py
 ```
 
 ---
