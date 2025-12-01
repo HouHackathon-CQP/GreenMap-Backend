@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from typing import Any
+from typing import Any, Optional
 
 from geoalchemy2.shape import to_shape
 from pydantic import BaseModel, ConfigDict, Field, computed_field
@@ -30,6 +30,13 @@ class LocationCreate(LocationBase):
     latitude: float
     longitude: float
 
+class LocationUpdate(BaseModel):
+    name: Optional[str] = None
+    description: Optional[str] = None
+    location_type: Optional[LocationType] = None
+    latitude: Optional[float] = None
+    longitude: Optional[float] = None
+    is_active: Optional[bool] = None
 
 class LocationRead(LocationBase):
     id: int
