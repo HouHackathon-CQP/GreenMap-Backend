@@ -1,4 +1,4 @@
-from app.schemas.location import LocationBase, LocationCreate, LocationRead
+from app.schemas.location import LocationBase, LocationCreate, LocationRead, LocationUpdate
 from app.schemas.news import NewsItem
 from app.schemas.report import ReportBase, ReportCreate, ReportRead, ReportUpdate
 from app.schemas.auth import LoginRequest, TokenResponse
@@ -8,6 +8,7 @@ __all__ = [
     "LocationBase",
     "LocationCreate",
     "LocationRead",
+    "LocationUpdate",
     "NewsItem",
     "ReportBase",
     "ReportCreate",
