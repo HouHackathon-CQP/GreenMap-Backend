@@ -78,6 +78,11 @@ FIRST_SUPERUSER_PASSWORD="123456"
 # External APIs
 OPENAQ_API_KEY="your_openaq_api_key"
 ORION_BROKER_URL="http://localhost:1026"
+
+# NGSI-LD config (Context & Type)
+NGSI_CONTEXT_URL=https://raw.githubusercontent.com/smart-data-models/dataModel.Environment/master/context.jsonld
+NGSI_TYPE_AQI=https://smartdatamodels.org/dataModel.Environment/AirQualityObserved
+NGSI_TYPE_WEATHER=https://smartdatamodels.org/dataModel.Environment/WeatherObserved
 ```
 
 ### 5. Khởi Động Docker
