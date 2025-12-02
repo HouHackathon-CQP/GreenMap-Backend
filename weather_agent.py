@@ -12,15 +12,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from datetime import datetime
+import asyncio
 
-from pydantic import BaseModel
+from app.workers.weather_agent import run_weather_agent
 
 
-class NewsItem(BaseModel):
-    title: str
-    link: str
-    description: str | None = None
-    published_at: datetime | None = None
-    image_url: str | None = None
-    source: str = "vnexpress"
+if __name__ == "__main__":
+    asyncio.run(run_weather_agent())

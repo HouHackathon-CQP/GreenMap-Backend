@@ -98,10 +98,11 @@ python Data/merge_json.py
 python init_db.py
 
 # Đăng ký thiết bị cảm biến
-python seed_sensors.py
+python seed_sensor.py
 
 # Nạp dữ liệu bản đồ
-python seed_data.py
+python import_osm.py 
+python sync_to_orion.py
 
 # Xử lý dữ liệu giao thông mô phỏng 
 python process_simulation.py
@@ -111,7 +112,7 @@ python process_simulation.py
 
 ## Chạy Ứng Dụng
 
-Mở 2 terminal riêng biệt:
+Mở 3 terminal riêng biệt:
 
 ### Terminal 1: API Backend
 ```bash
@@ -123,6 +124,11 @@ python main.py
 ### Terminal 2: AQI Agent (Cập Nhật Dữ Liệu Realtime)
 ```bash
 python aqi_agent.py
+```
+
+### Terminal 3: Weather Agent (Cập Nhật Dữ Liệu Realtime)
+```bash
+python weather_agent.py
 ```
 
 ---
@@ -186,23 +192,105 @@ Link: <https://raw.githubusercontent.com/smart-data-models/dataModel.Environment
 ## Cấu Trúc Thư Mục
 
 ```
+GreenMap-Backend/
 ├── app/
-│   ├── api/              # API routes
-│   ├── crud/             # Database operations
-│   ├── db/               # Database session
-│   ├── models/           # SQLAlchemy models
-│   ├── schemas/          # Pydantic schemas
-│   ├── services/         # Business logic
-│   └── workers/          # Background tasks
-├── Data/                 # GeoJSON files
-├── main.py               # FastAPI entry point
-├── aqi_agent.py          # AQI update service
-├── init_db.py            # Database initialization
-├── seed_data.py          # Sample data
-├── seed_sensors.py       # Sensor registration
-├── docker-compose.yml    # Docker services
-└── requirements.txt      # Python dependencies
+│   ├── api/
+│   │   ├── __init__.py
+│   │   ├── api.py                    # API router configuration
+│   │   ├── deps.py                   # Dependency injection
+│   │   └── routes/
+│   │       ├── aqi.py                # Air Quality Index endpoints
+│   │       ├── auth.py               # Authentication endpoints
+│   │       ├── locations.py          # Location management endpoints
+│   │       ├── news.py               # News endpoints
+│   │       ├── reports.py            # Report management endpoints
+│   │       ├── system.py             # System endpoints
+│   │       ├── traffic.py            # Traffic data endpoints
+│   │       ├── uploads.py            # File upload endpoints
+│   │       ├── users.py              # User management endpoints
+│   │       └── weather.py            # Weather endpoints
+│   ├── core/
+│   │   ├── __init__.py
+│   │   ├── config.py                 # Configuration settings
+│   │   └── security.py               # Security utilities
+│   ├── crud/
+│   │   ├── __init__.py
+│   │   ├── location.py               # Location CRUD operations
+│   │   ├── report.py                 # Report CRUD operations
+│   │   └── user.py                   # User CRUD operations
+│   ├── db/
+│   │   ├── __init__.py
+│   │   └── session.py                # Database session management
+│   ├── models/
+│   │   ├── __init__.py
+│   │   ├── enums.py                  # Enum definitions
+│   │   ├── location.py               # Location model
+│   │   ├── report.py                 # Report model
+│   │   ├── traffic.py                # Traffic model
+│   │   └── user.py                   # User model
+│   ├── schemas/
+│   │   ├── __init__.py
+│   │   ├── auth.py                   # Authentication schemas
+│   │   ├── location.py               # Location schemas
+│   │   ├── news.py                   # News schemas
+│   │   ├── report.py                 # Report schemas
+│   │   └── user.py                   # User schemas
+│   ├── services/
+│   │   ├── __init__.py
+│   │   ├── openaq.py                 # OpenAQ API service
+│   │   ├── orion.py                  # Orion-LD broker service
+│   │   ├── rss.py                    # RSS feed service
+│   │   └── weather.py                # Weather API service
+│   ├── workers/
+│   │   ├── __init__.py
+│   │   ├── aqi_agent.py              # AQI data update worker
+│   │   └── weather_agent.py          # Weather data update worker
+│   ├── __init__.py
+│   └── main.py                       # FastAPI app initialization
+├── Data/
+│   ├── bicycle_rental.geojson        # Bicycle rental stations data
+│   ├── charging_station.geojson      # EV charging stations data
+│   ├── park.geojson                  # Parks data
+│   ├── tourist_attractions.geojson   # Tourist attractions data
+│   ├── simulation_data_part1.json    # Simulation data (part 1)
+│   ├── simulation_data_part2.json    # Simulation data (part 2)
+│   ├── merge_json.py                 # Script to merge JSON files
+│   └── split_json.py                 # Script to split JSON files
+├── static/
+│   └── images/                       # Static image resources
+├── main.py                           # FastAPI server entry point
+├── aqi_agent.py                      # Standalone AQI update service
+├── weather_agent.py                  # Standalone Weather update service
+├── init_db.py                        # Database initialization script
+├── seed_sensor.py                    # Sensor data seeding script
+├── process_simulation.py             # Traffic simulation data processor
+├── sync_to_orion.py                  # Sync data to Orion-LD broker
+├── import_osm.py                     # OSM data import script
+├── docker-compose.yml                # Docker Compose configuration
+├── Dockerfile                        # Docker image build file
+├── requirements.txt                  # Python dependencies
+├── env.example                       # Example environment variables
+├── README.md                         # Readme file
+└── LICENSE                           # License file
 ```
+
+### Mô Tả Chi Tiết:
+
+- **app/** - Thư mục chứa ứng dụng FastAPI chính
+  - **api/** - Định nghĩa API routes và endpoints
+  - **core/** - Cấu hình và các tiện ích bảo mật
+  - **crud/** - Các hàm để tương tác với database
+  - **db/** - Quản lý kết nối database
+  - **models/** - Định nghĩa model SQLAlchemy
+  - **schemas/** - Pydantic schemas cho validation
+  - **services/** - Logic nghiệp vụ tích hợp API ngoài
+  - **workers/** - Background tasks và agent workers
+
+- **Data/** - Dữ liệu GeoJSON và simulation data
+
+- **Root Scripts** - Các script standalone cho initialization và maintenance
+
+- **Docker** - Cấu hình Docker cho containerization
 
 ---
 
@@ -222,7 +310,7 @@ python main.py
 ```
 
 ### API trả về danh sách rỗng
-- Kiểm tra xem đã chạy `seed_data.py` chưa
+- Kiểm tra xem đã chạy `import_osm.py` và `sync_to_orion.py` chưa
 - Kiểm tra Headers `Link` khi gọi Orion-LD đã đúng chưa
 
 ### Xem logs Docker
