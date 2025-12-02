@@ -161,7 +161,7 @@ async def read_all_locations(
 
     async with httpx.AsyncClient() as client:
         try:
-            response = await client.get(ORION_ENTITIES_URL, params=params, headers=read_headers)
+            response = await client.get(ORION_BASE_URL, params=params, headers=read_headers)
             if response.status_code == 404: return []
             response.raise_for_status()
             

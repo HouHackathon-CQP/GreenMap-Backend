@@ -64,7 +64,7 @@ Tạo file `.env` tại thư mục gốc:
 ```env
 # Database & Authentication
 DATABASE_URL="postgresql+asyncpg://admin:mysecretpassword@127.0.0.1:5432/greenmap_db"
-SECRET_KEY="your_secret_key_here_min_64_chars"
+SECRET_KEY="your_secret_key_here_64_chars"
 ALGORITHM="HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES=30
 
@@ -93,7 +93,13 @@ docker-compose up -d
 
 ### 6. Khởi Tạo Dữ Liệu
 
-Chạy lần lượt các lệnh sau:
+Chạy lệnh sau:
+```bash
+# Tự động chạy các lệnh khởi tạo dữ liệu 
+python setup_project.py
+```
+
+Hoặc chạy lần lượt các lệnh sau (dễ debug hơn):
 
 ```bash
 # Nối file dữ liệu JSON
@@ -112,6 +118,7 @@ python sync_to_orion.py
 # Xử lý dữ liệu giao thông mô phỏng 
 python process_simulation.py
 ```
+
 
 ---
 
