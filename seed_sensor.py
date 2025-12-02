@@ -15,20 +15,20 @@
 import asyncio
 import httpx
 from app.core.config import settings
-import app.services as services
 from app.services import openaq
 
 ORION_ENTITIES_URL = f"{settings.orion_broker_url}/ngsi-ld/v1/entities"
 HEADERS = {"Content-Type": "application/ld+json", "Accept": "application/json"}
-
-# --- SỬA DÒNG NÀY (Dùng chung Context với aqi_agent.py) ---
-CONTEXT = "https://raw.githubusercontent.com/smart-data-models/dataModel.Environment/master/context.jsonld"
-# ---------------------------------------------------------
+CONTEXT = settings.ngsi_context_url
 
 async def seed_devices():
     print("--- BẮT ĐẦU ĐĂNG KÝ THIẾT BỊ (SOSA: SENSOR) ---")
     
-    measurements = await openaq.get_hanoi_aqi()
+    try:
+        measurements = await openaq.get_hanoi_aqi()
+    except Exception as e:
+        print(f"Lỗi lấy dữ liệu OpenAQ: {e}")
+        return
     
     if not measurements:
         print("Không lấy được dữ liệu từ OpenAQ.")
@@ -38,12 +38,12 @@ async def seed_devices():
 
     async with httpx.AsyncClient() as client:
         for item in measurements:
-            sensor_id = item["sensor_id"]
+            station_key = item["sensor_id"]
             station_name = item["station_name"]
             coords = item["coordinates"]
             provider = item["provider_name"]
 
-            device_id = f"urn:ngsi-ld:Device:OpenAQ-{sensor_id}"
+            device_id = f"urn:ngsi-ld:Device:OpenAQ-{station_key}"
 
             payload = {
                 "id": device_id,
