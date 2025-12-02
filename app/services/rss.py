@@ -1,4 +1,19 @@
+# Copyright 2025 HouHackathon-CQP
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
 import asyncio
+import re
 import unicodedata
 import xml.etree.ElementTree as ET
 from email.utils import parsedate_to_datetime
@@ -23,6 +38,23 @@ HANOI_KEYWORDS = ["a"]
 TOPIC_KEYWORDS = [
     "a"
 ]
+
+
+def _extract_image_url(description: str | None, enclosure_url: str | None) -> str | None:
+    """Extract image URL from description HTML or enclosure."""
+    # Try enclosure first (if it's an image)
+    if enclosure_url:
+        if any(enclosure_url.lower().endswith(ext) for ext in ['.jpg', '.jpeg', '.png', '.gif', '.webp']):
+            return enclosure_url
+    
+    # Try to extract from description HTML
+    if description:
+        # Look for img src attribute
+        img_match = re.search(r'<img[^>]+src=["\']([^"\']+)["\']', description)
+        if img_match:
+            return img_match.group(1)
+    
+    return None
 
 
 def _normalize(text: str | None) -> str:
@@ -75,11 +107,17 @@ def _parse_feed(xml_content: str) -> Iterable[NewsItem]:
             continue
 
         if link:
+            # Extract image URL from enclosure or description
+            enclosure = item.find("enclosure")
+            enclosure_url = enclosure.get("url") if enclosure is not None else None
+            image_url = _extract_image_url(description, enclosure_url)
+            
             yield NewsItem(
                 title=title.strip(),
                 description=description.strip() if description else None,
                 link=link.strip(),
                 published_at=published_at,
+                image_url=image_url,
             )
 
 

@@ -1,5 +1,18 @@
-from typing import List, Optional, Any, Dict
+# Copyright 2025 HouHackathon-CQP
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
 
+from typing import List, Optional, Any, Dict
 import httpx
 from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -12,69 +25,56 @@ from app.models.enums import LocationType
 
 router = APIRouter(prefix="/locations", tags=["locations"])
 
+# --- CẤU HÌNH ORION ---
+ORION_BASE_URL = f"{settings.orion_broker_url}/ngsi-ld/v1/entities"
 ORION_UPSERT_URL = f"{settings.orion_broker_url}/ngsi-ld/v1/entityOperations/upsert?options=update"
-ORION_ENTITIES_URL = f"{settings.orion_broker_url}/ngsi-ld/v1/entities"
-CONTEXT = "https://raw.githubusercontent.com/smart-data-models/dataModel.Environment/master/context.jsonld"
+CONTEXT = settings.ngsi_context_url
+HEADERS = {"Content-Type": "application/ld+json", "Accept": "application/json"}
 
-HEADERS = {
-    "Content-Type": "application/ld+json",
-    "Accept": "application/json"
-}
-
-async def push_location_to_orion(location: schemas.LocationCreate, location_id: int):
-    """
-    Chuyển đổi LocationCreate thành NGSI-LD Entity và gửi sang Orion.
-    Sử dụng cơ chế UPSERT (Update/Insert) để tránh lỗi 409 Conflict.
-    """
-    entity_id = f"urn:ngsi-ld:{location.location_type}:{location_id}"
+# --- HELPER: Đồng bộ sang Orion ---
+async def push_location_to_orion(location_obj: models.GreenLocation):
+    """Đồng bộ (Tạo mới/Cập nhật) sang Orion-LD"""
+    # Convert DB Object -> Schema để dễ lấy dữ liệu (lat/lon)
+    loc_data = schemas.LocationRead.model_validate(location_obj)
+    
+    entity_id = f"urn:ngsi-ld:{loc_data.location_type.value}:{loc_data.id}"
+    
     payload = {
         "id": entity_id,
-        "type": location.location_type, 
-        
-        "name": {
-            "type": "Property",
-            "value": location.name
-        },
-        
+        "type": loc_data.location_type.value,
+        "name": {"type": "Property", "value": loc_data.name},
         "location": {
             "type": "GeoProperty",
-            "value": {
-                "type": "Point",
-                "coordinates": [location.longitude, location.latitude]
-            }
+            "value": {"type": "Point", "coordinates": [loc_data.longitude, loc_data.latitude]}
         },
-        
-        "source": {
-            "type": "Property",
-            "value": "Admin Created"
-        },
-        
+        "source": {"type": "Property", "value": "Admin Created"},
         "@context": CONTEXT
     }
-
-    if location.description:
-        payload["description"] = {
-            "type": "Property",
-            "value": location.description
-        }
+    
+    if loc_data.description:
+        payload["description"] = {"type": "Property", "value": loc_data.description}
 
     async with httpx.AsyncClient() as client:
         try:
-            response = await client.post(
-                ORION_UPSERT_URL, 
-                json=[payload],
-                headers=HEADERS,
-                timeout=10.0
-            )
-
-            if response.status_code in [201, 204]:
-                print(f"✅ Đã đồng bộ địa điểm {entity_id} sang Orion-LD.")
-            else:
-                print(f"❌ Lỗi Orion-LD ({response.status_code}): {response.text}")
-                
+            # Dùng list [payload] cho endpoint upsert
+            await client.post(ORION_UPSERT_URL, json=[payload], headers=HEADERS)
+            print(f"✅ Đã đồng bộ {entity_id} sang Orion")
         except Exception as e:
-            print(f"❌ Lỗi kết nối Orion-LD: {e}")
+            print(f"❌ Lỗi Orion Upsert: {e}")
 
+async def delete_location_from_orion(location_type: str, location_id: int):
+    """Xóa khỏi Orion"""
+    entity_id = f"urn:ngsi-ld:{location_type}:{location_id}"
+    url = f"{ORION_BASE_URL}/{entity_id}"
+    
+    async with httpx.AsyncClient() as client:
+        try:
+            await client.delete(url, headers=HEADERS)
+            print(f"🗑️ Đã xóa {entity_id} khỏi Orion")
+        except Exception as e:
+            print(f"❌ Lỗi Orion Delete: {e}")
+
+# --- API ENDPOINTS ---
 
 @router.post("", response_model=schemas.LocationRead)
 async def create_new_location(
@@ -82,34 +82,75 @@ async def create_new_location(
     db: AsyncSession = Depends(get_db),
     current_user: models.User = Depends(get_current_admin),
 ):
-    """
-    Tạo địa điểm mới:
-    1. Lưu vào PostgreSQL (để lấy ID và quản lý nghiệp vụ).
-    2. Đẩy sang Orion-LD (để hiển thị bản đồ và Linked Data).
-    """
+    # 1. Lưu Postgres
     db_location = await crud.create_location(db=db, location=location)
-    await push_location_to_orion(location, db_location.id)
-
+    # 2. Đồng bộ Orion
+    await push_location_to_orion(db_location)
     return db_location
 
+@router.get("/{location_id}", response_model=schemas.LocationRead)
+async def read_location_detail(
+    location_id: int,
+    db: AsyncSession = Depends(get_db),
+):
+    """Lấy chi tiết (để Admin sửa) - Lấy từ Postgres"""
+    location = await crud.get_location(db, location_id)
+    if not location:
+        raise HTTPException(status_code=404, detail="Location not found")
+    return location
+
+@router.put("/{location_id}", response_model=schemas.LocationRead)
+async def update_location(
+    location_id: int,
+    location_in: schemas.LocationUpdate,
+    db: AsyncSession = Depends(get_db),
+    current_user: models.User = Depends(get_current_admin),
+):
+    """Cập nhật địa điểm -> Đồng bộ sang Orion"""
+    location = await crud.get_location(db, location_id)
+    if not location:
+        raise HTTPException(status_code=404, detail="Location not found")
+    
+    # Update DB
+    updated_location = await crud.update_location(db, db_obj=location, obj_in=location_in)
+    
+    # Update Orion
+    await push_location_to_orion(updated_location)
+    
+    return updated_location
+
+@router.delete("/{location_id}")
+async def delete_location(
+    location_id: int,
+    db: AsyncSession = Depends(get_db),
+    current_user: models.User = Depends(get_current_admin),
+):
+    """Xóa địa điểm -> Xóa khỏi Orion"""
+    location = await crud.get_location(db, location_id)
+    if not location:
+        raise HTTPException(status_code=404, detail="Location not found")
+    
+    loc_type = location.location_type.value
+    
+    # Delete DB
+    await crud.delete_location(db, location_id)
+    
+    # Delete Orion
+    await delete_location_from_orion(loc_type, location_id)
+    
+    return {"message": "Location deleted successfully"}
 
 @router.get("")
 async def read_all_locations(
     location_type: Optional[LocationType] = None,
-    offset: int = Query(0, ge=0, description="Số lượng bản ghi bỏ qua (Offset)"),
-    limit: int = Query(100, ge=1, le=1000, description="Số lượng bản ghi tối đa"),
+    limit: int = Query(100, ge=1),
+    skip: int = Query(0, ge=0),
     options: str = "keyValues", 
-) -> List[Dict[str, Any]]: 
+) -> List[Dict[str, Any]]:
     """
-    Lấy danh sách địa điểm từ Orion-LD (Hỗ trợ phân trang skip/limit).
+    Lấy danh sách TỪ ORION-LD (để hiển thị bản đồ).
     """
-    
-    params = {
-        "limit": limit,
-        "offset": offset,
-        "options": options 
-    }
-
+    params = {"limit": limit, "offset": skip, "options": options}
     if location_type:
         params["type"] = location_type.value
 
@@ -120,11 +161,22 @@ async def read_all_locations(
 
     async with httpx.AsyncClient() as client:
         try:
-            response = await client.get(ORION_ENTITIES_URL, params=params, headers=read_headers)
+            response = await client.get(ORION_BASE_URL, params=params, headers=read_headers)
+            if response.status_code == 404: return []
             response.raise_for_status()
-            return response.json()
             
-        except httpx.HTTPStatusError as exc:
-            raise HTTPException(status_code=exc.response.status_code, detail=f"Orion Error: {exc.response.text}")
-        except Exception as exc:
-            raise HTTPException(status_code=500, detail=f"Internal Server Error: {str(exc)}")
+            # Xử lý ID để phân biệt cái nào sửa được
+            data = response.json()
+            for item in data:
+                orion_id = item.get("id", "")
+                parts = orion_id.split(":")
+                if parts and parts[-1].isdigit():
+                    item["id"] = int(parts[-1])
+                    item["is_editable"] = True
+                else:
+                    item["id"] = parts[-1] # Giữ ID chuỗi
+                    item["is_editable"] = False
+            
+            return data
+        except Exception as e:
+            raise HTTPException(status_code=500, detail=str(e))

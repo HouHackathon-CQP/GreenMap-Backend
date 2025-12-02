@@ -15,9 +15,7 @@ DATA_INTERVAL = 10
 @router.get("/segments")
 async def get_static_map(db: AsyncSession = Depends(get_db)):
     """
-    API 1: Lấy bản đồ nền (GeoJSON) - ĐÃ TỐI ƯU.
-    - ST_Simplify(geom, 0.0001): Làm mượt đường, giảm điểm thừa (~11m).
-    - ST_AsGeoJSON(..., 6): Giới hạn 6 số thập phân để giảm dung lượng.
+    Lấy bản đồ nền (GeoJSON) các đoạn đường giao thông.
     """
     query = """
         SELECT 
@@ -49,7 +47,7 @@ async def get_static_map(db: AsyncSession = Depends(get_db)):
 @router.get("/live")
 async def get_live_status(db: AsyncSession = Depends(get_db)):
     """
-    API 2: Lấy trạng thái hiện tại.
+    Lấy trạng thái hiện tại.
     Tự động làm tròn thời gian xuống mốc 10s gần nhất.
     """
 
