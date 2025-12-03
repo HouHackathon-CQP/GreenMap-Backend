@@ -25,13 +25,7 @@ from fastapi import HTTPException
 from app.schemas import NewsItem
 
 HANOIMOI_FEEDS = [
-    "https://hanoimoi.vn/rss/do-thi/giao-thong",
-    "https://hanoimoi.vn/rss/kinh-te",
-    "https://hanoimoi.vn/rss/do-thi/moi-truong",
-    "https://hanoimoi.vn/rss/y-te",
-    "https://hanoimoi.vn/rss/du-lich",
-    "https://hanoimoi.vn/rss/nong-nghiep-nong-thon",
-    "https://hanoimoi.vn/rss/khoa-hoc-cong-nghe/chuyen-doi-so",
+    "https://hanoimoi.vn/rss/do-thi/moi-truong"
 ]
 
 HANOI_KEYWORDS = ["a"]
