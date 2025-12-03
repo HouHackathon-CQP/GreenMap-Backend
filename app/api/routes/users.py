@@ -109,7 +109,7 @@ async def change_password(
     if not success:
         raise HTTPException(
             status_code=400,
-            detail="Mật khẩu hiện tại không chính xác",
+            detail="Current password is incorrect",
         )
     
     return {"message": "Password changed successfully"}
