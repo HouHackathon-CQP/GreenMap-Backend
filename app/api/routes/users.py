@@ -99,17 +99,27 @@ async def change_password(
     db: AsyncSession = Depends(get_db),
 ):
     """Đổi mật khẩu của user hiện tại"""
-    success = await crud.change_password(
+    result = await crud.change_password(
         db,
         current_user.id,
         change_password_request.current_password,
         change_password_request.new_password,
     )
     
-    if not success:
+    if result == "user_not_found":
+        raise HTTPException(
+            status_code=404,
+            detail="User not found",
+        )
+    elif result == "incorrect_password":
         raise HTTPException(
             status_code=400,
-            detail="Current password is incorrect",
+            detail="Mật khẩu hiện tại không chính xác",
+        )
+    elif result != "success":
+        raise HTTPException(
+            status_code=500,
+            detail="Unknown error",
         )
     
     return {"message": "Password changed successfully"}
