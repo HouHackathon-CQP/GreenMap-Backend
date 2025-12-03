@@ -96,5 +96,3 @@ async def change_password(
     await db.commit()
     await db.refresh(db_user)
     return True
-    await db.commit()
-    return True
