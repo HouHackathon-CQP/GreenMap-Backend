@@ -28,7 +28,7 @@ router = APIRouter(prefix="/locations", tags=["locations"])
 # --- CẤU HÌNH ORION ---
 ORION_BASE_URL = f"{settings.orion_broker_url}/ngsi-ld/v1/entities"
 ORION_UPSERT_URL = f"{settings.orion_broker_url}/ngsi-ld/v1/entityOperations/upsert?options=update"
-CONTEXT = settings.ngsi_context_url
+CONTEXT = settings.ngsi_context_transportation
 HEADERS = {"Content-Type": "application/ld+json", "Accept": "application/json"}
 
 # --- HELPER: Đồng bộ sang Orion ---
@@ -145,38 +145,73 @@ async def read_all_locations(
     location_type: Optional[LocationType] = None,
     limit: int = Query(100, ge=1),
     skip: int = Query(0, ge=0),
-    options: str = "keyValues", 
+    options: str = "keyValues",
+    # --- THAM SỐ ĐỂ PHÂN LUỒNG ---
+    raw: bool = Query(False, description="True: Trả về chuẩn NGSI-LD (cho bên thứ 3). False: Trả về định dạng CMS (cho Admin).")
 ) -> List[Dict[str, Any]]:
     """
-    Lấy danh sách TỪ ORION-LD (để hiển thị bản đồ).
+    Lấy danh sách địa điểm từ Orion-LD.
+    Hỗ trợ 2 chế độ hiển thị (Raw/CMS) để phục vụ cả tích hợp hệ thống và quản trị nội bộ.
     """
-    params = {"limit": limit, "offset": skip, "options": options}
+    
+    params = {
+        "limit": limit,
+        "offset": skip,
+        "options": options 
+    }
+
     if location_type:
         params["type"] = location_type.value
 
+    # Dùng Context Giao thông để Orion tự động rút gọn key (nếu có thể)
     read_headers = {
         "Accept": "application/ld+json",
-        "Link": f'<{CONTEXT}>; rel="http://www.w3.org/ns/ldp#context"; type="application/ld+json"'
+        "Link": f'<{settings.ngsi_context_transportation}>; rel="http://www.w3.org/ns/ldp#context"; type="application/ld+json"'
     }
 
     async with httpx.AsyncClient() as client:
         try:
+            # Gọi sang Orion
             response = await client.get(ORION_BASE_URL, params=params, headers=read_headers)
-            if response.status_code == 404: return []
-            response.raise_for_status()
             
-            # Xử lý ID để phân biệt cái nào sửa được
+            if response.status_code == 404: 
+                return []
+            
+            response.raise_for_status()
             data = response.json()
+            
+            # === TRƯỜNG HỢP 1: BÊN THỨ 3 (RAW DATA) ===
+            if raw:
+                # Trả về nguyên bản, giữ nguyên @context và ID dạng URN
+                return data
+
+            # === TRƯỜNG HỢP 2: ADMIN DASHBOARD (PROCESSED DATA) ===
+            # Xử lý để Frontend dễ dùng hơn
             for item in data:
+                # 1. Làm sạch Key (Flatten) - Phòng hờ Orion không rút gọn hết
+                if "https://smartdatamodels.org/name" in item:
+                    item["name"] = item.pop("https://smartdatamodels.org/name")
+                if "https://smartdatamodels.org/source" in item:
+                    item["data_source"] = item.pop("https://smartdatamodels.org/source")
+                
+                # Một số trường hợp description bị dính prefix
+                if "https://smartdatamodels.org/description" in item:
+                    item["description"] = item.pop("https://smartdatamodels.org/description")
+
+                # 2. Xử lý ID (Tách số để gọi API Sửa/Xóa)
                 orion_id = item.get("id", "")
                 parts = orion_id.split(":")
+                
                 if parts and parts[-1].isdigit():
-                    item["id"] = int(parts[-1])
+                    item["db_id"] = int(parts[-1]) # ID số (cho Postgres)
                     item["is_editable"] = True
                 else:
-                    item["id"] = parts[-1] # Giữ ID chuỗi
-                    item["is_editable"] = False
+                    item["db_id"] = None           # Không có trong Postgres
+                    item["is_editable"] = False    # Chỉ xem
             
             return data
+
         except Exception as e:
-            raise HTTPException(status_code=500, detail=str(e))
+            # Log lỗi ra console server để dễ debug
+            print(f"Error fetching locations: {e}")
+            raise HTTPException(status_code=500, detail=f"Orion Error: {str(e)}")

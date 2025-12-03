@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from fastapi import APIRouter, Query # <-- 1. Import Query
+from fastapi import APIRouter, Query
 import httpx
 from app.core.config import settings
 

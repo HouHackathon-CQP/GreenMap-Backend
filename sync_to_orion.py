@@ -22,7 +22,7 @@ from shapely import wkt  # <-- 1. Thay đổi import: Dùng wkt thay vì to_shap
 # Cấu hình Orion
 ORION_UPSERT_URL = f"{settings.orion_broker_url}/ngsi-ld/v1/entityOperations/upsert?options=update"
 # Dùng Context chuẩn Môi trường (giống các file khác)
-CONTEXT = "https://raw.githubusercontent.com/smart-data-models/dataModel.Environment/master/context.jsonld"
+CONTEXT = "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld"
 HEADERS = {"Content-Type": "application/ld+json", "Accept": "application/json"}
 
 async def sync_db_to_orion():
