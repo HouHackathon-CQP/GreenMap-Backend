@@ -90,3 +90,26 @@ async def delete_user(
     if not success:
         raise HTTPException(status_code=404, detail="User not found")
     return {"message": "User deleted successfully"}
+
+
+@router.post("/change-password/me")
+async def change_password(
+    change_password_request: schemas.ChangePasswordRequest,
+    current_user: models.User = Depends(get_current_user),
+    db: AsyncSession = Depends(get_db),
+):
+    """Đổi mật khẩu của user hiện tại"""
+    success = await crud.change_password(
+        db,
+        current_user.id,
+        change_password_request.current_password,
+        change_password_request.new_password,
+    )
+    
+    if not success:
+        raise HTTPException(
+            status_code=400,
+            detail="Mật khẩu hiện tại không chính xác",
+        )
+    
+    return {"message": "Password changed successfully"}

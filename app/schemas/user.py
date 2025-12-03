@@ -29,9 +29,13 @@ class UserCreate(UserBase):
 class UserUpdate(BaseModel):
     email: EmailStr | None = None
     full_name: str | None = None
-    password: str | None = None
     is_active: bool | None = None
     role: UserRole | None = None
+
+
+class ChangePasswordRequest(BaseModel):
+    current_password: str
+    new_password: str
 
 
 class UserRead(UserBase):
