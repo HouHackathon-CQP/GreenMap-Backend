@@ -18,7 +18,7 @@ from fastapi import APIRouter, BackgroundTasks, Depends, HTTPException
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app import crud, models, schemas
-from app.api.deps import get_current_admin, get_current_user
+from app.api.deps import get_current_admin, get_current_user # Giữ nguyên import
 from app.db.session import get_db
 from app.services.orion import push_report_to_orion
 
@@ -34,25 +34,37 @@ async def create_new_report(
     return await crud.create_report(db=db, report=report, user_id=current_user.id)
 
 
+# --- SỬA PHẦN NÀY (GET) ---
 @router.get("", response_model=List[schemas.ReportRead])
 async def read_reports(
     status: Optional[models.ReportStatus] = None,
     skip: int = 0,
     limit: int = 100,
     db: AsyncSession = Depends(get_db),
-    current_user: models.User = Depends(get_current_admin),
+    # 1. Đổi từ get_current_admin -> get_current_user
+    current_user: models.User = Depends(get_current_user),
 ):
+    # 2. Thêm kiểm tra quyền: Chỉ ADMIN hoặc MANAGER được xem
+    # Lưu ý: check kỹ xem trong models role lưu là "MANAGER" hay models.UserRole.MANAGER
+    if current_user.role not in ["ADMIN", "MANAGER", models.UserRole.ADMIN, models.UserRole.MANAGER]:
+         raise HTTPException(status_code=403, detail="Not authorized")
+
     return await crud.get_reports(db=db, status=status, skip=skip, limit=limit)
 
 
+# --- SỬA PHẦN NÀY (PUT) ---
 @router.put("/{report_id}/status", response_model=schemas.ReportRead)
 async def approve_report(
     report_id: int,
     status_update: schemas.ReportUpdate,
     background_tasks: BackgroundTasks,
     db: AsyncSession = Depends(get_db),
-    current_user: models.User = Depends(get_current_admin),
+    current_user: models.User = Depends(get_current_user),
 ):
+    # 2. Thêm kiểm tra quyền: Chỉ ADMIN hoặc MANAGER được duyệt
+    if current_user.role not in ["ADMIN", "MANAGER", models.UserRole.ADMIN, models.UserRole.MANAGER]:
+         raise HTTPException(status_code=403, detail="Not authorized")
+
     report = await crud.update_report_status(db, report_id, status_update.status)
     if not report:
         raise HTTPException(status_code=404, detail="Report not found")
