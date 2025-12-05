@@ -80,19 +80,21 @@ async def delete_user(db: AsyncSession, user_id: int) -> bool:
     return True
 
 
+# --- HÀM ĐÃ ĐƯỢC SỬA LẠI ĐỂ TRẢ VỀ STRING ---
 async def change_password(
     db: AsyncSession, user_id: int, current_password: str, new_password: str
-) -> bool:
+) -> str:
     db_user = await get_user_by_id(db, user_id)
     if not db_user:
-        return False
+        return "user_not_found" # Trả về chuỗi để Router biết user ko tồn tại
     
     # Verify current password
     if not verify_password(current_password, db_user.hashed_password):
-        return False
+        return "incorrect_password" # Trả về chuỗi để Router biết sai pass cũ
     
     # Update password
     db_user.hashed_password = get_password_hash(new_password)
     await db.commit()
     await db.refresh(db_user)
-    return True
+    
+    return "success" # Trả về chuỗi success
