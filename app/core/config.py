@@ -42,6 +42,7 @@ class Settings(BaseModel):
     ngsi_context_url: str = os.getenv("NGSI_CONTEXT_URL", "https://raw.githubusercontent.com/smart-data-models/dataModel.Environment/master/context.jsonld")    
     ngsi_type_aqi: str = os.getenv("NGSI_TYPE_AQI", "https://smartdatamodels.org/dataModel.Environment/AirQualityObserved")
     ngsi_type_weather: str = os.getenv("NGSI_TYPE_WEATHER", "https://smartdatamodels.org/dataModel.Environment/WeatherObserved")
+    ngsi_context_transportation: str = os.getenv("NGSI_CONTEXT_TRANSPORTATION", "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld")
     @validator("cors_origins", pre=True)
     def split_origins(cls, v: str | list[str]) -> list[str]:
         if isinstance(v, str):

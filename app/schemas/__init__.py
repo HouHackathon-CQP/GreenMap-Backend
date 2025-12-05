@@ -2,7 +2,7 @@ from app.schemas.location import LocationBase, LocationCreate, LocationRead, Loc
 from app.schemas.news import NewsItem
 from app.schemas.report import ReportBase, ReportCreate, ReportRead, ReportUpdate
 from app.schemas.auth import LoginRequest, TokenResponse
-from app.schemas.user import UserBase, UserCreate, UserRead
+from app.schemas.user import UserBase, UserCreate, UserRead, UserUpdate, ChangePasswordRequest
 
 __all__ = [
     "LocationBase",
@@ -19,4 +19,6 @@ __all__ = [
     "UserBase",
     "UserCreate",
     "UserRead",
+    "UserUpdate",
+    "ChangePasswordRequest",
 ]
