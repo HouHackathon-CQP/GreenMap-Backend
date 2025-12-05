@@ -1,3 +1,17 @@
+# Copyright 2025 HouHackathon-CQP
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
 from typing import Optional
 from fastapi import Depends, HTTPException, status
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
@@ -77,4 +91,16 @@ async def get_current_manager(
             status_code=status.HTTP_403_FORBIDDEN,
             detail="Yêu cầu quyền Quản lý.",
         )
+    return current_user
+
+# --- HÀM MỚI THÊM VÀO ĐÂY ---
+async def get_current_active_user(
+    current_user: models.User = Depends(get_current_user),
+) -> models.User:
+    """
+    Dependency kiểm tra user có đang active hay không.
+    Dùng cho các API cần đăng nhập nhưng không bắt buộc quyền Admin/Manager cụ thể
+    """
+    if not current_user.is_active:
+        raise HTTPException(status_code=400, detail="Inactive user")
     return current_user
