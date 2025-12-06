@@ -14,7 +14,7 @@
 
 from fastapi import APIRouter
 
-from app.api.routes import aqi, auth, locations, news, reports, system, uploads, users, weather, traffic
+from app.api.routes import aqi, auth, locations, news, reports, system, uploads, users, weather, traffic, ai
 
 
 api_router = APIRouter()
@@ -28,3 +28,4 @@ api_router.include_router(uploads.router)
 api_router.include_router(aqi.router)
 api_router.include_router(weather.router)
 api_router.include_router(traffic.router)
+api_router.include_router(ai.router)

@@ -173,6 +173,13 @@ PUT    /api/locations/{id}       - Cập nhật địa điểm
 DELETE /api/locations/{id}       - Xóa địa điểm
 ```
 
+### AI Insights (Gemini / Groq)
+```
+POST   /ai/weather-insights      - Phân tích thời tiết 24h/7 ngày + AQI bằng AI
+POST   /ai/weather-insights?provider=groq&lat=21.03&lon=105.85
+```
+> Cần cấu hình `GEMINI_API_KEY` hoặc `GROQ_API_KEY` trong `.env`.
+
 ### News
 ```
 GET    /api/news/hanoimoi        - Tin tức Hà Nội Mới

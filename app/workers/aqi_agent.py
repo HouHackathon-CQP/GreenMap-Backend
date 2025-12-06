@@ -74,7 +74,7 @@ async def run_aqi_agent():
         print(f"\n[{datetime.now()}] Đang chạy... Lấy dữ liệu AQI từ OpenAQ...")
         
         try:
-            live_measurements = await openaq.get_hanoi_aqi()
+            live_measurements = await openaq.get_hanoi_aqi(max_sensors=80, concurrency=4)
             
             if not live_measurements:
                 print("Không tìm thấy số đo 'sống' nào. Bỏ qua vòng này.")

@@ -39,10 +39,21 @@ class Settings(BaseModel):
     first_superuser_password: str = os.getenv("FIRST_SUPERUSER_PASSWORD", "123456")
     static_dir: str = os.getenv("STATIC_DIR", "static")
     aqi_service_path: str = os.getenv("AQI_SERVICE_PATH", "https://smartdatamodels.org/dataModel.Environment")
-    ngsi_context_url: str = os.getenv("NGSI_CONTEXT_URL", "https://raw.githubusercontent.com/smart-data-models/dataModel.Environment/master/context.jsonld")    
+    ngsi_context_url: str = os.getenv("NGSI_CONTEXT_URL", "https://raw.githubusercontent.com/smart-data-models/dataModel.Environment/master/context.jsonld")
     ngsi_type_aqi: str = os.getenv("NGSI_TYPE_AQI", "https://smartdatamodels.org/dataModel.Environment/AirQualityObserved")
     ngsi_type_weather: str = os.getenv("NGSI_TYPE_WEATHER", "https://smartdatamodels.org/dataModel.Environment/WeatherObserved")
     ngsi_context_transportation: str = os.getenv("NGSI_CONTEXT_TRANSPORTATION", "https://raw.githubusercontent.com/smart-data-models/dataModel.Transportation/master/context.jsonld")
+    gemini_api_key: str | None = os.getenv("GEMINI_API_KEY")
+    gemini_model: str = os.getenv("GEMINI_MODEL", "gemini-1.5-flash")
+    groq_api_key: str | None = os.getenv("GROQ_API_KEY") or os.getenv("GROK_API_KEY")
+    groq_model: str = (
+        os.getenv("GROQ_MODEL")
+    )
+    groq_api_base: str = (
+        os.getenv("GROQ_API_BASE")
+        or os.getenv("GROK_API_BASE")
+        or "https://api.groq.com/openai/v1/chat/completions"
+    )
     @validator("cors_origins", pre=True)
     def split_origins(cls, v: str | list[str]) -> list[str]:
         if isinstance(v, str):

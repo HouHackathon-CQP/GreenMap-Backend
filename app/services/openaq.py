@@ -18,7 +18,12 @@ async def fetch_sensor_measurement(client: httpx.AsyncClient, sensor_info: dict,
     
     try:
         meas_res = await client.get(meas_url, headers=headers)
-        if meas_res.status_code == 404: return None
+        if meas_res.status_code == 404:
+            return None
+        # Với 429 (rate limit), bỏ qua sensor này để không làm hỏng toàn bộ kết quả
+        if meas_res.status_code == 429:
+            print(f"[WARN] Sensor {sensor_id} bị giới hạn tần suất (429). Bỏ qua.")
+            return None
         meas_res.raise_for_status()
         
         json_body = meas_res.json()
@@ -56,9 +61,10 @@ async def fetch_sensor_measurement(client: httpx.AsyncClient, sensor_info: dict,
         try:
             now = datetime.now(timezone.utc)
             obs_time = datetime.fromisoformat(utc_time_str)
-            if (now - obs_time).total_seconds() < 86400: # 24h
+            if (now - obs_time).total_seconds() < 86400:  # 24h
                 is_online = True
-        except: pass
+        except Exception:
+            pass
 
         return {
             "sensor_id": sensor_id,
@@ -70,12 +76,15 @@ async def fetch_sensor_measurement(client: httpx.AsyncClient, sensor_info: dict,
             "datetime_utc": utc_time_str,
             "status": "Online" if is_online else "Offline"
         }
-            
     except Exception as exc:
         print(f"Lỗi sensor {sensor_id}: {exc}")
         return None
 
-async def get_hanoi_aqi():
+
+async def get_hanoi_aqi(max_sensors: int = 80, concurrency: int = 5):
+    """
+    Lấy danh sách AQI/PM2.5 quanh Hà Nội. Giới hạn số sensor và độ song song để tránh 429.
+    """
     try:
         headers = {"accept": "application/json"}
         if settings.openaq_api_key:
@@ -116,15 +125,22 @@ async def get_hanoi_aqi():
                             "provider_name": provider,
                         })
 
-            if not sensors_to_fetch: return []
+            if not sensors_to_fetch:
+                return []
+
+            # Giới hạn số sensor để tránh bị rate limit
+            sensors_to_fetch = sensors_to_fetch[:max_sensors]
 
             print(f"--- Tìm thấy {len(sensors_to_fetch)} sensors. Đang lấy dữ liệu từ trường 'latest'... ---")
 
-            # 3. Gọi API song song
-            tasks = [
-                fetch_sensor_measurement(client, s, headers)
-                for s in sensors_to_fetch
-            ]
+            # 3. Gọi API song song nhưng giới hạn độ song song
+            sem = asyncio.Semaphore(concurrency)
+
+            async def wrapped_fetch(sensor: dict):
+                async with sem:
+                    return await fetch_sensor_measurement(client, sensor, headers)
+
+            tasks = [wrapped_fetch(s) for s in sensors_to_fetch]
             measurements_results = await asyncio.gather(*tasks)
 
             # 4. Gom nhóm (Lấy sensor tốt nhất của mỗi trạm)
