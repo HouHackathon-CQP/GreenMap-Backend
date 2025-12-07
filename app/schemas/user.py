@@ -26,6 +26,11 @@ class UserCreate(UserBase):
     password: str
 
 
+class UserCreateByAdmin(UserBase):
+    password: str
+    role: UserRole = UserRole.CITIZEN
+
+
 class UserUpdate(BaseModel):
     email: EmailStr | None = None
     full_name: str | None = None
