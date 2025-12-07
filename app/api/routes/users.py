@@ -51,11 +51,24 @@ async def create_new_user(
     user: schemas.UserCreate,
     db: AsyncSession = Depends(get_db),
 ):
-    """Tạo user mới (không cần đăng nhập)"""
+    """Tạo user mới (không cần đăng nhập) - mặc định role = CITIZEN"""
     db_user = await crud.get_user_by_email(db, email=user.email)
     if db_user:
         raise HTTPException(status_code=400, detail="Email already registered")
     return await crud.create_user(db=db, user=user)
+
+
+@router.post("/admin/create", response_model=schemas.UserRead)
+async def admin_create_user(
+    user: schemas.UserCreateByAdmin,
+    db: AsyncSession = Depends(get_db),
+    current_user: models.User = Depends(get_current_admin),
+):
+    """Tạo user với role cụ thể (chỉ Admin) - có thể tạo Manager, Admin"""
+    db_user = await crud.get_user_by_email(db, email=user.email)
+    if db_user:
+        raise HTTPException(status_code=400, detail="Email already registered")
+    return await crud.create_user(db=db, user=user, role=user.role)
 
 
 @router.put("/{user_id}", response_model=schemas.UserRead)
@@ -66,7 +79,6 @@ async def update_user(
     db: AsyncSession = Depends(get_db),
 ):
     """Cập nhật thông tin user (chỉ Admin hoặc chính user đó mới được cập nhật)"""
-    # Check quyền: Admin hoặc chính user đó
     if current_user.role != models.UserRole.ADMIN and current_user.id != user_id:
         raise HTTPException(
             status_code=403,

@@ -27,6 +27,7 @@ from app.schemas.ai import (
     AIRouteRequest,
     AIRouteResponse,
 )
+from app.schemas.user import UserBase, UserCreate, UserRead, UserUpdate, ChangePasswordRequest, UserCreateByAdmin
 
 __all__ = [
     "LocationBase",
@@ -56,4 +57,5 @@ __all__ = [
     "AIRouteGeometry",
     "AIRoutePath",
     "AIRouteResponse",
+    "UserCreateByAdmin",
 ]
