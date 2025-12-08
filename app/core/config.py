@@ -51,7 +51,6 @@ class Settings(BaseModel):
     )
     groq_api_base: str = (
         os.getenv("GROQ_API_BASE")
-        or os.getenv("GROK_API_BASE")
         or "https://api.groq.com/openai/v1/chat/completions"
     )
     @validator("cors_origins", pre=True)
