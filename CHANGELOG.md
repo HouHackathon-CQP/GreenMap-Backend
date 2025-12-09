@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 
 ## [unreleased]
 
+### 📚 Documentation
+
+- Add changelog, contributing guidelines, and security policy
+
 ### 🛠️`fix
 
 - Update locations endpoint to support transportation context and enhance data handling`
