@@ -12,23 +12,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from app.models.enums import LocationType, ReportStatus, UserRole
-from app.models.location import GreenLocation
-from app.models.report import UserReport
-from app.models.user import User
-from app.models.notification import NotificationToken
-from app.models.traffic import TrafficSegment, SimulationFrame
-from app.models.ai_report import AIReport
+import asyncio
+import logging
 
-__all__ = [
-    "User",
-    "NotificationToken",
-    "GreenLocation",
-    "UserReport",
-    "AIReport",
-    "UserRole",
-    "LocationType",
-    "ReportStatus",
-    "TrafficSegment",
-    "SimulationFrame",
-]
+from app.workers.notification_job import run_daily_notification_job
+
+
+if __name__ == "__main__":
+    logging.basicConfig(
+        level=logging.INFO,
+        format="%(asctime)s [%(levelname)s] %(message)s",
+    )
+    asyncio.run(run_daily_notification_job())

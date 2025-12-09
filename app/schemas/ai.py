@@ -12,23 +12,24 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from app.models.enums import LocationType, ReportStatus, UserRole
-from app.models.location import GreenLocation
-from app.models.report import UserReport
-from app.models.user import User
-from app.models.notification import NotificationToken
-from app.models.traffic import TrafficSegment, SimulationFrame
-from app.models.ai_report import AIReport
+from datetime import datetime
+from typing import Any
 
-__all__ = [
-    "User",
-    "NotificationToken",
-    "GreenLocation",
-    "UserReport",
-    "AIReport",
-    "UserRole",
-    "LocationType",
-    "ReportStatus",
-    "TrafficSegment",
-    "SimulationFrame",
-]
+from pydantic import BaseModel, ConfigDict
+
+
+class AIReportBase(BaseModel):
+    lat: float
+    lon: float
+    provider: str
+    model: str | None = None
+    analysis: str
+    context: dict[str, Any] | None = None
+
+
+class AIReportRead(AIReportBase):
+    id: int
+    user_id: int | None = None
+    created_at: datetime | None = None
+
+    model_config = ConfigDict(from_attributes=True)

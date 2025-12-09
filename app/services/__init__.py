@@ -12,6 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from app.services import openaq, rss, weather, ai_insights
+from app.services import openaq, rss, weather, ai_insights, push
 
-__all__ = ["openaq", "rss", "weather", "ai_insights"]
+__all__ = ["openaq", "rss", "weather", "ai_insights", "push"]

@@ -83,6 +83,16 @@ ORION_BROKER_URL="http://localhost:1026"
 NGSI_CONTEXT_URL=https://raw.githubusercontent.com/smart-data-models/dataModel.Environment/master/context.jsonld
 NGSI_TYPE_AQI=https://smartdatamodels.org/dataModel.Environment/AirQualityObserved
 NGSI_TYPE_WEATHER=https://smartdatamodels.org/dataModel.Environment/WeatherObserved
+
+# Firebase push notification
+FIREBASE_CREDENTIALS_FILE="/path/to/firebase-service-account.json"
+FIREBASE_DEFAULT_TOPIC="greenmap-daily"
+
+# Daily notification schedule (local server time)
+DAILY_PUSH_HOUR=7
+DAILY_PUSH_MINUTE=0
+DAILY_PUSH_TITLE="Bản đồ Xanh - Cập nhật môi trường mỗi ngày"
+DAILY_PUSH_BODY="Mở ứng dụng để xem dự báo thời tiết và chất lượng không khí hôm nay."
 ```
 
 ### 5. Khởi Động Docker
@@ -124,7 +134,7 @@ python process_simulation.py
 
 ## Chạy Ứng Dụng
 
-Mở 3 terminal riêng biệt:
+Mở 4 terminal riêng biệt:
 
 ### Terminal 1: API Backend
 ```bash
@@ -142,6 +152,12 @@ python aqi_agent.py
 ```bash
 python weather_agent.py
 ```
+
+### Terminal 4: Daily Notification Job (gửi push Firebase hằng ngày)
+```bash
+python notification_job.py
+```
+> Yêu cầu cấu hình `FIREBASE_CREDENTIALS_FILE` và đồng bộ device token từ mobile app.
 
 ---
 
@@ -184,6 +200,14 @@ POST   /ai/weather-insights?provider=groq&lat=21.03&lon=105.85
 ```
 GET    /api/news/hanoimoi        - Tin tức Hà Nội Mới
 GET    /api/news/hanoimoi?limit=20
+```
+
+### Notifications (Firebase)
+```
+POST   /api/notifications/register           - Mobile đăng ký/ cập nhật device token
+DELETE /api/notifications/register/{token}   - Hủy đăng ký token
+GET    /api/notifications/tokens             - Danh sách token (Admin)
+POST   /api/notifications/send               - Gửi push thủ công (Admin)
 ```
 
 ### Context Broker (Orion-LD)

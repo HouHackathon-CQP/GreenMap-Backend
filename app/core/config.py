@@ -53,6 +53,19 @@ class Settings(BaseModel):
         os.getenv("GROQ_API_BASE")
         or "https://api.groq.com/openai/v1/chat/completions"
     )
+    firebase_credentials_file: str | None = os.getenv("FIREBASE_CREDENTIALS_FILE")
+    firebase_default_topic: str = os.getenv("FIREBASE_DEFAULT_TOPIC", "greenmap-daily")
+    daily_push_hour: int = int(os.getenv("DAILY_PUSH_HOUR", "7"))
+    daily_push_minute: int = int(os.getenv("DAILY_PUSH_MINUTE", "0"))
+    daily_push_title: str = os.getenv(
+        "DAILY_PUSH_TITLE",
+        "Bản đồ Xanh - Cập nhật môi trường mỗi ngày",
+    )
+    daily_push_body: str = os.getenv(
+        "DAILY_PUSH_BODY",
+        "Mở ứng dụng để xem dự báo thời tiết và chất lượng không khí hôm nay.",
+    )
+
     @validator("cors_origins", pre=True)
     def split_origins(cls, v: str | list[str]) -> list[str]:
         if isinstance(v, str):

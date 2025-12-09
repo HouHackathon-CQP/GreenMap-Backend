@@ -10,3 +10,4 @@ python-jose
 bcrypt==3.2.0
 python-dotenv
 httpx
+firebase-admin
