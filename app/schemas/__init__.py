@@ -16,7 +16,25 @@ from app.schemas.location import LocationBase, LocationCreate, LocationRead, Loc
 from app.schemas.news import NewsItem
 from app.schemas.report import ReportBase, ReportCreate, ReportRead, ReportUpdate
 from app.schemas.auth import LoginRequest, TokenResponse
-from app.schemas.user import UserBase, UserCreate, UserRead, UserUpdate, ChangePasswordRequest
+from app.schemas.user import UserBase, UserCreate, UserRead, UserUpdate, ChangePasswordRequest, UserCreateByAdmin
+from app.schemas.notification import (
+    DeviceTokenCreate, 
+    DeviceTokenRead, 
+    PushMessage, 
+    TopicPushMessage,
+    NotificationHistoryCreate,
+    NotificationHistoryRead,
+    NotificationHistoryList,
+)
+from app.schemas.ai import (
+    AIReportRead,
+    AIRouteGeometry,
+    AIRouteLocation,
+    AIRoutePath,
+    AIRoutePoi,
+    AIRouteRequest,
+    AIRouteResponse,
+)
 
 __all__ = [
     "LocationBase",
@@ -35,4 +53,20 @@ __all__ = [
     "UserRead",
     "UserUpdate",
     "ChangePasswordRequest",
+    "UserCreateByAdmin",
+    "DeviceTokenCreate",
+    "DeviceTokenRead",
+    "PushMessage",
+    "TopicPushMessage",
+    "NotificationHistoryCreate",
+    "NotificationHistoryRead",
+    "NotificationHistoryList",
+    "AIReportRead",
+    "AIRouteRequest",
+    "AIRouteLocation",
+    "AIRoutePoi",
+    "AIRouteGeometry",
+    "AIRoutePath",
+    "AIRouteResponse",
+    "UserCreateByAdmin",
 ]

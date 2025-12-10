@@ -14,16 +14,21 @@
 
 from typing import Literal
 
-from fastapi import APIRouter, HTTPException, Query
+from fastapi import APIRouter, Depends, HTTPException, Query
+from sqlalchemy.ext.asyncio import AsyncSession
 
+from app import crud, models, schemas
+from app.api.deps import get_current_user_silent
+from app.db.session import get_db
 from app.services.ai_insights import generate_ai_insight
+from app.services.ai_routing import generate_ai_route
 
 
 Provider = Literal["gemini", "groq", "auto"]
 router = APIRouter(prefix="/ai", tags=["ai"])
 
 
-@router.post("/weather-insights")
+@router.post("/weather-insights", response_model=schemas.AIReportRead, include_in_schema=False)
 async def get_ai_weather_insights(
     lat: float = Query(21.0285, description="Vĩ độ (mặc định: Hà Nội)"),
     lon: float = Query(105.8542, description="Kinh độ (mặc định: Hà Nội)"),
@@ -32,16 +37,72 @@ async def get_ai_weather_insights(
         None,
         description="Ghi đè model nếu cần (ví dụ: gemini-1.5-pro). Bỏ trống để dùng mặc định.",
     ),
+    db: AsyncSession = Depends(get_db),
+    current_user: models.User | None = Depends(get_current_user_silent),
 ):
     """
     Phân tích thời tiết 24h/7 ngày + AQI bằng AI (Gemini/Groq) và trả về lời khuyên.
     """
     try:
-        return await generate_ai_insight(
+        ai_result = await generate_ai_insight(
             lat=lat,
             lon=lon,
             provider=provider,
             model_override=model,
         )
+    except Exception as exc:  # noqa: BLE001
+        raise HTTPException(status_code=502, detail=str(exc)) from exc
+
+    analysis_text = ai_result.get("analysis")
+    if not analysis_text:
+        raise HTTPException(status_code=502, detail="AI không trả về nội dung phân tích.")
+
+    saved = await crud.create_ai_report(
+        db=db,
+        provider=ai_result.get("provider") or provider,
+        model=ai_result.get("model"),
+        lat=lat,
+        lon=lon,
+        analysis=analysis_text,
+        context=ai_result.get("context"),
+        user_id=current_user.id if current_user else None,
+    )
+    return saved
+
+
+@router.get("/weather-insights/history", response_model=list[schemas.AIReportRead], include_in_schema=False)
+async def get_ai_weather_history(
+    skip: int = Query(0, ge=0, description="Bỏ qua n kết quả đầu."),
+    limit: int = Query(20, ge=1, le=100, description="Số bản ghi tối đa trả về."),
+    db: AsyncSession = Depends(get_db),
+    current_user: models.User | None = Depends(get_current_user_silent),
+):
+    """
+    Xem lại các bản phân tích AI đã tạo. Nếu đăng nhập, chỉ trả về lịch sử của bạn.
+    """
+    user_id = current_user.id if current_user else None
+    return await crud.list_ai_reports(db=db, user_id=user_id, skip=skip, limit=limit)
+
+
+@router.post("/directions", response_model=schemas.AIRouteResponse, include_in_schema=False)
+async def ai_directions(
+    payload: schemas.AIRouteRequest,
+    db: AsyncSession = Depends(get_db),
+):
+    """
+    Đọc câu hỏi chỉ đường (tự nhiên), tự động tìm POI/điểm đến (Nominatim OSM), tính route bằng OSRM và trả về GeoJSON.
+    """
+    try:
+        return await generate_ai_route(
+            db=db,
+            question=payload.question,
+            current_lat=payload.current_lat,
+            current_lon=payload.current_lon,
+            destination_lat=payload.destination_lat,
+            destination_lon=payload.destination_lon,
+            model_override=payload.model,
+        )
+    except HTTPException:
+        raise
     except Exception as exc:  # noqa: BLE001
         raise HTTPException(status_code=502, detail=str(exc)) from exc

@@ -28,6 +28,9 @@ class Settings(BaseModel):
     secret_key: str = os.getenv("SECRET_KEY", "change-me")
     algorithm: str = os.getenv("ALGORITHM", "HS256")
     access_token_expire_minutes: int = int(os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES", "30"))
+    
+    # API Documentation
+    docs_enabled: bool = os.getenv("DOCS_ENABLED", "true").lower() == "true"
     database_url: str = os.getenv(
         "DATABASE_URL",
         "postgresql+asyncpg://postgres:password@localhost/greenmap_db",
@@ -53,6 +56,24 @@ class Settings(BaseModel):
         os.getenv("GROQ_API_BASE")
         or "https://api.groq.com/openai/v1/chat/completions"
     )
+    osrm_base_url: str = os.getenv("OSRM_BASE_URL", "https://router.project-osrm.org")
+    osm_nominatim_url: str = os.getenv(
+        "OSM_NOMINATIM_URL",
+        "https://nominatim.openstreetmap.org/search",
+    )
+    firebase_credentials_file: str | None = os.getenv("FIREBASE_CREDENTIALS_FILE")
+    firebase_default_topic: str = os.getenv("FIREBASE_DEFAULT_TOPIC", "greenmap-daily")
+    daily_push_hour: int = int(os.getenv("DAILY_PUSH_HOUR", "7"))
+    daily_push_minute: int = int(os.getenv("DAILY_PUSH_MINUTE", "0"))
+    daily_push_title: str = os.getenv(
+        "DAILY_PUSH_TITLE",
+        "Bản đồ Xanh - Cập nhật môi trường mỗi ngày",
+    )
+    daily_push_body: str = os.getenv(
+        "DAILY_PUSH_BODY",
+        "Mở ứng dụng để xem dự báo thời tiết và chất lượng không khí hôm nay.",
+    )
+
     @validator("cors_origins", pre=True)
     def split_origins(cls, v: str | list[str]) -> list[str]:
         if isinstance(v, str):

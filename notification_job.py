@@ -13,11 +13,14 @@
 # limitations under the License.
 
 import asyncio
-import sys
-import uvicorn
-from app.main import app
+import logging
+
+from app.workers.notification_job import run_daily_notification_job
+
 
 if __name__ == "__main__":
-    if sys.platform.startswith("win"):
-        asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
-    uvicorn.run("app.main:app", host="0.0.0.0", port=8000, reload=True)
+    logging.basicConfig(
+        level=logging.INFO,
+        format="%(asctime)s [%(levelname)s] %(message)s",
+    )
+    asyncio.run(run_daily_notification_job())

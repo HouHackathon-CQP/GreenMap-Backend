@@ -16,12 +16,17 @@ from app.models.enums import LocationType, ReportStatus, UserRole
 from app.models.location import GreenLocation
 from app.models.report import UserReport
 from app.models.user import User
+from app.models.notification import NotificationToken, NotificationHistory
 from app.models.traffic import TrafficSegment, SimulationFrame
+from app.models.ai_report import AIReport
 
 __all__ = [
     "User",
+    "NotificationToken",
+    "NotificationHistory",
     "GreenLocation",
     "UserReport",
+    "AIReport",
     "UserRole",
     "LocationType",
     "ReportStatus",

@@ -15,6 +15,19 @@
 from app.crud.location import create_location, get_locations, get_location, update_location, delete_location
 from app.crud.report import create_report, get_reports, update_report_status
 from app.crud.user import create_user, get_user_by_email, get_user_by_id, get_all_users, update_user, delete_user, change_password
+from app.crud.notification import (
+    upsert_device_token,
+    deactivate_token,
+    deactivate_tokens_by_value,
+    get_active_tokens,
+    get_all_tokens,
+    mark_tokens_sent,
+    create_notification_history,
+    get_notification_history,
+    get_notification_history_by_id,
+    delete_old_notification_history,
+)
+from app.crud.ai_report import create_ai_report, list_ai_reports, get_ai_report
 
 __all__ = [
     "create_location",
@@ -32,4 +45,17 @@ __all__ = [
     "update_user",
     "delete_user",
     "change_password",
+    "upsert_device_token",
+    "deactivate_token",
+    "deactivate_tokens_by_value",
+    "get_active_tokens",
+    "get_all_tokens",
+    "mark_tokens_sent",
+    "create_notification_history",
+    "get_notification_history",
+    "get_notification_history_by_id",
+    "delete_old_notification_history",
+    "create_ai_report",
+    "list_ai_reports",
+    "get_ai_report",
 ]
