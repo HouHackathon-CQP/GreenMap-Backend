@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from sqlalchemy import Boolean, Column, DateTime, ForeignKey, Integer, String, func
+from sqlalchemy import Boolean, Column, DateTime, ForeignKey, Integer, String, Text, func
 from sqlalchemy.orm import relationship
 
 from app.db.session import Base
@@ -30,3 +30,24 @@ class NotificationToken(Base):
     created_at = Column(DateTime(timezone=True), server_default=func.now(), nullable=False)
 
     user = relationship("User", backref="notification_tokens")
+
+
+class NotificationHistory(Base):
+    __tablename__ = "notification_history"
+
+    id = Column(Integer, primary_key=True, index=True)
+    title = Column(String(255), nullable=False)
+    body = Column(Text, nullable=False)
+    data = Column(Text, nullable=True)  # JSON string
+    notification_type = Column(String(50), nullable=False, index=True)  # "token", "topic", "broadcast"
+    topic = Column(String(255), nullable=True)  # For topic notifications
+    target_user_id = Column(Integer, ForeignKey("users.id"), nullable=True)  # For user-specific notifications
+    sent_count = Column(Integer, default=0, nullable=False)
+    failed_count = Column(Integer, default=0, nullable=False)
+    sent_by_user_id = Column(Integer, ForeignKey("users.id"), nullable=True)
+    status = Column(String(50), default="sent", nullable=False)  # "sent", "failed", "partial"
+    error_message = Column(Text, nullable=True)
+    created_at = Column(DateTime(timezone=True), server_default=func.now(), nullable=False, index=True)
+
+    target_user = relationship("User", foreign_keys=[target_user_id], backref="received_notifications")
+    sent_by_user = relationship("User", foreign_keys=[sent_by_user_id], backref="sent_notifications")
