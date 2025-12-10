@@ -53,6 +53,11 @@ class Settings(BaseModel):
         os.getenv("GROQ_API_BASE")
         or "https://api.groq.com/openai/v1/chat/completions"
     )
+    osrm_base_url: str = os.getenv("OSRM_BASE_URL", "https://router.project-osrm.org")
+    osm_nominatim_url: str = os.getenv(
+        "OSM_NOMINATIM_URL",
+        "https://nominatim.openstreetmap.org/search",
+    )
     firebase_credentials_file: str | None = os.getenv("FIREBASE_CREDENTIALS_FILE")
     firebase_default_topic: str = os.getenv("FIREBASE_DEFAULT_TOPIC", "greenmap-daily")
     daily_push_hour: int = int(os.getenv("DAILY_PUSH_HOUR", "7"))

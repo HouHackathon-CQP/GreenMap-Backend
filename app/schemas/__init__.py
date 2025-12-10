@@ -18,7 +18,15 @@ from app.schemas.report import ReportBase, ReportCreate, ReportRead, ReportUpdat
 from app.schemas.auth import LoginRequest, TokenResponse
 from app.schemas.user import UserBase, UserCreate, UserRead, UserUpdate, ChangePasswordRequest
 from app.schemas.notification import DeviceTokenCreate, DeviceTokenRead, PushMessage, TopicPushMessage
-from app.schemas.ai import AIReportRead
+from app.schemas.ai import (
+    AIReportRead,
+    AIRouteGeometry,
+    AIRouteLocation,
+    AIRoutePath,
+    AIRoutePoi,
+    AIRouteRequest,
+    AIRouteResponse,
+)
 
 __all__ = [
     "LocationBase",
@@ -42,4 +50,10 @@ __all__ = [
     "PushMessage",
     "TopicPushMessage",
     "AIReportRead",
+    "AIRouteRequest",
+    "AIRouteLocation",
+    "AIRoutePoi",
+    "AIRouteGeometry",
+    "AIRoutePath",
+    "AIRouteResponse",
 ]
