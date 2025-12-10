@@ -13,33 +13,30 @@ Chúng tôi hoan nghênh mọi ý kiến, từ báo lỗi, đề xuất tính n�
 
 1. Fork repository này.  
 2. Tạo branch mới từ `main` (ví dụ: `fix/ten-bug` hoặc `feature/them-chuc-nang`).  
-3. Commit thay đổi theo [Conventional Commits](#conventional-commits).  
+3. Commit thay đổi với message rõ ràng theo [hướng dẫn bên dưới](#commit-message-guidelines).  
 4. Push lên fork của bạn và mở Pull Request.  
 5. Mô tả chi tiết những gì bạn thay đổi.
 
-## Conventional Commits
+## Commit Message Guidelines
 
-Dự án sử dụng [Conventional Commits](https://www.conventionalcommits.org/) để tự động tạo changelog.
+Để duy trì lịch sử commit rõ ràng và dễ theo dõi, chúng tôi khuyến khích sử dụng format [Conventional Commits](https://www.conventionalcommits.org/).
 
 ### Format
 ```
 <type>(<scope>): <description>
 
 [optional body]
-
-[optional footer]
 ```
 
-### Types
-- **feat**: Tính năng mới (🚀 Features)
-- **fix**: Sửa lỗi (🐛 Bug Fixes)
-- **docs**: Cập nhật tài liệu (📚 Documentation)
-- **style**: Thay đổi formatting, không ảnh hưởng code
-- **refactor**: Tái cấu trúc code (🚜 Refactor)
-- **perf**: Cải thiện hiệu suất (⚡ Performance)
-- **test**: Thêm/sửa tests (🧪 Testing)
-- **chore**: Maintenance tasks (⚙️ Miscellaneous)
-- **ci**: CI/CD changes
+### Types phổ biến
+- **feat**: Thêm tính năng mới
+- **fix**: Sửa lỗi
+- **docs**: Cập nhật tài liệu
+- **style**: Thay đổi formatting (không ảnh hưởng logic code)
+- **refactor**: Tái cấu trúc code
+- **perf**: Cải thiện hiệu suất
+- **test**: Thêm/sửa tests
+- **chore**: Các công việc maintenance khác
 
 ### Ví dụ
 ```bash
@@ -48,16 +45,9 @@ fix(api): resolve null pointer in weather endpoint
 docs: update API documentation
 refactor(database): optimize query performance
 test(users): add unit tests for user service
-chore(deps): update dependencies
 ```
 
-### Breaking Changes
-Nếu có thay đổi breaking, thêm `!` sau type hoặc thêm `BREAKING CHANGE:` trong footer:
-```bash
-feat(api)!: change response format for locations endpoint
-
-BREAKING CHANGE: Response now returns array instead of object
-```  
+**Lưu ý:** Nếu không quen với format này, commit message đơn giản và rõ ràng vẫn được chấp nhận!  
 
 ## Quy tắc code
 
