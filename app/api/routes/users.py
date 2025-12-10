@@ -22,7 +22,7 @@ from app.db.session import get_db
 router = APIRouter(prefix="/users", tags=["users"])
 
 
-@router.get("", response_model=list[schemas.UserRead])
+@router.get("", response_model=list[schemas.UserRead], include_in_schema=False)
 async def get_users(
     skip: int = 0,
     limit: int = 100,
@@ -33,7 +33,7 @@ async def get_users(
     return await crud.get_all_users(db, skip=skip, limit=limit)
 
 
-@router.get("/{user_id}", response_model=schemas.UserRead)
+@router.get("/{user_id}", response_model=schemas.UserRead, include_in_schema=False)
 async def get_user(
     user_id: int,
     current_user: models.User = Depends(get_current_user),
@@ -46,7 +46,7 @@ async def get_user(
     return db_user
 
 
-@router.post("", response_model=schemas.UserRead)
+@router.post("", response_model=schemas.UserRead, include_in_schema=False)
 async def create_new_user(
     user: schemas.UserCreate,
     db: AsyncSession = Depends(get_db),
@@ -58,7 +58,7 @@ async def create_new_user(
     return await crud.create_user(db=db, user=user)
 
 
-@router.post("/admin/create", response_model=schemas.UserRead)
+@router.post("/admin/create", response_model=schemas.UserRead, include_in_schema=False)
 async def admin_create_user(
     user: schemas.UserCreateByAdmin,
     db: AsyncSession = Depends(get_db),
@@ -71,7 +71,7 @@ async def admin_create_user(
     return await crud.create_user(db=db, user=user, role=user.role)
 
 
-@router.put("/{user_id}", response_model=schemas.UserRead)
+@router.put("/{user_id}", response_model=schemas.UserRead, include_in_schema=False)
 async def update_user(
     user_id: int,
     user_update: schemas.UserUpdate,
@@ -91,7 +91,7 @@ async def update_user(
     return db_user
 
 
-@router.delete("/{user_id}")
+@router.delete("/{user_id}", include_in_schema=False)
 async def delete_user(
     user_id: int,
     current_user: models.User = Depends(get_current_admin),
@@ -104,7 +104,7 @@ async def delete_user(
     return {"message": "User deleted successfully"}
 
 
-@router.post("/change-password/me")
+@router.post("/change-password/me", include_in_schema=False)
 async def change_password(
     change_password_request: schemas.ChangePasswordRequest,
     current_user: models.User = Depends(get_current_user),

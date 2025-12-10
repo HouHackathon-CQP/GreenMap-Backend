@@ -28,6 +28,9 @@ class Settings(BaseModel):
     secret_key: str = os.getenv("SECRET_KEY", "change-me")
     algorithm: str = os.getenv("ALGORITHM", "HS256")
     access_token_expire_minutes: int = int(os.getenv("ACCESS_TOKEN_EXPIRE_MINUTES", "30"))
+    
+    # API Documentation
+    docs_enabled: bool = os.getenv("DOCS_ENABLED", "true").lower() == "true"
     database_url: str = os.getenv(
         "DATABASE_URL",
         "postgresql+asyncpg://postgres:password@localhost/greenmap_db",

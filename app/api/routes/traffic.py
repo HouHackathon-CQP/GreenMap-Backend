@@ -26,7 +26,7 @@ LOOP_DURATION = 3600
 START_TIME_REF = time.time()
 DATA_INTERVAL = 10 
 
-@router.get("/segments")
+@router.get("/segments", include_in_schema=False)
 async def get_static_map(db: AsyncSession = Depends(get_db)):
     """
     Lấy bản đồ nền (GeoJSON) các đoạn đường giao thông.
@@ -58,7 +58,7 @@ async def get_static_map(db: AsyncSession = Depends(get_db)):
         
     return {"type": "FeatureCollection", "features": features}
 
-@router.get("/live")
+@router.get("/live", include_in_schema=False)
 async def get_live_status(db: AsyncSession = Depends(get_db)):
     """
     Lấy trạng thái hiện tại.

@@ -26,7 +26,7 @@ STATIC_IMAGES_DIR = Path(settings.static_dir) / "images"
 STATIC_IMAGES_DIR.mkdir(parents=True, exist_ok=True)
 
 
-@router.post("/upload")
+@router.post("/upload", include_in_schema=False)
 async def upload_image(file: UploadFile = File(...)):
     file_extension = file.filename.split(".")[-1]
     file_name = f"{uuid.uuid4()}.{file_extension}"

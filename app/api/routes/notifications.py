@@ -28,7 +28,7 @@ router = APIRouter(prefix="/notifications", tags=["notifications"])
 logger = logging.getLogger(__name__)
 
 
-@router.post("/register", response_model=schemas.DeviceTokenRead)
+@router.post("/register", response_model=schemas.DeviceTokenRead, include_in_schema=False)
 async def register_device_token(
     payload: schemas.DeviceTokenCreate,
     current_user: models.User | None = Depends(get_current_user_silent),
@@ -47,7 +47,7 @@ async def register_device_token(
     return device
 
 
-@router.delete("/register/{token}")
+@router.delete("/register/{token}", include_in_schema=False)
 async def unregister_device_token(
     token: str,
     db: AsyncSession = Depends(get_db),
@@ -58,7 +58,7 @@ async def unregister_device_token(
     return {"message": "Đã hủy đăng ký token"}
 
 
-@router.get("/tokens", response_model=list[schemas.DeviceTokenRead])
+@router.get("/tokens", response_model=list[schemas.DeviceTokenRead], include_in_schema=False)
 async def list_tokens(
     current_user: models.User = Depends(get_current_admin),
     db: AsyncSession = Depends(get_db),
@@ -66,7 +66,7 @@ async def list_tokens(
     return await crud.get_all_tokens(db)
 
 
-@router.post("/send")
+@router.post("/send", include_in_schema=False)
 async def send_push_notification(
     message: schemas.PushMessage,
     current_user: models.User = Depends(get_current_admin),
@@ -140,7 +140,7 @@ async def send_push_notification(
     }
 
 
-@router.post("/send/topic")
+@router.post("/send/topic", include_in_schema=False)
 async def send_topic_notification(
     message: schemas.TopicPushMessage,
     current_user: models.User = Depends(get_current_admin),
@@ -205,7 +205,7 @@ async def send_topic_notification(
     return {"topic": topic, "message_id": result.get("message_id")}
 
 
-@router.get("/history", response_model=schemas.NotificationHistoryList)
+@router.get("/history", response_model=schemas.NotificationHistoryList, include_in_schema=False)
 async def get_notification_history(
     skip: int = Query(0, ge=0),
     limit: int = Query(100, ge=1, le=1000),
@@ -228,7 +228,7 @@ async def get_notification_history(
     return schemas.NotificationHistoryList(total=total, items=items)
 
 
-@router.get("/history/{notification_id}", response_model=schemas.NotificationHistoryRead)
+@router.get("/history/{notification_id}", response_model=schemas.NotificationHistoryRead, include_in_schema=False)
 async def get_notification_by_id(
     notification_id: int,
     current_user: models.User = Depends(get_current_admin),
@@ -243,7 +243,7 @@ async def get_notification_by_id(
     return notification
 
 
-@router.delete("/history/cleanup")
+@router.delete("/history/cleanup", include_in_schema=False)
 async def cleanup_old_notifications(
     days: int = Query(90, ge=1, le=365, description="Xóa thông báo cũ hơn số ngày này"),
     current_user: models.User = Depends(get_current_admin),

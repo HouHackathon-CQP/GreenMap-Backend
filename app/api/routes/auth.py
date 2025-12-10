@@ -26,7 +26,7 @@ router = APIRouter(tags=["auth"])
 logger = logging.getLogger(__name__)
 
 
-@router.post("/login", response_model=schemas.TokenResponse)
+@router.post("/login", response_model=schemas.TokenResponse, include_in_schema=False)
 async def login_for_access_token(
     credentials: schemas.LoginRequest,
     db: AsyncSession = Depends(get_db),
@@ -45,7 +45,7 @@ async def login_for_access_token(
         "role": user.role
     }
 
-@router.post("/logout")
+@router.post("/logout", include_in_schema=False)
 async def logout(
     current_user: models.User = Depends(deps.get_current_user)
 ):
