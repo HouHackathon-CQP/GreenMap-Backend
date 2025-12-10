@@ -26,7 +26,15 @@ from app.schemas.notification import (
     NotificationHistoryRead,
     NotificationHistoryList,
 )
-from app.schemas.ai import AIReportRead
+from app.schemas.ai import (
+    AIReportRead,
+    AIRouteGeometry,
+    AIRouteLocation,
+    AIRoutePath,
+    AIRoutePoi,
+    AIRouteRequest,
+    AIRouteResponse,
+)
 
 __all__ = [
     "LocationBase",
@@ -53,4 +61,10 @@ __all__ = [
     "NotificationHistoryRead",
     "NotificationHistoryList",
     "AIReportRead",
+    "AIRouteGeometry",
+    "AIRouteLocation",
+    "AIRoutePath",
+    "AIRoutePoi",
+    "AIRouteRequest",
+    "AIRouteResponse",
 ]
