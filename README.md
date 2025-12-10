@@ -423,8 +423,6 @@ docker-compose logs -f service_name
 
 Xem [CHANGELOG.md](CHANGELOG.md) để biết lịch sử thay đổi chi tiết của dự án.
 
-Changelog được tự động tạo bằng [git-cliff](https://git-cliff.org) từ git history.
-
 ---
 
 ## Contributors
@@ -435,7 +433,7 @@ Dự án này được phát triển bởi HouHackathon-CQP.
 
 Chúng tôi hoan nghênh mọi đóng góp! Vui lòng đọc [CONTRIBUTING.md](CONTRIBUTING.md) để biết chi tiết về:
 - Quy trình gửi Pull Request
-- Conventional Commits guidelines
+- Hướng dẫn commit message
 - Quy tắc code và cộng đồng
 
 ## Liên hệ
