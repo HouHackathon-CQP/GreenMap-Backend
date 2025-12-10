@@ -17,7 +17,6 @@ import sys
 import uvicorn
 from app.main import app
 
-
 if __name__ == "__main__":
     if sys.platform.startswith("win"):
         asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
