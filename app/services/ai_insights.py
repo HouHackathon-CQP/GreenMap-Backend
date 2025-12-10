@@ -24,6 +24,7 @@ from app.services import openaq
 from app.services import weather as weather_service
 
 Provider = Literal["gemini", "groq", "auto"]
+GROQ_CANONICAL_URL = "https://api.groq.com/openai/v1/chat/completions"
 
 
 def _safe_round(value: Any, digits: int = 1) -> Any:
@@ -184,12 +185,25 @@ async def _call_gemini(prompt: str, model_override: str | None = None) -> dict[s
     text = parts[0].get("text") if parts else None
     return {"provider": "gemini", "model": model, "text": text}
 
+
+def _build_groq_url(base_url: str | None) -> str:
+    if not base_url:
+        return GROQ_CANONICAL_URL
+    cleaned = base_url.strip().rstrip("/")
+    if cleaned.endswith("/chat/completions"):
+        return cleaned
+    if cleaned.endswith("/openai/v1") or cleaned.endswith("/v1"):
+        return f"{cleaned}/chat/completions"
+    if cleaned.endswith("/openai"):
+        return f"{cleaned}/v1/chat/completions"
+    return f"{cleaned}/openai/v1/chat/completions"
+
 async def _call_groq(prompt: str, model_override: str | None = None) -> dict[str, Any]:
     if not settings.groq_api_key:
         raise RuntimeError("Thiếu GROQ_API_KEY")
 
-    model = model_override or settings.groq_model
-    url = settings.groq_api_base
+    model = model_override or settings.groq_model or "mixtral-8x7b-32768"
+    url = _build_groq_url(settings.groq_api_base)
     headers = {
         "Authorization": f"Bearer {settings.groq_api_key}",
         "Content-Type": "application/json",
@@ -207,9 +221,14 @@ async def _call_groq(prompt: str, model_override: str | None = None) -> dict[str
     }
 
     async with httpx.AsyncClient(timeout=25.0) as client:
-        response = await client.post(url, headers=headers, json=payload)
-        response.raise_for_status()
-        data = response.json()
+        try:
+            response = await client.post(url, headers=headers, json=payload)
+            response.raise_for_status()
+            data = response.json()
+        except httpx.HTTPStatusError as exc:
+            raise RuntimeError(
+                f"Groq trả về lỗi {exc.response.status_code}: {exc.response.text[:200]}"
+            ) from exc
 
     choice = (data.get("choices") or [{}])[0]
     message = choice.get("message", {})

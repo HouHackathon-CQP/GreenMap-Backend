@@ -21,6 +21,7 @@ from app import crud, models, schemas
 from app.api.deps import get_current_user_silent
 from app.db.session import get_db
 from app.services.ai_insights import generate_ai_insight
+from app.services.ai_routing import generate_ai_route
 
 
 Provider = Literal["gemini", "groq", "auto"]
@@ -81,3 +82,27 @@ async def get_ai_weather_history(
     """
     user_id = current_user.id if current_user else None
     return await crud.list_ai_reports(db=db, user_id=user_id, skip=skip, limit=limit)
+
+
+@router.post("/directions", response_model=schemas.AIRouteResponse)
+async def ai_directions(
+    payload: schemas.AIRouteRequest,
+    db: AsyncSession = Depends(get_db),
+):
+    """
+    Đọc câu hỏi chỉ đường (tự nhiên), tự động tìm POI/điểm đến (Nominatim OSM), tính route bằng OSRM và trả về GeoJSON.
+    """
+    try:
+        return await generate_ai_route(
+            db=db,
+            question=payload.question,
+            current_lat=payload.current_lat,
+            current_lon=payload.current_lon,
+            destination_lat=payload.destination_lat,
+            destination_lon=payload.destination_lon,
+            model_override=payload.model,
+        )
+    except HTTPException:
+        raise
+    except Exception as exc:  # noqa: BLE001
+        raise HTTPException(status_code=502, detail=str(exc)) from exc
