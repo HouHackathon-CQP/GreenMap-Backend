@@ -28,7 +28,7 @@ Provider = Literal["gemini", "groq", "auto"]
 router = APIRouter(prefix="/ai", tags=["ai"])
 
 
-@router.post("/weather-insights", response_model=schemas.AIReportRead)
+@router.post("/weather-insights", response_model=schemas.AIReportRead, include_in_schema=False)
 async def get_ai_weather_insights(
     lat: float = Query(21.0285, description="Vĩ độ (mặc định: Hà Nội)"),
     lon: float = Query(105.8542, description="Kinh độ (mặc định: Hà Nội)"),
@@ -70,7 +70,7 @@ async def get_ai_weather_insights(
     return saved
 
 
-@router.get("/weather-insights/history", response_model=list[schemas.AIReportRead])
+@router.get("/weather-insights/history", response_model=list[schemas.AIReportRead], include_in_schema=False)
 async def get_ai_weather_history(
     skip: int = Query(0, ge=0, description="Bỏ qua n kết quả đầu."),
     limit: int = Query(20, ge=1, le=100, description="Số bản ghi tối đa trả về."),
@@ -84,7 +84,7 @@ async def get_ai_weather_history(
     return await crud.list_ai_reports(db=db, user_id=user_id, skip=skip, limit=limit)
 
 
-@router.post("/directions", response_model=schemas.AIRouteResponse)
+@router.post("/directions", response_model=schemas.AIRouteResponse, include_in_schema=False)
 async def ai_directions(
     payload: schemas.AIRouteRequest,
     db: AsyncSession = Depends(get_db),

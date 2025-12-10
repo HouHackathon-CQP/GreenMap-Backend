@@ -165,43 +165,84 @@ python notification_job.py
 
 ## API Endpoints
 
-### Authentication & Users
+### System
 ```
-POST   /api/auth/login           - Đăng nhập
-POST   /api/auth/register        - Đăng ký
-GET    /api/users/me             - Lấy thông tin user hiện tại
-PUT    /api/users/{user_id}      - Cập nhật thông tin user
+GET    /                         - Root endpoint
+GET    /test-db                  - Test database connection
 ```
 
-### Reports
+### Authentication
 ```
-GET    /api/reports              - Danh sách báo cáo
-POST   /api/reports              - Gửi báo cáo sự cố
-GET    /api/reports/{id}         - Chi tiết báo cáo
-PUT    /api/reports/{id}         - Cập nhật báo cáo
-DELETE /api/reports/{id}         - Xóa báo cáo
+POST   /login                    - Đăng nhập (trả về access_token)
+POST   /logout                   - Đăng xuất (yêu cầu xác thực)
+```
+
+### Users
+```
+GET    /users                    - Lấy danh sách user (yêu cầu xác thực)
+POST   /users                    - Đăng ký user mới (không cần xác thực)
+GET    /users/{user_id}          - Lấy thông tin user theo ID (yêu cầu xác thực)
+PUT    /users/{user_id}          - Cập nhật thông tin user (Admin hoặc chính user đó)
+DELETE /users/{user_id}          - Xóa user (chỉ Admin)
+POST   /users/change-password/me - Đổi mật khẩu user hiện tại (yêu cầu xác thực)
 ```
 
 ### Locations
 ```
-GET    /api/locations            - Danh sách địa điểm
-POST   /api/locations            - Tạo địa điểm mới
-GET    /api/locations/{id}       - Chi tiết địa điểm
-PUT    /api/locations/{id}       - Cập nhật địa điểm
-DELETE /api/locations/{id}       - Xóa địa điểm
+GET    /locations                - Lấy danh sách địa điểm từ Orion-LD
+POST   /locations                - Tạo địa điểm mới (yêu cầu xác thực)
+GET    /locations/{location_id}  - Lấy chi tiết địa điểm từ Postgres (để Admin sửa)
+PUT    /locations/{location_id}  - Cập nhật địa điểm -> Đồng bộ sang Orion (yêu cầu xác thực)
+DELETE /locations/{location_id}  - Xóa địa điểm -> Xóa khỏi Orion (yêu cầu xác thực)
+```
+
+**Location Types:** `CHARGING_STATION`, `GREEN_SPACE`, `PUBLIC_PARK`, `BICYCLE_RENTAL`, `TOURIST_ATTRACTION`
+
+### Reports
+```
+GET    /reports                  - Lấy danh sách báo cáo (yêu cầu xác thực)
+POST   /reports                  - Tạo báo cáo sự cố mới (yêu cầu xác thực)
+PUT    /reports/{report_id}/status - Cập nhật trạng thái báo cáo (yêu cầu xác thực)
+```
+
+**Report Status:** `PENDING`, `APPROVED`, `REJECTED`
+
+### News
+```
+GET    /news/hanoimoi            - Lấy tin tức từ Hà Nội Mới
+```
+
+### Air Quality Index (AQI)
+```
+GET    /aqi/hanoi                - Lấy dữ liệu AQI từ Orion-LD
+                                  - Hỗ trợ: ?limit=100 (max 1000 do đặc thù của Orion_LD)
+```
+
+### Weather
+```
+GET    /weather/hanoi            - Lấy dữ liệu thời tiết các quận từ Orion-LD
+GET    /weather/forecast         - Dự báo thời tiết chi tiết (Trực tiếp từ Open-Meteo)
+                                  - Hỗ trợ: ?lat=21.0285&lon=105.8542
+                                  - Trả về: Hiện tại, 24h tới, 7 ngày tới
+```
+
+### Traffic
+```
+GET    /traffic/segments         - Lấy bản đồ nền (GeoJSON) các đoạn đường giao thông
+GET    /traffic/live             - Lấy trạng thái giao thông hiện tại
 ```
 
 ### AI Insights (Gemini / Groq)
 ```
 POST   /ai/weather-insights      - Phân tích thời tiết 24h/7 ngày + AQI bằng AI
-POST   /ai/weather-insights?provider=groq&lat=21.03&lon=105.85
+                                  - Hỗ trợ: ?lat=21.0285&lon=105.8542&provider=auto&model=
+                                  - Provider: gemini, groq, hoặc auto
 ```
 > Cần cấu hình `GEMINI_API_KEY` hoặc `GROQ_API_KEY` trong `.env`.
 
-### News
+### File Upload
 ```
-GET    /api/news/hanoimoi        - Tin tức Hà Nội Mới
-GET    /api/news/hanoimoi?limit=20
+POST   /upload                   - Upload image (multipart/form-data)
 ```
 
 ### Notifications (Firebase)
@@ -378,6 +419,24 @@ docker-compose logs -f service_name
 
 ---
 
+## Changelog
+
+Xem [CHANGELOG.md](CHANGELOG.md) để biết lịch sử thay đổi chi tiết của dự án.
+
+---
+
 ## Contributors
 
 Dự án này được phát triển bởi HouHackathon-CQP.
+
+## Đóng góp
+
+Chúng tôi hoan nghênh mọi đóng góp! Vui lòng đọc [CONTRIBUTING.md](CONTRIBUTING.md) để biết chi tiết về:
+- Quy trình gửi Pull Request
+- Hướng dẫn commit message
+- Quy tắc code và cộng đồng
+
+## Liên hệ
+
+- Repository: [https://github.com/HouHackathon-CQP/GreenMap-Backend](https://github.com/HouHackathon-CQP/GreenMap-Backend)
+- Issues: [https://github.com/HouHackathon-CQP/GreenMap-Backend/issues](https://github.com/HouHackathon-CQP/GreenMap-Backend/issues)

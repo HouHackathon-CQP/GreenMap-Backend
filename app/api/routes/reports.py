@@ -25,7 +25,7 @@ from app.services.orion import push_report_to_orion
 router = APIRouter(prefix="/reports", tags=["reports"])
 
 
-@router.post("", response_model=schemas.ReportRead)
+@router.post("", response_model=schemas.ReportRead, include_in_schema=False)
 async def create_new_report(
     report: schemas.ReportCreate,
     db: AsyncSession = Depends(get_db),
@@ -34,7 +34,7 @@ async def create_new_report(
     return await crud.create_report(db=db, report=report, user_id=current_user.id)
 
 
-@router.get("", response_model=List[schemas.ReportRead])
+@router.get("", response_model=List[schemas.ReportRead], include_in_schema=False)
 async def read_reports(
     status: Optional[models.ReportStatus] = None,
     skip: int = 0,
@@ -45,7 +45,7 @@ async def read_reports(
     return await crud.get_reports(db=db, status=status, skip=skip, limit=limit)
 
 
-@router.put("/{report_id}/status", response_model=schemas.ReportRead)
+@router.put("/{report_id}/status", response_model=schemas.ReportRead, include_in_schema=False)
 async def approve_report(
     report_id: int,
     status_update: schemas.ReportUpdate,

@@ -76,7 +76,7 @@ async def delete_location_from_orion(location_type: str, location_id: int):
 
 # --- API ENDPOINTS ---
 
-@router.post("", response_model=schemas.LocationRead)
+@router.post("", response_model=schemas.LocationRead, include_in_schema=False)
 async def create_new_location(
     location: schemas.LocationCreate,
     db: AsyncSession = Depends(get_db),
@@ -88,7 +88,7 @@ async def create_new_location(
     await push_location_to_orion(db_location)
     return db_location
 
-@router.get("/{location_id}", response_model=schemas.LocationRead)
+@router.get("/{location_id}", response_model=schemas.LocationRead, include_in_schema=False)
 async def read_location_detail(
     location_id: int,
     db: AsyncSession = Depends(get_db),
@@ -99,7 +99,7 @@ async def read_location_detail(
         raise HTTPException(status_code=404, detail="Location not found")
     return location
 
-@router.put("/{location_id}", response_model=schemas.LocationRead)
+@router.put("/{location_id}", response_model=schemas.LocationRead, include_in_schema=False)
 async def update_location(
     location_id: int,
     location_in: schemas.LocationUpdate,
@@ -119,7 +119,7 @@ async def update_location(
     
     return updated_location
 
-@router.delete("/{location_id}")
+@router.delete("/{location_id}", include_in_schema=False)
 async def delete_location(
     location_id: int,
     db: AsyncSession = Depends(get_db),

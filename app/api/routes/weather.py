@@ -60,7 +60,7 @@ async def get_hanoi_weather(
                 "hint": "Kiểm tra kết nối tới Orion-LD."
             }
         
-@router.get("/forecast")
+@router.get("/forecast", include_in_schema=False)
 async def get_weather_forecast(
     lat: float = Query(21.0285, description="Vĩ độ"),
     lon: float = Query(105.8542, description="Kinh độ")

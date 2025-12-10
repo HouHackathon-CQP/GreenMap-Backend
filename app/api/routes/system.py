@@ -21,12 +21,12 @@ from app.db.session import get_db
 router = APIRouter(tags=["system"])
 
 
-@router.get("/")
+@router.get("/", include_in_schema=False)
 async def root():
     return {"message": "GreenMap Backend is Running!"}
 
 
-@router.get("/test-db")
+@router.get("/test-db", include_in_schema=False)
 async def test_db_connection(db: AsyncSession = Depends(get_db)):
     try:
         await db.execute(text("SELECT 1"))

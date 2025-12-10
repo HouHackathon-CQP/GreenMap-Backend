@@ -34,7 +34,12 @@ if sys.platform.startswith("win"):
 
 
 def create_application() -> FastAPI:
-    app = FastAPI(title=settings.project_name)
+    app = FastAPI(
+        title=settings.project_name,
+        docs_url="/docs" if settings.docs_enabled else None,
+        redoc_url="/redoc" if settings.docs_enabled else None,
+        openapi_url="/openapi.json" if settings.docs_enabled else None,
+    )
 
     app.add_middleware(
         CORSMiddleware,
