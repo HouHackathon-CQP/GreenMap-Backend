@@ -115,7 +115,7 @@ Hoặc chạy lần lượt các lệnh sau (dễ debug hơn):
 # Nối file dữ liệu JSON
 python Data/merge_json.py
 
-# Tạo bảng User & Admin
+# Tạo tất cả bảng database (users, locations, reports, notification_tokens, notification_history, v.v.)
 python init_db.py
 
 # Đăng ký thiết bị cảm biến
@@ -128,6 +128,8 @@ python sync_to_orion.py
 # Xử lý dữ liệu giao thông mô phỏng 
 python process_simulation.py
 ```
+
+> **Lưu ý**: `init_db.py` tự động tạo tất cả các bảng được định nghĩa trong models, bao gồm cả bảng `notification_history` cho tính năng lịch sử thông báo.
 
 
 ---
@@ -204,11 +206,17 @@ GET    /api/news/hanoimoi?limit=20
 
 ### Notifications (Firebase)
 ```
-POST   /api/notifications/register           - Mobile đăng ký/ cập nhật device token
-DELETE /api/notifications/register/{token}   - Hủy đăng ký token
-GET    /api/notifications/tokens             - Danh sách token (Admin)
-POST   /api/notifications/send               - Gửi push thủ công (Admin)
+POST   /api/notifications/register              - Mobile đăng ký/ cập nhật device token
+DELETE /api/notifications/register/{token}      - Hủy đăng ký token
+GET    /api/notifications/tokens                - Danh sách token (Admin)
+POST   /api/notifications/send                  - Gửi push broadcast (Admin)
+POST   /api/notifications/send/topic            - Gửi push theo topic (Admin)
+GET    /api/notifications/history               - Xem lịch sử thông báo (Admin)
+GET    /api/notifications/history/{id}          - Chi tiết lịch sử (Admin)
+DELETE /api/notifications/history/cleanup       - Dọn dẹp lịch sử cũ (Admin)
 ```
+
+**Notification History**: Hệ thống tự động lưu lịch sử tất cả thông báo đã gửi, bao gồm số lượng thành công/thất bại, người gửi, thời gian, v.v. Hữu ích cho việc theo dõi và audit.
 
 ### Context Broker (Orion-LD)
 ```
@@ -246,6 +254,7 @@ GreenMap-Backend/
 │   │       ├── auth.py               # Authentication endpoints
 │   │       ├── locations.py          # Location management endpoints
 │   │       ├── news.py               # News endpoints
+│   │       ├── notifications.py      # Notification & history endpoints
 │   │       ├── reports.py            # Report management endpoints
 │   │       ├── system.py             # System endpoints
 │   │       ├── traffic.py            # Traffic data endpoints
@@ -259,6 +268,7 @@ GreenMap-Backend/
 │   ├── crud/
 │   │   ├── __init__.py
 │   │   ├── location.py               # Location CRUD operations
+│   │   ├── notification.py           # Notification CRUD operations
 │   │   ├── report.py                 # Report CRUD operations
 │   │   └── user.py                   # User CRUD operations
 │   ├── db/
@@ -268,6 +278,7 @@ GreenMap-Backend/
 │   │   ├── __init__.py
 │   │   ├── enums.py                  # Enum definitions
 │   │   ├── location.py               # Location model
+│   │   ├── notification.py           # Notification & history models
 │   │   ├── report.py                 # Report model
 │   │   ├── traffic.py                # Traffic model
 │   │   └── user.py                   # User model
@@ -276,17 +287,20 @@ GreenMap-Backend/
 │   │   ├── auth.py                   # Authentication schemas
 │   │   ├── location.py               # Location schemas
 │   │   ├── news.py                   # News schemas
+│   │   ├── notification.py           # Notification schemas
 │   │   ├── report.py                 # Report schemas
 │   │   └── user.py                   # User schemas
 │   ├── services/
 │   │   ├── __init__.py
 │   │   ├── openaq.py                 # OpenAQ API service
 │   │   ├── orion.py                  # Orion-LD broker service
+│   │   ├── push.py                   # Firebase push notification service
 │   │   ├── rss.py                    # RSS feed service
 │   │   └── weather.py                # Weather API service
 │   ├── workers/
 │   │   ├── __init__.py
 │   │   ├── aqi_agent.py              # AQI data update worker
+│   │   ├── notification_job.py       # Daily push notification worker
 │   │   └── weather_agent.py          # Weather data update worker
 │   ├── __init__.py
 │   └── main.py                       # FastAPI app initialization
@@ -304,6 +318,7 @@ GreenMap-Backend/
 ├── main.py                           # FastAPI server entry point
 ├── aqi_agent.py                      # Standalone AQI update service
 ├── weather_agent.py                  # Standalone Weather update service
+├── notification_job.py               # Daily push notification scheduler
 ├── init_db.py                        # Database initialization script
 ├── seed_sensor.py                    # Sensor data seeding script
 ├── process_simulation.py             # Traffic simulation data processor

@@ -17,7 +17,15 @@ from app.schemas.news import NewsItem
 from app.schemas.report import ReportBase, ReportCreate, ReportRead, ReportUpdate
 from app.schemas.auth import LoginRequest, TokenResponse
 from app.schemas.user import UserBase, UserCreate, UserRead, UserUpdate, ChangePasswordRequest
-from app.schemas.notification import DeviceTokenCreate, DeviceTokenRead, PushMessage, TopicPushMessage
+from app.schemas.notification import (
+    DeviceTokenCreate, 
+    DeviceTokenRead, 
+    PushMessage, 
+    TopicPushMessage,
+    NotificationHistoryCreate,
+    NotificationHistoryRead,
+    NotificationHistoryList,
+)
 from app.schemas.ai import AIReportRead
 
 __all__ = [
@@ -41,5 +49,8 @@ __all__ = [
     "DeviceTokenRead",
     "PushMessage",
     "TopicPushMessage",
+    "NotificationHistoryCreate",
+    "NotificationHistoryRead",
+    "NotificationHistoryList",
     "AIReportRead",
 ]
