@@ -22,6 +22,10 @@ from app.crud.notification import (
     get_active_tokens,
     get_all_tokens,
     mark_tokens_sent,
+    create_notification_history,
+    get_notification_history,
+    get_notification_history_by_id,
+    delete_old_notification_history,
 )
 from app.crud.ai_report import create_ai_report, list_ai_reports, get_ai_report
 
@@ -47,6 +51,10 @@ __all__ = [
     "get_active_tokens",
     "get_all_tokens",
     "mark_tokens_sent",
+    "create_notification_history",
+    "get_notification_history",
+    "get_notification_history_by_id",
+    "delete_old_notification_history",
     "create_ai_report",
     "list_ai_reports",
     "get_ai_report",

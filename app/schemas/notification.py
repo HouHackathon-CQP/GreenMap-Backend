@@ -43,3 +43,40 @@ class PushMessage(BaseModel):
 
 class TopicPushMessage(PushMessage):
     topic: str | None = None
+
+
+class NotificationHistoryCreate(BaseModel):
+    title: str
+    body: str
+    data: str | None = None  # JSON string
+    notification_type: str  # "token", "topic", "broadcast"
+    topic: str | None = None
+    target_user_id: int | None = None
+    sent_count: int = 0
+    failed_count: int = 0
+    sent_by_user_id: int | None = None
+    status: str = "sent"  # "sent", "failed", "partial"
+    error_message: str | None = None
+
+
+class NotificationHistoryRead(BaseModel):
+    id: int
+    title: str
+    body: str
+    data: str | None = None
+    notification_type: str
+    topic: str | None = None
+    target_user_id: int | None = None
+    sent_count: int
+    failed_count: int
+    sent_by_user_id: int | None = None
+    status: str
+    error_message: str | None = None
+    created_at: datetime
+
+    model_config = ConfigDict(from_attributes=True)
+
+
+class NotificationHistoryList(BaseModel):
+    total: int
+    items: list[NotificationHistoryRead]
