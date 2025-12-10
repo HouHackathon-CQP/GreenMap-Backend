@@ -1,50 +1,35 @@
 # Changelog
 
-All notable changes to this project will be documented in this file.
+All notable changes to the **GreenMap Backend** project will be documented in this file.
 
-## [unreleased]
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-### 📚 Documentation
+## [Unreleased]
 
-- Add changelog, contributing guidelines, and security policy
-
-### 🛠️`fix
-
-- Update locations endpoint to support transportation context and enhance data handling`
-
-### 🫂`feat
-
-- Implement user CRUD operations and delete some non-relative rss source`
-- Add change password functionality for users`
-
-## [1.0.0] - 2025-12-02
 
 ### 🚀 Features
+- Add copyright notice and license information to all source files - [@blueMonkey23](https://github.com/blueMonkey23) in [`7362fc3`](https://github.com/HouHackathon-CQP/GreenMap-Backend/commit/7362fc3410ba81367eafbf94ed9110ef329c90a7)
+- Add license information to merge_json.py and split_json.py, and update README with JSON processing command - [@blueMonkey23](https://github.com/blueMonkey23) in [`d8c4b4a`](https://github.com/HouHackathon-CQP/GreenMap-Backend/commit/d8c4b4aa305415b279b68bb49af6b3f580e099df)
 
-- Add copyright notice and license information to all source files
-- Add license information to merge_json.py and split_json.py, and update README with JSON processing command
 
-### 🌦️`Feat
+### 📝 Other Changes
+- Implement location push to Orion-LD and enhance retrieval with pagination - [@blueMonkey23](https://github.com/blueMonkey23) in [`68e4817`](https://github.com/HouHackathon-CQP/GreenMap-Backend/commit/68e481721d6057f01c6be674bc39edff668cae42)
+- Integrate Open-Meteo weather API - [@blueMonkey23](https://github.com/blueMonkey23) in [`8b86787`](https://github.com/HouHackathon-CQP/GreenMap-Backend/commit/8b867873eba265a287cb601563b9f2365602b6d2)
+- Improve weather forecast processing and enhance time handling - [@blueMonkey23](https://github.com/blueMonkey23) in [`aaca92d`](https://github.com/HouHackathon-CQP/GreenMap-Backend/commit/aaca92d546a782401f1e3a2f30ebe11a9a5a3113)
+- Enhance login response with user details in TokenResponse - [@blueMonkey23](https://github.com/blueMonkey23) in [`d903d58`](https://github.com/HouHackathon-CQP/GreenMap-Backend/commit/d903d58d20f16711f9f7e78c9a1851df969d325e)
+- Integrate traffic simulation data and api - [@blueMonkey23](https://github.com/blueMonkey23) in [`d74612b`](https://github.com/HouHackathon-CQP/GreenMap-Backend/commit/d74612b9597a65dbcd0fb0ca18afa3dfda688fd1)
+- Implement CRUD operations for locations and synchronize with Orion-LD - [@blueMonkey23](https://github.com/blueMonkey23) in [`cc2c133`](https://github.com/HouHackathon-CQP/GreenMap-Backend/commit/cc2c133ba027024b6650e5effbf99df36210911e)
+- Update README, enhance OpenAQ service, add weather agent - [@blueMonkey23](https://github.com/blueMonkey23) in [`bb47dbb`](https://github.com/HouHackathon-CQP/GreenMap-Backend/commit/bb47dbb43e4cf1b133fad6e8d851ff164e95992b)
+- Update README and environment files, enhance Docker setup, and add setup script for system initialization - [@blueMonkey23](https://github.com/blueMonkey23) in [`57d8454`](https://github.com/HouHackathon-CQP/GreenMap-Backend/commit/57d84545f70b1b1c17831183a89b57017edd4d31)
+- Update locations endpoint to support transportation context and enhance data handling - [@blueMonkey23](https://github.com/blueMonkey23) in [`77f621b`](https://github.com/HouHackathon-CQP/GreenMap-Backend/commit/77f621badf97a3e74ad81d4cd30eb72d22492ae4)
+- Implement user CRUD operations and delete some non-relative rss source - [@blueMonkey23](https://github.com/blueMonkey23) in [`d28d3d9`](https://github.com/HouHackathon-CQP/GreenMap-Backend/commit/d28d3d9b543f7d2e05f96404b50b7d2b171c6a93)
+- Add change password functionality for users - [@blueMonkey23](https://github.com/blueMonkey23) in [`de7a671`](https://github.com/HouHackathon-CQP/GreenMap-Backend/commit/de7a6716619cdc60b7dbd3590638aa30a23dbe01)
 
-- Integrate Open-Meteo weather API `
 
-### 🌦️`Refactor
+### 📚 Documentation
+- add changelog, contributing guidelines, and security policy - [@blueMonkey23](https://github.com/blueMonkey23) in [`9814749`](https://github.com/HouHackathon-CQP/GreenMap-Backend/commit/981474966ce84024f37c2ad0d6275b55e1cd05b7)
+- update changelog and script output messages - [@blueMonkey23](https://github.com/blueMonkey23) in [`b7c4771`](https://github.com/HouHackathon-CQP/GreenMap-Backend/commit/b7c477156ce17e6bfa8b4170c84a1fda09e07db8)
+---
 
-- Improve weather forecast processing and enhance time handling`
-
-### 🐧`Feat
-
-- Implement location push to Orion-LD and enhance retrieval with pagination`
-- Enhance login response with user details in TokenResponse`
-
-### 🐧`feat
-
-- Implement CRUD operations for locations and synchronize with Orion-LD`
-- Update README, enhance OpenAQ service, add weather agent`
-- Update README and environment files, enhance Docker setup, and add setup script for system initialization`
-
-### 🚦`Feat
-
-- Integrate traffic simulation data and api`
-
-<!-- generated by git-cliff -->
+*Changelog generated by [git-cliff](https://git-cliff.org). For contribution guidelines, see [CONTRIBUTING.md](CONTRIBUTING.md).*
