@@ -378,6 +378,31 @@ docker-compose logs -f service_name
 
 ---
 
+## ⚖️ Bản Quyền & Giấy Phép (License)
+
+### 1. Mã Nguồn (Source Code)
+Mã nguồn của dự án này được phát hành dưới giấy phép **Apache License 2.0**.
+Bạn được phép sử dụng, sửa đổi và phân phối lại mã nguồn này cho mục đích cá nhân hoặc thương mại.
+
+### 2. Dữ Liệu Bản Đồ (Map Data)
+Dữ liệu địa lý (Công viên, Trạm sạc, Địa điểm du lịch...) được trích xuất từ **OpenStreetMap (OSM)**.
+- **Giấy phép:** [ODbL (Open Database License)](https://opendatacommons.org/licenses/odbl/)
+- **Ghi công:** © OpenStreetMap contributors.
+
+### 3. Dữ Liệu Môi Trường (IoT Data)
+Dữ liệu cảm biến thời gian thực được cung cấp bởi các nền tảng Dữ liệu mở (Open Data):
+
+| Loại Dữ Liệu | Nguồn Cung Cấp | Giấy Phép |
+| :--- | :--- | :--- |
+| **Chất lượng không khí (AQI)** | [OpenAQ API](https://openaq.org/) | Open Data / CC BY 4.0 |
+| **Thời tiết (Weather)** | [Open-Meteo API](https://open-meteo.com/) | CC BY 4.0 (Attribution Required) |
+
+### 4. Dữ Liệu Giao Thông
+- **Dữ liệu Giao thông (Ngã Tư Sở):** - Nguồn đã publish bởi nhóm phát triển: [Kaggle - Nga Tu So Intersection Traffic Dataset](https://www.kaggle.com/datasets/egglover05/nga-tu-so-intersection-traffic-dataset)
+  - License: Đọc chi tiết ở description của dataset
+---
+**Tuyên bố miễn trừ trách nhiệm:** Dự án này được xây dựng cho mục đích giáo dục và thi đấu (OLP 2025). Dữ liệu mô phỏng giao thông (Traffic Simulation) được tạo ra bởi phần mềm SUMO và không phản ánh tình trạng giao thông thực tế.
+
 ## Contributors
 
 Dự án này được phát triển bởi HouHackathon-CQP.
