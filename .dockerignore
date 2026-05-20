@@ -1,0 +1,15 @@
+.git
+.gitignore
+.venv
+venv
+__pycache__
+*.pyc
+.env
+.env.*
+*.log
+hs_err_pid*.log
+replay_pid*.log
+*.firebase-adminsdk-*.json
+green-*-firebase-adminsdk-*.json
+greenmap-*-firebase-adminsdk-*.json
+secrets/

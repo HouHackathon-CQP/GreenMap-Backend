@@ -23,7 +23,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # FastAPI/Uvicorn sẽ chạy port 8000
-EXPOSE 8000
+EXPOSE 8001
 
 # ---- QUAN TRỌNG ----
 # Nếu biến app = FastAPI() nằm trong main.py -> dùng "main:app"
